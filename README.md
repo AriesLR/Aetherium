@@ -1,0 +1,2 @@
+# Palhub
+ Palhub is a user-friendly server management tool designed to simplify the process of configuring, starting, and stopping game servers. With Palhub, users can effortlessly manage their servers with ease, providing a seamless experience for server administrators. Whether you're setting up a new server or maintaining an existing one, Palhub offers intuitive features to streamline your server management tasks.
