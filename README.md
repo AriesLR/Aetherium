@@ -49,3 +49,8 @@ To get started with Palhub, simply download the latest release from the [Release
 ## License
 
 [MIT License](LICENSE)
+
+## Acknowledgements
+- [CoreRCON](https://github.com/Challengermode/CoreRcon) - For the .NET Standard implementation of the Source RCON Protocol, more specifically [Challengermode](https://github.com/Challengermode) for maintaining the package.
+
+- [Darkbyte](https://github.com/darkbyte42) - For all the input they've given so far, their suggestions are giving me direction on what features to add.
