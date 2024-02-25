@@ -23,7 +23,7 @@
 
 - Save Backups
 - Light Theme (Currently dark by default.)
-- UI Overhaul, as of right now (v0.0.1) Palhub is in a pre-release stage.
+- UI Overhaul
 - Graceful shutdown (instead of killing the task, run shutdown command in rcon)
 
 ## Known Issues
