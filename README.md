@@ -31,9 +31,6 @@
 - Server output disappears when switching pages (Server stays running.)
 - Rcon output disappears when switching pages.
 - Rcon disconnects when switching pages.
-- App icon is default .NET icon (tried for far too long to figure this out, and still haven't.)
-- Folder is bloated with various logo sizes (I think this is part of the appicon as well.)
-- I used .NET Maui and that was my first mistake.
 
 ## Getting Started
 
