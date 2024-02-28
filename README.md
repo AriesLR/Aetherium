@@ -46,6 +46,16 @@ To get started with Palhub, simply download the latest release from the [Release
 
 5. **Start Your Server**: Once configured, start your server with the click of a button and monitor its output in real-time.
 
+## Configuration
+
+While this project has started as a server launcher for just Palworld, I've already made some changes to make this work with almost any game server.
+That being said, below I will post example configs for various games as I test them.
+
+### Palworld
+[Palworld Config](docs/images/palworldconfig.png)
+
+
+
 ## License
 
 [MIT License](LICENSE)
