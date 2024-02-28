@@ -18,13 +18,13 @@
 - Monitor server output in real-time.
 - Configure automatic server restarts.
 - User-friendly interface.
+- Save folder backups.
+- RCON integration.
 
 ## Planned Features
 
-- Save Backups
 - Light Theme (Currently dark by default.)
 - UI Overhaul
-- Graceful shutdown (instead of killing the task, run shutdown command in rcon)
 
 ## Known Issues
 
