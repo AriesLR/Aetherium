@@ -52,7 +52,7 @@ While this project has started as a server launcher for just Palworld, I've alre
 That being said, below I will post example configs for various games as I test them.
 
 ### Palworld
-[Palworld Config](docs/images/palworldconfig.png?raw=true "Palworld Config")
+[Palworld Config](https://raw.githubusercontent.com/AriesLR/Palhub/main/docs/images/palworldconfig.png)
 
 
 
