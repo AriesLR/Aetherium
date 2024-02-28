@@ -28,6 +28,7 @@
 
 ## Known Issues
 
+- Toggling backups on and off multiple times will start multiple backup tasks until closing the app. (Priority to fix)
 - Server output disappears when switching pages (Server stays running.)
 - Rcon output disappears when switching pages.
 - Rcon disconnects when switching pages.
