@@ -54,6 +54,8 @@ That being said, below I will post example configs for various games as I test t
 ### Palworld
 ![Palworld Config](https://raw.githubusercontent.com/AriesLR/Palhub/main/docs/images/palworldconfig.png)
 
+![Arma 3 Config](https://raw.githubusercontent.com/AriesLR/Palhub/main/docs/images/arma3config.png)
+
 
 
 ## License
