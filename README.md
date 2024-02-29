@@ -28,7 +28,6 @@
 
 ## Known Issues
 
-- Toggling backups on and off multiple times will start multiple backup tasks until closing the app. (Priority to fix)
 - Server output disappears when switching pages (Server stays running.)
 - Rcon output disappears when switching pages.
 - Rcon disconnects when switching pages.
@@ -43,7 +42,7 @@ To get started with Palhub, simply download the latest release from the [Release
 
 3. **Run Palhub**: Once downloaded, run the Palhub executable (Palhub.exe) on your machine.
 
-4. **Configure Your Server**: Navigate to the configuration page within Palhub to set up your server settings.
+4. **Configure Your Server**: Navigate to the configuration page within Palhub to set up your server settings, see [Configuration](#configuration).
 
 5. **Start Your Server**: Once configured, start your server with the click of a button and monitor its output in real-time.
 
