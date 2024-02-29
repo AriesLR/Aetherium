@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {},
     ".NETCoreApp,Version=v8.0/win10-x64": {
-      "Palhub/0.0.6": {
+      "Palhub/0.0.7": {
         "dependencies": {
           "CoreRCON": "5.4.0",
           "Microsoft.AspNetCore.Components.WebView.Maui": "8.0.6",
@@ -664,7 +664,7 @@
     }
   },
   "libraries": {
-    "Palhub/0.0.6": {
+    "Palhub/0.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
