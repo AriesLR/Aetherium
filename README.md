@@ -28,8 +28,6 @@
 
 ## Known Issues
 
-- Server output disappears when switching pages (Server stays running.)
-- Rcon output disappears when switching pages.
 - Rcon disconnects when switching pages.
 
 ## Getting Started
