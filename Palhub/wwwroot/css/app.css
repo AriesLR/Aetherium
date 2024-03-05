@@ -71,10 +71,161 @@ h1:focus {
     }
 }
 
+/* Bootstrap Overrides CSS Below */
+
+/* Bootstrap Buttons */
+.btn-primary {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(123, 73, 230, 0.25);
+    --bs-btn-border-color: rgb(123, 73, 230, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(123, 73, 230, 0.50);
+    --bs-btn-hover-border-color: rgb(123, 73, 230, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(123, 73, 230, 0.90);
+    --bs-btn-active-border-color: rgb(123, 73, 230, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(123, 73, 230, 0.25);
+    --bs-btn-disabled-border-color: rgb(123, 73, 230, 0.25);
+}
+
+.btn-secondary {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(69, 69, 69, 0.25);
+    --bs-btn-border-color: rgb(69, 69, 69, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(69, 69, 69, 0.50);
+    --bs-btn-hover-border-color: rgb(69, 69, 69, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(69, 69, 69, 0.90);
+    --bs-btn-active-border-color: rgb(69, 69, 69, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(69, 69, 69, 0.25);
+    --bs-btn-disabled-border-color: rgb(69, 69, 69, 0.25);
+}
+
+.btn-success {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(75, 230, 73, 0.25);
+    --bs-btn-border-color: rgb(75, 230, 73, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(75, 230, 73, 0.50);
+    --bs-btn-hover-border-color: rgb(75, 230, 73, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(75, 230, 73, 0.90);
+    --bs-btn-active-border-color: rgb(75, 230, 73, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(75, 230, 73, 0.25);
+    --bs-btn-disabled-border-color: rgb(75, 230, 73, 0.25);
+}
+
+.btn-info {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(73, 220, 230, 0.25);
+    --bs-btn-border-color: rgb(73, 220, 230, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(73, 220, 230, 0.50);
+    --bs-btn-hover-border-color: rgb(73, 220, 230, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(73, 220, 230, 0.90);
+    --bs-btn-active-border-color: rgb(73, 220, 230, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(73, 220, 230, 0.25);
+    --bs-btn-disabled-border-color: rgb(73, 220, 230, 0.25);
+}
+
+.btn-warning {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(228, 230, 73, 0.25);
+    --bs-btn-border-color: rgb(228, 230, 73, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(228, 230, 73, 0.50);
+    --bs-btn-hover-border-color: rgb(228, 230, 73, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(228, 230, 73, 0.90);
+    --bs-btn-active-border-color: rgb(228, 230, 73, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(228, 230, 73, 0.25);
+    --bs-btn-disabled-border-color: rgb(228, 230, 73, 0.25);
+}
+
+.btn-danger {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(230, 73, 73, 0.25);
+    --bs-btn-border-color: rgb(230, 73, 73, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(230, 73, 73, 0.50);
+    --bs-btn-hover-border-color: rgb(230, 73, 73, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(230, 73, 73, 0.90);
+    --bs-btn-active-border-color: rgb(230, 73, 73, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(230, 73, 73, 0.25);
+    --bs-btn-disabled-border-color: rgb(230, 73, 73, 0.25);
+}
+
+.btn-light {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(255, 255, 255, 0.25);
+    --bs-btn-border-color: rgb(255, 255, 255, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(255, 255, 255, 0.50);
+    --bs-btn-hover-border-color: rgb(255, 255, 255, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-border-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
+    --bs-btn-disabled-bg: rgb(255, 255, 255, 0.25);
+    --bs-btn-disabled-border-color: rgb(255, 255, 255, 0.25);
+}
+
+.btn-dark {
+    --bs-btn-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-bg: rgb(100, 100, 100, 0.25);
+    --bs-btn-border-color: rgb(100, 100, 100, 0.25);
+    --bs-btn-hover-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-hover-bg: rgb(100, 100, 100, 0.50);
+    --bs-btn-hover-border-color: rgb(100, 100, 100, 0.50);
+    --bs-btn-focus-shadow-rgb: 235, 81, 150;
+    --bs-btn-active-color: rgb(255, 255, 255, 0.90);
+    --bs-btn-active-bg: rgb(100, 100, 100, 0.90);
+    --bs-btn-active-border-color: rgb(100, 100, 100, 0.90);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(100, 100, 100, 0.90);
+    --bs-btn-disabled-bg: rgb(100, 100, 100, 0.25);
+    --bs-btn-disabled-border-color: rgb(100, 100, 100, 0.25);
+}
+
 /* Custom CSS Below */
 .footer {
     color: rgb(255, 255, 255, 0.05);
 }
+
+/* Blazored Toasts CSS Override */
+.blazored-toast {
+    background-image: linear-gradient(180deg, rgba(50,50,50,1) 0%, rgba(22,22,22,1) 100%) !important;
+    color: #fff !important;
+}
+
+.blazored-toast .blazored-toast-progressbar > span {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0 0) !important;
+}
+
+/* Config.razor */
 
 .configheaderpaths {
     border-top-left-radius: 1rem;
@@ -131,4 +282,19 @@ h1:focus {
 
 .configcontainer {
     padding: 0.5rem;
+}
+
+.configname {
+    text-align: center;
+}
+
+.newconfigname {
+    height: 2rem !important;
+    line-height: 2rem !important;
+}
+
+.configbutton {
+    --bs-btn-border-color: rgb(118, 118, 118, 1);
+    --bs-btn-hover-border-color: rgb(118, 118, 118, 1);
+    --bs-btn-active-border-color: rgb(118, 118, 118, 1);
 }
