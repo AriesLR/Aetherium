@@ -20,6 +20,8 @@
 - User-friendly interface.
 - Save folder backups.
 - RCON integration.
+- Resource monitoring.
+- Config switching.
 
 ## Planned Features
 
