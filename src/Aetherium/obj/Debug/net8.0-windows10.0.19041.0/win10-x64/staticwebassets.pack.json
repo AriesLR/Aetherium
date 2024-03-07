@@ -1,43 +1,47 @@
 {
   "Files": [
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css",
       "PackagePath": "staticwebassets\\Aetherium.styles.css"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\css\\app.css",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\favicon.png",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo-alt.png",
+      "PackagePath": "staticwebassets\\images\\bannerlogo-alt.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",
       "PackagePath": "staticwebassets\\images\\bannerlogo.png"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\images\\logo.png",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\index.html",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
       "PackagePath": "staticwebassets\\js\\sessionStorageInterop.js"
     },
     {

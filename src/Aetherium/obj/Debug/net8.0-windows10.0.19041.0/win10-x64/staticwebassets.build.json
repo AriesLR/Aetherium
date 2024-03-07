@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zD1KqA2ZmEFjTP/1/V45BuTWrFidZ2NJIyV/O+sIqRI=",
+  "Hash": "q3lcLWlVq/2OebdVtJT1zDlA5yPLtBFvz955qIfJ/b4=",
   "Source": "Aetherium",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,7 +10,7 @@
     {
       "Name": "Aetherium\\wwwroot",
       "Source": "Aetherium",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "C:\\Users\\gelli\\.nuget\\packages\\blazored.toast\\4.2.0\\staticwebassets\\Blazored.Toast.bundle.scp.css"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css",
       "SourceId": "Aetherium",
       "SourceType": "Computed",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "Aetherium.styles.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css"
+      "OriginalItemSpec": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Aetherium.styles.css"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Aetherium.bundle.scp.css",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Aetherium.bundle.scp.css",
       "SourceId": "Aetherium",
       "SourceType": "Computed",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "Aetherium.bundle.scp.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "G:\\#Github#\\Palhub\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Aetherium.bundle.scp.css"
+      "OriginalItemSpec": "G:\\#Github#\\Aetherium\\src\\Aetherium\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Aetherium.bundle.scp.css"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\css\\app.css",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\app.css",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.css"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\favicon.png",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\favicon.png",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "images/bannerlogo.png",
       "AssetKind": "All",
@@ -150,10 +150,29 @@
       "OriginalItemSpec": "wwwroot\\images\\bannerlogo.png"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\images\\logo.png",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo-alt.png",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/bannerlogo-alt.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bannerlogo-alt.png"
+    },
+    {
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\logo.png",
+      "SourceId": "Aetherium",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -169,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\index.html",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\index.html",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -188,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -207,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
       "SourceId": "Aetherium",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\#Github#\\Palhub\\src\\Aetherium\\wwwroot\\",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "js/sessionStorageInterop.js",
       "AssetKind": "All",

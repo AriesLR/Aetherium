@@ -9,93 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Aetherium
 build_property.RootNamespace = Aetherium
-build_property.ProjectDir = G:\#Github#\Palhub\src\Aetherium\
+build_property.ProjectDir = G:\#Github#\Aetherium\src\Aetherium\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\#Github#\Palhub\src\Aetherium
+build_property.MSBuildProjectDirectory = G:\#Github#\Aetherium\src\Aetherium
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/App.xaml]
+[G:/\#Github\#/Aetherium/src/Aetherium/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Aetherium.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/MainPage.xaml]
+[G:/\#Github\#/Aetherium/src/Aetherium/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Aetherium.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Pages/Config.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Pages/Config.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25maWcucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Pages/Home.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Pages/Rcon.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Pages/Rcon.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSY29uLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Pages/Server.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Pages/Server.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJ2ZXIucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Pages/Settings.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Pages/Settings.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXR0aW5ncy5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Routes.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Routes.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/_Imports.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/_Imports.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Layout/MainLayout.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = b-na97djipdv
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Layout/NavMenu.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = b-3bdwor1p2n
 
-[G:/\#Github\#/Palhub/src/Aetherium/Components/Layout/ProcessMonitor.razor]
+[G:/\#Github\#/Aetherium/src/Aetherium/Components/Layout/ProcessMonitor.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUHJvY2Vzc01vbml0b3IucmF6b3I=

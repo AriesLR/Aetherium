@@ -225,6 +225,15 @@ h1:focus {
     background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0 0) !important;
 }
 
+/* Home.razor */
+.home-banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
 /* Config.razor */
 
 .configheaderpaths {
