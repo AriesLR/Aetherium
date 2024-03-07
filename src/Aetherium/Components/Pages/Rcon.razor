@@ -1,0 +1,171 @@
+﻿@page "/rcon"
+@using CoreRCON;
+@using System.Diagnostics;
+@using System.Net;
+@using System.Text.Json;
+@using System.IO;
+@using Aetherium.Components.Shared;
+@inject IJSRuntime JSRuntime
+@inject IToastService toastService
+
+
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <h5>RCON Console</h5>
+            <textarea class="form-control" rows="10" readonly style="background-color: rgb(255, 255, 255, 0.10); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.15); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@output</textarea>
+        </div>
+        <div class="row">
+            <input type="text" class="form-control rcon-input mt-1 mb-1" placeholder="Enter RCON command" @bind="command">
+            <button class="btn btn-primary btn-sm mt-1" @onclick="SendCommandAsync">Send</button>
+        </div>
+        <div class="row">
+            <button class="btn btn-success btn-sm mt-1" @onclick="ConnectAsync">Connect</button>
+            <button class="btn btn-danger btn-sm mt-1" @onclick="Disconnect">Disconnect</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Configuration configuration = new Configuration();
+    private RCON? rcon;
+    private string command = "";
+    private string? output = "";
+    private bool isConnected = false;
+    private List<string> ConfigNames = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        LoadConfigurations();
+
+        // Retrieve server output from session storage
+        output = await GetItem("output");
+    }
+
+    private void LoadConfigurations()
+    {
+        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
+        if (File.Exists(appSettingsPath))
+        {
+            try
+            {
+                string json = File.ReadAllText(appSettingsPath);
+                var jsonObject = JsonDocument.Parse(json).RootElement;
+                if (jsonObject.TryGetProperty("ConfigNames", out JsonElement configNamesElement))
+                {
+                    ConfigNames = JsonSerializer.Deserialize<List<string>>(configNamesElement.GetRawText());
+                }
+                else
+                {
+                    Debug.WriteLine("ConfigNames property not found in appsettings.json.");
+                    toastService.ShowError("ConfigNames property not found in appsettings.json.");
+                }
+                if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
+                {
+                    configuration.ConfigName = selectedConfigElement.GetString();
+                }
+                else
+                {
+                    Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
+                    toastService.ShowError("SelectedConfig property not found in appsettings.json.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
+                toastService.ShowError($"Error loading appsettings file: {ex.Message}");
+            }
+        }
+        else
+        {
+            Debug.WriteLine("appsettings.json file not found.");
+            toastService.ShowError("appsettings.json file not found.");
+        }
+    }
+
+    private async Task ConnectAsync()
+    {
+        var config = await LoadConfigAsync();
+        if (config != null)
+        {
+            try
+            {
+                rcon = new RCON(IPAddress.Parse(config.RconIp), ushort.Parse(config.RconPort), config.AdminPassword);
+                await rcon.ConnectAsync();
+                isConnected = true;
+                output += "[Rcon] Connected successfully.\n";
+                await SetItem("output", output);
+            }
+            catch (Exception ex)
+            {
+                output += $"[Rcon] Failed to connect: {ex.Message}\n";
+                await SetItem("output", output);
+            }
+        }
+        else
+        {
+            output += "[Rcon] Configuration not found.\n";
+            await SetItem("output", output);
+        }
+    }
+
+    private async Task SendCommandAsync()
+    {
+        if (isConnected && rcon != null && !string.IsNullOrWhiteSpace(command))
+        {
+            try
+            {
+                var response = await rcon.SendCommandAsync(command);
+                output += $"\n{response}";
+                await SetItem("output", output);
+            }
+            catch (Exception ex)
+            {
+                output += $"Server: {ex.Message}\n";
+                await SetItem("output", output);
+            }
+        }
+        else if (!isConnected)
+        {
+            output += "[Rcon] Not connected.\n";
+            await SetItem("output", output);
+        }
+    }
+
+    private void Disconnect()
+    {
+        if (rcon != null)
+        {
+            rcon.Dispose();
+            isConnected = false;
+            output += "[Rcon] Disconnected successfully.\n";
+        }
+    }
+
+    private async Task SetItem(string key, string value)
+    {
+        await JSRuntime.InvokeVoidAsync("sessionStorageInterop.setItem", key, value);
+    }
+
+    private async Task<string?> GetItem(string key)
+    {
+        return await JSRuntime.InvokeAsync<string>("sessionStorageInterop.getItem", key);
+    }
+
+    private async Task<Configuration?> LoadConfigAsync()
+    {
+        var configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
+        if (!Directory.Exists(configFolderPath))
+        {
+            Directory.CreateDirectory(configFolderPath);
+        }
+
+        var configFilePath = Path.Combine(configFolderPath, $"{configuration.ConfigName}.json");
+        if (File.Exists(configFilePath))
+        {
+            string json = await File.ReadAllTextAsync(configFilePath);
+            return JsonSerializer.Deserialize<Configuration>(json);
+        }
+        return null;
+    }
+}
