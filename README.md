@@ -1,5 +1,7 @@
 # Aetherium: Streamlining Server Management
 
+![Aetherium Banner](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/bannerlogo.png)
+
  > [!CAUTION]  
 > Aetherium is currently in a pre-release stage.
 
@@ -89,10 +91,10 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 ### Example Configs
 
 #### Palworld
-![Palworld Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/palworldconfig.png)
+![Palworld Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/config/palworldconfig.png)
 
 #### Arma 3
-![Arma 3 Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/arma3config.png)
+![Arma 3 Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/config/arma3config.png)
 
 ## Acknowledgements
 - [CoreRCON](https://github.com/Challengermode/CoreRcon) - For the .NET Standard implementation of the Source RCON Protocol.
