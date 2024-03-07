@@ -52,7 +52,7 @@ To begin using Aetherium, you have the option to choose between an installer or 
 
 ### Installer Version:
 
-1. **Download and Install**: Download [Aetherium-Setup.exe](https://github.com/arieslr/Aetherium/releases/latest/download/Aetherium-Setup.exe). Run the installer and follow the on-screen instructions to complete the installation process.
+1. **Download and Install**: Download `Aetherium-Setup.exe` from the [Releases](https://github.com/arieslr/Aetherium/releases/latest) page. Run the installer and follow the on-screen instructions to complete the installation process.
 
 2. **Configure Your Server**: After installation, launch Aetherium and navigate to the configuration page to set up your server settings (see [Configuration](#configuration)).
 
@@ -60,7 +60,7 @@ To begin using Aetherium, you have the option to choose between an installer or 
 
 ### Portable Version:
 
-1. **Download and Extract**: Download [Aetherium-Portable.zip](https://github.com/arieslr/Aetherium/releases/latest/download/Aetherium-Portable.zip). Extract the contents of the downloaded ZIP file to a folder of your choice on your machine.
+1. **Download and Extract**: Download `Aetherium-Portable.zip` from the [Releases](https://github.com/arieslr/Aetherium/releases/latest) page. Extract the contents of the downloaded ZIP file to a folder of your choice on your machine.
 
 2. **Run Aetherium**: Navigate to the extracted Aetherium folder and run the Aetherium executable (Aetherium.exe) to launch the application.
 
