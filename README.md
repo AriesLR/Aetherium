@@ -1,5 +1,3 @@
-# Aetherium: Streamlining Server Management
-
 ![Aetherium Banner](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/bannerlogo.png)
 
  > [!CAUTION]  
