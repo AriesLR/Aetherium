@@ -10,18 +10,17 @@
 
 
 <div class="container">
-    <div class="col">
-        <div class="row">
+    <div class="row">
+        <div class="col">
             <h5>RCON Console</h5>
-            <textarea class="form-control" rows="10" readonly style="background-color: rgb(255, 255, 255, 0.10); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.15); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@output</textarea>
-        </div>
-        <div class="row">
-            <input type="text" class="form-control rcon-input mt-1 mb-1" placeholder="Enter RCON command" @bind="command">
-            <button class="btn btn-primary btn-sm mt-1" @onclick="SendCommandAsync">Send</button>
-        </div>
-        <div class="row">
-            <button class="btn btn-success btn-sm mt-1" @onclick="ConnectAsync">Connect</button>
-            <button class="btn btn-danger btn-sm mt-1" @onclick="Disconnect">Disconnect</button>
+            <textarea class="form-control" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@output</textarea>
+
+            <div class="input-group mt-1">
+                <button class="btn btn-success btn-sm rcon-button" @onclick="ConnectAsync">Connect</button>
+                <button class="btn btn-danger btn-sm rcon-button" @onclick="Disconnect">Disconnect</button>
+                <input type="text" class="form-control rcon-input" placeholder="Enter RCON command" @bind="command">
+                <button class="btn btn-primary btn-sm rcon-button" @onclick="SendCommandAsync">Send</button>
+            </div>
         </div>
     </div>
 </div>

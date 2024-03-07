@@ -5,19 +5,16 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    background-image: url(https://i.imgur.com/jTR7b91.png);
 }
 
 main[b-na97djipdv] {
     flex: 1;
-    background-image: url(https://i.imgur.com/LMynTpe.png);
-    background-color: #161616;
     color: white;
     padding: 1rem 1rem 1rem 1rem;
 }
 
 .sidebar[b-na97djipdv] {
-    background-color: #000000;
-    background-image: linear-gradient(180deg, rgb(25, 25, 25) 0%, rgb(40, 40, 40, 0.50) 100%);
     border-right: solid 1px;
     border-color: rgb(255, 255, 255, 0.10);
     width: 15rem;
@@ -27,8 +24,6 @@ main[b-na97djipdv] {
 }
 
 .rightsidebar[b-na97djipdv] {
-    background-color: #000000;
-    background-image: linear-gradient(180deg, rgb(25, 25, 25) 0%, rgb(40, 40, 40, 0.50) 100%);
     border-left: solid 1px;
     border-color: rgb(255, 255, 255, 0.10);
     width: 6rem;
@@ -48,15 +43,16 @@ main[b-na97djipdv] {
 .nav-item-text[b-3bdwor1p2n] {
     display: inline-block;
     position: center;
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255, 0.80);
 }
 
 .bi[b-3bdwor1p2n] {
     display: inline-block;
     position: center;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
     margin-right: 0.75rem;
     margin-left: 0.75rem;
     background-size: cover;
