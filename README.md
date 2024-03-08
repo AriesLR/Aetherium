@@ -89,6 +89,9 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 #### Arma 3
 ![Arma 3 Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/config/arma3config.png)
 
+#### Enshrouded
+![Enshrouded Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/config/enshroudedconfig.png)
+
 ## Acknowledgements
 - [CoreRCON](https://github.com/Challengermode/CoreRcon) - For the .NET Standard implementation of the Source RCON Protocol.
 
