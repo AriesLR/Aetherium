@@ -16,8 +16,8 @@
             <textarea class="form-control" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@output</textarea>
 
             <div class="input-group mt-1">
-                <button class="btn btn-success btn-sm rcon-button" @onclick="ConnectAsync">Connect</button>
-                <button class="btn btn-danger btn-sm rcon-button" @onclick="Disconnect">Disconnect</button>
+                <button class="btn btn-success bg-gradient btn-sm rcon-button" @onclick="ConnectAsync">Connect</button>
+                <button class="btn btn-danger bg-gradient btn-sm rcon-button" @onclick="Disconnect">Disconnect</button>
                 <input type="text" class="form-control rcon-input" placeholder="Enter RCON command" @bind="command">
                 <button class="btn btn-primary btn-sm rcon-button" @onclick="SendCommandAsync">Send</button>
             </div>
@@ -135,9 +135,17 @@
     {
         if (rcon != null)
         {
-            rcon.Dispose();
-            isConnected = false;
-            output += "[Rcon] Disconnected successfully.\n";
+            try
+            {
+                rcon.Dispose();
+                isConnected = false;
+                output += "[Rcon] Disconnected successfully.\n";
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"RCON is not connected: {ex.Message}");
+                toastService.ShowError($"RCON is not connected");
+            }
         }
     }
 

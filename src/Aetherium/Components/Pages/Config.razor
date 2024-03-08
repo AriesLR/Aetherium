@@ -16,15 +16,15 @@
                     <h4>File Paths</h4>
                     <div class="configcontainerpaths">
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Server Path</span>
+                            <span class="input-group-text configlabel">Server Path</span>
                             <input type="text" class="form-control" @bind-value="configuration.ServerPath" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Save Path</span>
+                            <span class="input-group-text configlabel">Save Path</span>
                             <input type="text" class="form-control" @bind-value="configuration.SavePath" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Backup Path</span>
+                            <span class="input-group-text configlabel">Backup Path</span>
                             <input type="text" class="form-control" @bind-value="configuration.BackupPath" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     <h4>Parameters</h4>
                     <div class="configcontainerparams">
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Launch Parameters</span>
+                            <span class="input-group-text configlabel">Launch Parameters</span>
                             <input type="text" class="form-control" @bind-value="configuration.LaunchParams" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
@@ -54,15 +54,15 @@
                     <h4>Rcon</h4>
                     <div class="configcontainer">
                         <div class="input-group mb-1">
-                            <span class="input-group-text">IP</span>
+                            <span class="input-group-text configlabel">IP</span>
                             <input type="text" class="form-control" @bind-value="configuration.RconIp" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Port</span>
+                            <span class="input-group-text configlabel">Port</span>
                             <input type="text" class="form-control" @bind-value="configuration.RconPort" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Admin Password</span>
+                            <span class="input-group-text configlabel">Admin Password</span>
                             <input type="password" class="form-control" @bind-value="configuration.AdminPassword" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
@@ -75,11 +75,11 @@
                     <h4>Intervals</h4>
                     <div class="configcontainer">
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Backup Interval (minutes)</span>
+                            <span class="input-group-text configlabel">Backup Interval (minutes)</span>
                             <input type="number" class="form-control" @bind-value="configuration.BackupInterval" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
-                            <span class="input-group-text">Restart Interval (minutes)</span>
+                            <span class="input-group-text configlabel">Restart Interval (minutes)</span>
                             <input type="number" class="form-control" @bind-value="configuration.RestartInterval" @onchange="SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
@@ -91,7 +91,7 @@
         <div class="col">
             <div class="configswitcher">
                 <div class="input-group mt-1">
-                    <button class="btn btn-light btn-sm dropdown-toggle configbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-light bg-gradient btn-sm dropdown-toggle configbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @configuration.ConfigName
                     </button>
                     <ul class="dropdown-menu">
@@ -101,8 +101,8 @@
                         }
                     </ul>
                     <input type="text" class="form-control newconfigname" @bind="NewConfigName" placeholder="Enter new config name" />
-                    <button class="btn btn-success btn-sm configbutton" @onclick="AddNewConfig">Add Config</button>
-                    <button class="btn btn-danger btn-sm configbutton" @onclick="DeleteConfig">Delete Config</button>
+                    <button class="btn btn-success bg-gradient btn-sm configbutton" @onclick="AddNewConfig">Add Config</button>
+                    <button class="btn btn-danger bg-gradient btn-sm configbutton" @onclick="DeleteConfig">Delete Config</button>
                 </div>
             </div>
         </div>

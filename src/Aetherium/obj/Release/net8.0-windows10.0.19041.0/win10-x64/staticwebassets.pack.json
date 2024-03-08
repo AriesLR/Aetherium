@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
     },
     {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo-alt.png",
+      "PackagePath": "staticwebassets\\images\\bannerlogo-alt.png"
     },
     {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",

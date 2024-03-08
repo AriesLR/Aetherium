@@ -1,41 +1,52 @@
 .processcontainer {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding: 0.75rem 3.25rem 0.75rem 3.25rem;
 }
 
 .process-monitor {
-    display: block;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    display: inline-block;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: rgb(255, 255, 255, 0.05);
+    background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%);
+    width: 20rem;
 }
 
-.process-monitor-labeltext {
-    display: block;
-    position: center;
-    text-align: center;
-    margin-top: 0.5rem;
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-.process-monitor-usagetext {
-    display: block;
-    position: center;
-    text-align: center;
-    margin-top: 0.25rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #b7b7b7;
+.process-monitor-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .bi {
-    display: block;
-    position: center;
-    width: 3rem;
-    height: 3rem;
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
     background-size: cover;
+    justify-content: left;
+}
+
+.process-monitor-labeltext {
+    display: flex;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(255, 255, 255, 0.90);
+    width: 10rem;
+}
+
+.process-monitor-usagetext {
+    display: flex;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgb(255, 255, 255, 0.80);
+    width: 4.5rem;
+    justify-content: right;
+}
+
+.process-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bi-cpu-fill-process-monitor {

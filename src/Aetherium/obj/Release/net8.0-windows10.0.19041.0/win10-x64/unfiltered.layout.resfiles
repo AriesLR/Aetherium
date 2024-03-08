@@ -59,7 +59,9 @@ wwwroot\Aetherium.bundle.scp.css
 AboutAssets.txt
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.css
+wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\favicon.png
+wwwroot\images\bannerlogo-alt.png
 wwwroot\images\bannerlogo.png
 wwwroot\images\logo.png
 wwwroot\index.html

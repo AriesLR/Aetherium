@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q3lcLWlVq/2OebdVtJT1zDlA5yPLtBFvz955qIfJ/b4=",
+  "Hash": "WnxdibZBUFiSBThdt/uUaz1e6riD8xgPjRJJzjFWHjU=",
   "Source": "Aetherium",
   "BasePath": "/",
   "Mode": "Root",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "SourceId": "Aetherium",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/bootstrap/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
       "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\favicon.png",

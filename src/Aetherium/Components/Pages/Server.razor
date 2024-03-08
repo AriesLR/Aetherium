@@ -7,46 +7,50 @@
 @using System.Threading;
 @using System.Threading.Tasks;
 @using Aetherium.Components.Shared;
+@using Aetherium.Components.Pages;
 @inject IJSRuntime JSRuntime
 @inject IToastService toastService
 
 
 <div class="container">
-    <div class="row mt-3">
+    <div class="row">
         <div class="col">
             <h5>Server Output</h5>
             <textarea class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@serverOutput</textarea>
         </div>
     </div>
-    <div class="row mb-3">
-        <div class="col">
-            <button class="btn btn-success btn-sm" @onclick="StartServerAsync" disabled="@((serverProcess != null && !serverProcess.HasExited) || serverStarting)">Start Server</button>
-            <button class="btn btn-danger btn-sm" @onclick="StopServer" disabled="@((serverProcess == null || serverProcess.HasExited) || serverStopping)">Stop Server</button>
-        </div>
-        <div class="col text-end">
-            <span class="badge bg-@(serverProcess != null && !serverProcess.HasExited ? "success" : "danger")">
-                @((serverProcess != null && !serverProcess.HasExited) ? "Server Running" : "Server Off")
-            </span>
+    <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+            <button class="btn btn-success bg-gradient btn-sm m-1" @onclick="StartServerAsync" disabled="@((serverProcess != null && !serverProcess.HasExited) || serverStarting)">Start Server</button>
+            <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="StopServer" disabled="@((serverProcess == null || serverProcess.HasExited) || serverStopping)">Stop Server</button>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <label class="form-check-label">
-                Automatic Restarts:
-                <div class="form-check form-switch">
-                    <input type="checkbox" class="form-check-input" checked="@automaticRestarts" @onchange="ToggleRestart">
+        <div class="col d-flex justify-content-center">
+            <div class="togglebg">
+                <div class="togglecontents">
+                    <div class="toggle-label">
+                        <span>Automatic Restarts</span>
+                    </div>
+                    <div class="form-check form-switch toggle-switch">
+                        <input type="checkbox" class="form-check-input" checked="@automaticRestarts" @onchange="ToggleRestart">
+                    </div>
                 </div>
-            </label>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <label class="form-check-label">
-                Save Backups:
-                <div class="form-check form-switch">
-                    <input type="checkbox" class="form-check-input" checked="@saveBackupsEnabled" @onchange="ToggleSaveBackups">
+        <div class="col d-flex justify-content-center">
+            <div class="togglebg">
+                <div class="togglecontents">
+                    <div class="toggle-label">
+                        <span>Save Backups</span>
+                    </div>
+                    <div class="form-check form-switch toggle-switch">
+                        <input type="checkbox" class="form-check-input" checked="@saveBackupsEnabled" @onchange="ToggleSaveBackups">
+                    </div>
                 </div>
-            </label>
+            </div>
         </div>
     </div>
 </div>

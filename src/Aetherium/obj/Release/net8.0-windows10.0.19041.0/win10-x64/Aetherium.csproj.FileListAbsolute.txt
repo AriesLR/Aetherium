@@ -874,3 +874,5 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\bannerlogo-alt.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css

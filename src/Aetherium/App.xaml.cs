@@ -7,6 +7,7 @@ using Aetherium.Components.Pages;
 using System.Diagnostics;
 using Aetherium.Components.Layout;
 using static Aetherium.Components.Layout.ProcessMonitor;
+using Microsoft.Maui.Devices;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -25,6 +26,16 @@ namespace Aetherium
         protected override Window CreateWindow(IActivationState? activationState)
         {
             Window window = base.CreateWindow(activationState);
+
+            var displayInfo = DeviceDisplay.Current.MainDisplayInfo;
+            window.Height = 750;
+            window.Width = 1450;
+            window.MinimumHeight = 750;
+            window.MinimumWidth = 1450;
+            window.MaximumHeight = 750;
+            window.MaximumWidth = 1450;
+            window.X = (displayInfo.Width / displayInfo.Density - window.Width) / 2;
+            window.Y = (displayInfo.Height / displayInfo.Density - window.Height) / 2;
 
             window.Destroying += (s, e) =>
             {

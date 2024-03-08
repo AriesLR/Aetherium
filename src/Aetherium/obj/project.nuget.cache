@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iyZF31oN5Oc6WJQ5XhCeH1wPqOtYV0ByhIAljpIWadEFlmRQObBKFFoMk88BWINQA+FGPmmHNQt3r/YvWtKdSg==",
+  "dgSpecHash": "nc7h0qw8OuotUrkTCAlQqebmG+ET3qPHxreJrdnyxmEY/mDso5MMBXMZ4soDgtYMIW0Y32Aj9K9GFzuNT5kdDw==",
   "success": true,
   "projectFilePath": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,10 @@
     "C:\\Users\\gelli\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.2\\microsoft.netcore.app.runtime.win-x64.8.0.2.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.2.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.2\\microsoft.aspnetcore.app.runtime.win-x64.8.0.2.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\8.0.2\\microsoft.netcore.app.crossgen2.win-x64.8.0.2.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512"
   ],
   "logs": []

@@ -2,9 +2,6 @@
 
 # 
 
- > [!CAUTION]  
-> Aetherium is currently in a pre-release stage.
-
  #### Aetherium is your ultimate destination for streamlined game server management. Whether you're setting up a cozy gaming haven for friends on your local machine or harnessing the power of a Virtual Private Server (VPS), Aetherium empowers you every step of the way. Wave goodbye to clunky 'Start.bat' scripts and embrace the future of gaming with Aetherium at your side. Seamlessly launch, monitor, and maintain your game servers with ease.
 
 ## Table of Contents
@@ -12,7 +9,6 @@
 - [Prerequisites](#prerequisites)
 - [Features](#features)
 - [Planned Features](#planned-features)
-- [Known Issues](#known-issues)
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
 - [Acknowledgements](#acknowledgements)
@@ -43,10 +39,6 @@
 - Light Theme (Currently dark by default)
 - Multi-Server Support (Currently only supports 1 active server process)
 - UI Overhaul
-
-## Known Issues
-
-- Rcon disconnects when switching pages. (It's not a bug, it's a feature?)
 
 ## Getting Started
 

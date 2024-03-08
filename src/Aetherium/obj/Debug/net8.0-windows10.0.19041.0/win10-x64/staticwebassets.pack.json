@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
     },
     {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },

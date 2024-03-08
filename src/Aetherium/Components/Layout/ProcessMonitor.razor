@@ -3,21 +3,33 @@
 @using System.Threading.Tasks;
 @using Aetherium.Components.Pages;
 
-<div class="container processcontainer">
-    <div class="row">
-        <div class="col">
-            <div class="process-monitor">
-                <span class="bi bi-cpu-fill-process-monitor" aria-hidden="true" ></span>
-                <span class="process-monitor-labeltext">CPU <br /> Usage</span>
-                <span class="process-monitor-usagetext">@resourceMonitor?.CpuUsage%</span>
+<div class="container">
+    <div class="processcontainer">
+        <div class="row row-cols-3">
+            <div class="col d-flex justify-content-center">
+                <div class="process-monitor">
+                    <div class="process-monitor-container">
+                        <span class="bi bi-cpu-fill-process-monitor" aria-hidden="true"></span>
+                        <span class="process-monitor-labeltext">CPU Usage</span>
+                        <span class="process-monitor-usagetext">@resourceMonitor?.CpuUsage%</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="w-100"></div>
-        <div class="col">
-            <div class="process-monitor">
-                <span class="bi bi-memory-process-monitor" aria-hidden="true" height="32" width="32"></span>
-                <span class="process-monitor-labeltext">Memory <br /> Usage</span>
-                <span class="process-monitor-usagetext">@resourceMonitor?.MemoryUsageMB MB</span>
+            <div class="col d-flex justify-content-center">
+                <div class="process-status">
+                    <span class="badge bg-@(Server.serverProcess != null && !Server.serverProcess.HasExited ? "success" : "danger")">
+                        @((Server.serverProcess != null && !Server.serverProcess.HasExited) ? "Server Running" : "Server Off")
+                    </span>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="process-monitor">
+                    <div class="process-monitor-container">
+                        <span class="bi bi-memory-process-monitor" aria-hidden="true"></span>
+                        <span class="process-monitor-labeltext">Memory Usage</span>
+                        <span class="process-monitor-usagetext">@resourceMonitor?.MemoryUsageMB MB</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -45,14 +57,9 @@
             resourceMonitor = new ResourceMonitor(UpdateState); // Pass a reference to the UpdateState method
             await resourceMonitor.StartMonitoring(Server.serverProcess, 1); // Monitor every 1 second
 
-            // Wait until the server process is closed
-            while (Server.serverProcess != null && !Server.serverProcess.HasExited)
-            {
-                await Task.Delay(TimeSpan.FromSeconds(1)); // Delay for 1 second before checking again
-            }
-
             // Stop monitoring when the server process is closed
             resourceMonitor.Dispose();
+            UpdateState();
         }
     }
 
