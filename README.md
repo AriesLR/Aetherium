@@ -79,6 +79,7 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 | *Rcon* | Password | Password, Game Specific | `SuperSecurePassword123` |
 | *Intervals* | Backup Interval (Minutes) | Time, in minutes | `30` | 
 | *Intervals* | Restart Interval (Minutes) | Time, in minutes | `180` |
+###### That's a random IP, no need to worry thinking I intentionally put my own IP there.
 
 ### Example Configs
 
