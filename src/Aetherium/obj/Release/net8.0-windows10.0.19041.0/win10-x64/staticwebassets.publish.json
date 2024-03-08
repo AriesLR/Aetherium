@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oRJirdIU4XqqwlsqrD3erZKcMOTuBKi31C45XlvbA/c=",
+  "Hash": "LOv+aUg4LL+020TfvipUr5kfFd6V7ypr+Dbg7KzgR9M=",
   "Source": "Aetherium",
   "BasePath": "/",
   "Mode": "Root",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\scrollToBottom.js",
+      "SourceId": "Aetherium",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/scrollToBottom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\scrollToBottom.js"
     },
     {
       "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",

@@ -108,7 +108,11 @@
                 }
 
                 // Get CPU usage
-                CpuUsage = (int)cpuCounter.NextValue() / Environment.ProcessorCount;
+                double cpuUsage = (double)cpuCounter.NextValue() / Environment.ProcessorCount;
+                string formatCpuUsage = cpuUsage.ToString("0.0");
+                float cpuUsageFloat = float.Parse(formatCpuUsage);
+
+                CpuUsage = cpuUsageFloat;
 
                 // Get memory usage
                 MemoryUsageMB = (int)(ramCounter.NextValue() / (1024f * 1024f)); // Convert bytes to megabytes and cast to int

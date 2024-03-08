@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
     },
     {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\scrollToBottom.js",
+      "PackagePath": "staticwebassets\\js\\scrollToBottom.js"
+    },
+    {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
       "PackagePath": "staticwebassets\\js\\sessionStorageInterop.js"
     },

@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col">
             <h5>Server Output</h5>
-            <textarea class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@serverOutput</textarea>
+            <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@serverOutput</textarea>
         </div>
     </div>
     <div class="row mb-4">
@@ -218,6 +218,7 @@
                 if (!string.IsNullOrEmpty(e.Data))
                 {
                     serverOutput += e.Data + Environment.NewLine;
+                    await UpdateServerOutput();
                     await InvokeAsync(() => StateHasChanged()); // Update UI
                     await SetItem("serverOutput", serverOutput);
                 }
@@ -229,6 +230,7 @@
                 if (!string.IsNullOrEmpty(e.Data))
                 {
                     serverOutput += e.Data + Environment.NewLine;
+                    await UpdateServerOutput();
                     await InvokeAsync(() => StateHasChanged()); // Update UI
                     await SetItem("serverOutput", serverOutput);
                 }
@@ -252,6 +254,12 @@
             {
                 StartRestartTimer();
             }
+            // Start the backup timer if save backups are enabled
+            if (saveBackupsEnabled)
+            {
+                StartSaveBackups();
+                Debug.WriteLine("Starting Backups");
+            }
         }
         catch (Exception ex)
         {
@@ -262,6 +270,11 @@
         {
             serverStarting = false; // Re-enable start button
         }
+    }
+
+    private async Task UpdateServerOutput()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToBottom");
     }
 
     private void StopServer()
@@ -282,6 +295,10 @@
             // Stop the restart timer
             StopRestartTimer();
 
+            // Stop backup timer
+            StopBackupTimer();
+            Debug.WriteLine("Stopping Backups");
+
             serverStopping = false; // Re-enable stop button
         }
         else
@@ -296,34 +313,13 @@
         automaticRestarts = (bool)(e?.Value ?? false);
         configuration.AutomaticRestarts = automaticRestarts;
         SaveConfig();
-
-        if (automaticRestarts)
-        {
-            StartRestartTimer();
-        }
-        else
-        {
-            StopRestartTimer();
-        }
     }
 
     private void ToggleSaveBackups(ChangeEventArgs e)
     {
-        bool newValue = (bool)(e?.Value ?? false);
-        if (newValue == saveBackupsEnabled) return; // No change, return early
-
-        saveBackupsEnabled = newValue;
+        saveBackupsEnabled = (bool)(e?.Value ?? false);
         configuration.SaveBackupsEnabled = saveBackupsEnabled;
         SaveConfig();
-
-        if (saveBackupsEnabled)
-        {
-            StartSaveBackups(); // Start backup if enabled
-        }
-        else
-        {
-            StopBackupTimer(); // Stop backup if disabled
-        }
     }
 
     private void StartSaveBackups()
@@ -376,12 +372,13 @@
                 DirectoryCopy(saveFolderPath, tempBackupFolder, true);
 
                 // Compress the backup folder
-                string zipFileName = $"backup_{DateTime.Now:yyyyMMddHHmmss}.zip";
+                string zipFileName = $"{configuration.ConfigName}_backup_{DateTime.Now:MM-dd-yyyy-HHmm}.zip";
                 string zipFilePath = Path.Combine(backupFolderPath, zipFileName);
                 ZipFile.CreateFromDirectory(tempBackupFolder, zipFilePath);
 
                 // Remove the temporary backup folder
                 Directory.Delete(tempBackupFolder, true);
+
             }
             else
             {
