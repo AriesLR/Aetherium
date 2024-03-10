@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aetherium")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.9.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.9+73b2291a2b70f0493e585a31d1a30476c91345ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.9+056504997ccf79ab4f8948a3ae5f13a97c51705a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aetherium")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aetherium")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.9.0")]
