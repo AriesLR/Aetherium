@@ -1,4 +1,6 @@
-﻿using Blazored.Toast;
+﻿using Aetherium.Components.Functions.Config;
+using Blazored.Toast;
+using Blazored.Toast.Services;
 using Microsoft.Extensions.Logging;
 
 namespace Aetherium
@@ -21,10 +23,15 @@ namespace Aetherium
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            var app = builder.Build();
+
+            // Assign IToastService to the static property in AppServices
+            AppServices.ToastService = app.Services.GetService<IToastService>();
+
+            return app;
         }
     }
 }

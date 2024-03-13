@@ -4,149 +4,47 @@
 @using System.Net;
 @using System.Text.Json;
 @using System.IO;
-@using Aetherium.Components.Shared;
+@using Aetherium.Components.Functions;
+@using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Server;
 @inject IJSRuntime JSRuntime
-@inject IToastService toastService
 
 
 <div class="container">
     <div class="row">
         <div class="col">
             <h5>RCON Console</h5>
-            <textarea class="form-control" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@output</textarea>
+            <textarea id="outputTextarea" class="form-control" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.rconOutput</textarea>
 
             <div class="input-group mt-1">
-                <button class="btn btn-success bg-gradient btn-sm rcon-button" @onclick="ConnectAsync">Connect</button>
-                <button class="btn btn-danger bg-gradient btn-sm rcon-button" @onclick="Disconnect">Disconnect</button>
-                <input type="text" class="form-control rcon-input" placeholder="Enter RCON command" @bind="command">
-                <button class="btn btn-primary btn-sm rcon-button" @onclick="SendCommandAsync">Send</button>
+                <button class="btn btn-success bg-gradient btn-sm rcon-button" @onclick="RconConnect">Connect</button>
+                <button class="btn btn-danger bg-gradient btn-sm rcon-button" @onclick="RconDisconnect">Disconnect</button>
+                <input type="text" class="form-control rcon-input" placeholder="Enter RCON rconCommand" @bind="AppConfig.rconCommand">
+                <button class="btn btn-primary btn-sm rcon-button" @onclick="RconSendCommand">Send</button>
             </div>
         </div>
     </div>
 </div>
 
 @code {
-    private Configuration configuration = new Configuration();
-    private RCON? rcon;
-    private string command = "";
-    private string? output = "";
-    private bool isConnected = false;
-    private List<string> ConfigNames = new List<string>();
+
 
     protected override async Task OnInitializedAsync()
     {
-        LoadConfigurations();
+        AppSettingsLoad.LoadAppConfig();
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
 
-        // Retrieve server output from session storage
-        output = await GetItem("output");
+        AppConfig.rconOutput = await GetItem("rconOutput");
     }
 
-    private void LoadConfigurations()
+    // Scroll textarea and Update UI
+    private async void OutputUpdate()
     {
-        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-        if (File.Exists(appSettingsPath))
-        {
-            try
-            {
-                string json = File.ReadAllText(appSettingsPath);
-                var jsonObject = JsonDocument.Parse(json).RootElement;
-                if (jsonObject.TryGetProperty("ConfigNames", out JsonElement configNamesElement))
-                {
-                    ConfigNames = JsonSerializer.Deserialize<List<string>>(configNamesElement.GetRawText());
-                }
-                else
-                {
-                    Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                    toastService.ShowError("ConfigNames property not found in appsettings.json.");
-                }
-                if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
-                {
-                    configuration.ConfigName = selectedConfigElement.GetString();
-                }
-                else
-                {
-                    Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                    toastService.ShowError("SelectedConfig property not found in appsettings.json.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
-                toastService.ShowError($"Error loading appsettings file: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("appsettings.json file not found.");
-            toastService.ShowError("appsettings.json file not found.");
-        }
-    }
-
-    private async Task ConnectAsync()
-    {
-        var config = await LoadConfigAsync();
-        if (config != null)
-        {
-            try
-            {
-                rcon = new RCON(IPAddress.Parse(config.RconIp), ushort.Parse(config.RconPort), config.AdminPassword);
-                await rcon.ConnectAsync();
-                isConnected = true;
-                output += "[Rcon] Connected successfully.\n";
-                await SetItem("output", output);
-            }
-            catch (Exception ex)
-            {
-                output += $"[Rcon] Failed to connect: {ex.Message}\n";
-                await SetItem("output", output);
-            }
-        }
-        else
-        {
-            output += "[Rcon] Configuration not found.\n";
-            await SetItem("output", output);
-        }
-    }
-
-    private async Task SendCommandAsync()
-    {
-        if (isConnected && rcon != null && !string.IsNullOrWhiteSpace(command))
-        {
-            try
-            {
-                var response = await rcon.SendCommandAsync(command);
-                output += $"\n{response}";
-                await SetItem("output", output);
-            }
-            catch (Exception ex)
-            {
-                output += $"Server: {ex.Message}\n";
-                await SetItem("output", output);
-            }
-        }
-        else if (!isConnected)
-        {
-            output += "[Rcon] Not connected.\n";
-            await SetItem("output", output);
-        }
-    }
-
-    private void Disconnect()
-    {
-        if (rcon != null)
-        {
-            try
-            {
-                rcon.Dispose();
-                isConnected = false;
-                output += "[Rcon] Disconnected successfully.\n";
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"RCON is not connected: {ex.Message}");
-                toastService.ShowError($"RCON is not connected");
-            }
-        }
+        await JSRuntime.InvokeVoidAsync("scrollToBottom");
+        await InvokeAsync(StateHasChanged);
     }
 
     private async Task SetItem(string key, string value)
@@ -159,20 +57,71 @@
         return await JSRuntime.InvokeAsync<string>("sessionStorageInterop.getItem", key);
     }
 
-    private async Task<Configuration?> LoadConfigAsync()
+
+    public async Task RconConnect()
     {
-        var configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        if (!Directory.Exists(configFolderPath))
+        // Assuming AppConfig.rconIp, AppConfig.rconPort, and AppConfig.rconPassword are already populated
+        if (!string.IsNullOrWhiteSpace(AppConfig.rconIp) && !string.IsNullOrWhiteSpace(AppConfig.rconPort) && !string.IsNullOrWhiteSpace(AppConfig.rconPassword))
         {
-            Directory.CreateDirectory(configFolderPath);
+            try
+            {
+                AppConfig.rcon = new RCON(IPAddress.Parse(AppConfig.rconIp), ushort.Parse(AppConfig.rconPort), AppConfig.rconPassword);
+                await AppConfig.rcon.ConnectAsync();
+                AppConfig.isConnected = true;
+                AppConfig.rconOutput += "[Rcon] Connected successfully.\n";
+            }
+            catch (Exception ex)
+            {
+                AppConfig.rconOutput += $"[Rcon] Failed to connect: {ex.Message}\n";
+            }
+        }
+        else
+        {
+            AppConfig.rconOutput += "[Rcon] Configuration not found or incomplete.\n";
         }
 
-        var configFilePath = Path.Combine(configFolderPath, $"{configuration.ConfigName}.json");
-        if (File.Exists(configFilePath))
+        await SetItem("rconOutput", AppConfig.rconOutput);
+    }
+
+
+    private async Task RconSendCommand()
+    {
+        if (AppConfig.isConnected && AppConfig.rcon != null && !string.IsNullOrWhiteSpace(AppConfig.rconCommand))
         {
-            string json = await File.ReadAllTextAsync(configFilePath);
-            return JsonSerializer.Deserialize<Configuration>(json);
+            try
+            {
+                var response = await AppConfig.rcon.SendCommandAsync(AppConfig.rconCommand);
+                AppConfig.rconOutput += $"\n{response}";
+                await SetItem("rconOutput", AppConfig.rconOutput);
+            }
+            catch (Exception ex)
+            {
+                AppConfig.rconOutput += $"Server: {ex.Message}\n";
+                await SetItem("rconOutput", AppConfig.rconOutput);
+            }
         }
-        return null;
+        else if (!AppConfig.isConnected)
+        {
+            AppConfig.rconOutput += "[Rcon] Not connected.\n";
+            await SetItem("rconOutput", AppConfig.rconOutput);
+        }
+    }
+
+    private void RconDisconnect()
+    {
+        if (AppConfig.rcon != null)
+        {
+            try
+            {
+                AppConfig.rcon.Dispose();
+                AppConfig.isConnected = false;
+                AppConfig.rconOutput += "[Rcon] Disconnected successfully.\n";
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"RCON is not connected: {ex.Message}");
+                AppServices.ToastService.ShowError($"RCON is not connected");
+            }
+        }
     }
 }

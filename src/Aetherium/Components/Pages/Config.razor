@@ -5,7 +5,8 @@
 @using System.IO;
 @using System.Linq;
 @using System.Text.Json;
-@using Aetherium.Components.Shared;
+@using Aetherium.Components.Functions;
+@using Aetherium.Components.Functions.Config;
 @inject IToastService toastService
 
 <div class="container text-center">
@@ -17,15 +18,15 @@
                     <div class="configcontainerpaths">
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Server Path</span>
-                            <input type="text" class="form-control" @bind-value="configuration.ServerPath" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.ServerPath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Save Path</span>
-                            <input type="text" class="form-control" @bind-value="configuration.SavePath" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.SavePath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Backup Path</span>
-                            <input type="text" class="form-control" @bind-value="configuration.BackupPath" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.BackupPath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
                 </div>
@@ -40,7 +41,7 @@
                     <div class="configcontainerparams">
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Launch Parameters</span>
-                            <input type="text" class="form-control" @bind-value="configuration.LaunchParams" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.LaunchParams" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
                 </div>
@@ -55,15 +56,15 @@
                     <div class="configcontainer">
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">IP</span>
-                            <input type="text" class="form-control" @bind-value="configuration.RconIp" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.RconIp" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Port</span>
-                            <input type="text" class="form-control" @bind-value="configuration.RconPort" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="text" class="form-control" @bind-value="Configuration.Instance.RconPort" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Admin Password</span>
-                            <input type="password" class="form-control" @bind-value="configuration.AdminPassword" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="password" class="form-control" @bind-value="Configuration.Instance.AdminPassword" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
                 </div>
@@ -76,11 +77,11 @@
                     <div class="configcontainer">
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Backup Interval (minutes)</span>
-                            <input type="number" class="form-control" @bind-value="configuration.BackupInterval" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="number" class="form-control" @bind-value="Configuration.Instance.BackupInterval" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text configlabel">Restart Interval (minutes)</span>
-                            <input type="number" class="form-control" @bind-value="configuration.RestartInterval" @onchange="SaveConfig" @bind-value:event="oninput" />
+                            <input type="number" class="form-control" @bind-value="Configuration.Instance.RestartInterval" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         </div>
                     </div>
                 </div>
@@ -92,17 +93,17 @@
             <div class="configswitcher">
                 <div class="input-group mt-1">
                     <button class="btn btn-light bg-gradient btn-sm dropdown-toggle configbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        @configuration.ConfigName
+                        @Configuration.Instance.ConfigName
                     </button>
                     <ul class="dropdown-menu">
-                        @foreach (var configName in ConfigNames)
+                        @foreach (var configName in AppConfig.ConfigNames)
                         {
-                            <li><button class="dropdown-item" @onclick="() => LoadConfig(configName)">@configName</button></li>
+                            <li><button class="dropdown-item" @onclick="() => ServerConfigsLoad.LoadServerConfig(configName)">@configName</button></li>
                         }
                     </ul>
-                    <input type="text" class="form-control newconfigname" @bind="NewConfigName" placeholder="Enter new config name" />
-                    <button class="btn btn-success bg-gradient btn-sm configbutton" @onclick="AddNewConfig">Add Config</button>
-                    <button class="btn btn-danger bg-gradient btn-sm configbutton" @onclick="DeleteConfig">Delete Config</button>
+                    <input type="text" class="form-control newconfigname" @bind="AppConfig.NewConfigName" placeholder="Enter new config name" />
+                    <button class="btn btn-success bg-gradient btn-sm configbutton" @onclick="ServerConfigsAdd.AddNewConfig">Add Config</button>
+                    <button class="btn btn-danger bg-gradient btn-sm configbutton" @onclick="ServerConfigsDelete.DeleteConfig">Delete Config</button>
                 </div>
             </div>
         </div>
@@ -110,383 +111,13 @@
 </div>
 
 @code {
-    private Configuration configuration = new Configuration();
-    private List<string> ConfigNames = new List<string>(); // List to store configuration names
-    private string NewConfigName;
-
     protected override void OnInitialized()
     {
-        InitializeAppSettings(); // Create appsettings.json if it doesn't exist
-        LoadConfigurations(); // Load existing configurations
-        LoadConfig(configuration.ConfigName); // Load selected configuration
-    }
-
-    private void InitializeAppSettings()
-    {
-        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-        if (!File.Exists(appSettingsPath))
+        AppSettingsInit.InitAppSettings(); // Create appsettings.json if it doesn't exist
+        AppSettingsLoad.LoadAppConfig(); // Load existing Configurations     
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
         {
-            // Create appsettings.json with default configuration names and selected config
-            var settings = new
-            {
-                ConfigNames = new List<string> { "Default" },
-                SelectedConfig = "Default"
-            };
-            var json = JsonSerializer.Serialize(settings);
-            File.WriteAllText(appSettingsPath, json);
-
-            // Create default configuration file if it doesn't exist
-            CreateNewConfigFile("Default");
-        }
-        else
-        {
-            // Check if the default configuration exists, if not, create it
-            string defaultConfigPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "Default.json");
-            if (!File.Exists(defaultConfigPath))
-            {
-                CreateNewConfigFile("Default");
-            }
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
         }
     }
-
-
-
-    private void LoadConfigurations()
-    {
-        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-        if (File.Exists(appSettingsPath))
-        {
-            try
-            {
-                string json = File.ReadAllText(appSettingsPath);
-                var jsonObject = JsonDocument.Parse(json).RootElement;
-                if (jsonObject.TryGetProperty("ConfigNames", out JsonElement configNamesElement))
-                {
-                    ConfigNames = JsonSerializer.Deserialize<List<string>>(configNamesElement.GetRawText());
-                }
-                else
-                {
-                    Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                    toastService.ShowError("ConfigNames property not found in appsettings.json.");
-                }
-                if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
-                {
-                    configuration.ConfigName = selectedConfigElement.GetString();
-                }
-                else
-                {
-                    Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                    toastService.ShowError("SelectedConfig property not found in appsettings.json.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
-                toastService.ShowError($"Error loading appsettings file: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("appsettings.json file not found.");
-            toastService.ShowError("appsettings.json file not found.");
-        }
-    }
-
-
-
-
-    private void AddNewConfig()
-    {
-        if (!string.IsNullOrWhiteSpace(NewConfigName))
-        {
-            if (!ConfigNames.Contains(NewConfigName))
-            {
-                ConfigNames.Add(NewConfigName);
-                SaveConfigNames(); // Save the updated list of configuration names
-                CreateNewConfigFile(NewConfigName); // Create a new configuration file
-
-                // Reload configurations to update the ConfigNames list
-                LoadConfigurations();
-
-                // Set the newly added configuration as the selected one
-                configuration.ConfigName = NewConfigName;
-
-                // Update the UI
-                StateHasChanged();
-            }
-            else
-            {
-                Debug.WriteLine($"Configuration '{NewConfigName}' already exists.");
-                toastService.ShowError($"Configuration '{NewConfigName}' already exists.");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("Please enter a valid configuration name.");
-            toastService.ShowError("Please enter a valid configuration name.");
-        }
-        NewConfigName = string.Empty;
-    }
-
-
-
-
-    private void SaveConfigNames()
-    {
-        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-        if (File.Exists(appSettingsPath))
-        {
-            try
-            {
-                // Read the existing appsettings.json file
-                string json = File.ReadAllText(appSettingsPath);
-                var appSettingsObject = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
-
-                // Update the ConfigNames property with the updated list of config names
-                if (appSettingsObject.ContainsKey("ConfigNames"))
-                {
-                    var existingConfigNames = ((JsonElement)appSettingsObject["ConfigNames"]).EnumerateArray().Select(x => x.GetString()).ToList();
-                    foreach (var newConfigName in ConfigNames)
-                    {
-                        if (!existingConfigNames.Contains(newConfigName))
-                        {
-                            existingConfigNames.Add(newConfigName);
-                        }
-                    }
-                    appSettingsObject["ConfigNames"] = existingConfigNames;
-                }
-                else
-                {
-                    appSettingsObject.Add("ConfigNames", ConfigNames);
-                }
-
-                // Write the updated JSON back to the appsettings.json file
-                json = JsonSerializer.Serialize(appSettingsObject, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(appSettingsPath, json);
-
-                Debug.WriteLine("ConfigNames updated in appsettings.json.");
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                toastService.ShowError($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("appsettings.json file not found.");
-            toastService.ShowError("appsettings.json file not found.");
-        }
-    }
-
-    private void CreateNewConfigFile(string configName)
-    {
-        string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        if (!Directory.Exists(configFolderPath))
-        {
-            Directory.CreateDirectory(configFolderPath);
-        }
-
-        string configFilePath = Path.Combine(configFolderPath, $"{configName}.json");
-        if (!File.Exists(configFilePath))
-        {
-            try
-            {
-                // Create a new configuration file with default settings
-                var defaultConfig = new Configuration { ConfigName = configName };
-                var json = JsonSerializer.Serialize(defaultConfig);
-                File.WriteAllText(configFilePath, json);
-                Debug.WriteLine($"Configuration file '{configName}.json' created.");
-
-                // Add the new config name to the list of config names
-                ConfigNames.Add(configName);
-                SaveConfigNames(); // Save the updated list of configuration names
-
-                // Load the newly created configuration
-                LoadConfig(configName); // Load the newly added configuration
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error creating configuration file '{configName}.json': {ex.Message}");
-                toastService.ShowError($"Error creating configuration file '{configName}.json': {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine($"Configuration file '{configName}.json' already exists.");
-            toastService.ShowError($"Configuration file '{configName}.json' already exists.");
-        }
-    }
-
-
-
-    private void LoadConfig(string configName)
-    {
-        Debug.WriteLine($"Loading configuration: {configName}");
-        string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        string configFilePath = Path.Combine(configFolderPath, $"{configName}.json");
-        Debug.WriteLine($"Config file path: {configFilePath}");
-        if (File.Exists(configFilePath))
-        {
-            try
-            {
-                string json = File.ReadAllText(configFilePath);
-                configuration = JsonSerializer.Deserialize<Configuration>(json) ?? new Configuration();
-                configuration.ConfigName = configName;
-                Debug.WriteLine("Configuration loaded successfully.");
-                StateHasChanged(); // Update the UI
-
-                // Update SelectedConfig in appsettings.json
-                string appSettingsPath = Path.Combine(configFolderPath, "appsettings.json");
-                if (File.Exists(appSettingsPath))
-                {
-                    try
-                    {
-                        // Read the existing appsettings.json file
-                        string appSettingsJson = File.ReadAllText(appSettingsPath);
-                        var appSettingsObject = JsonSerializer.Deserialize<Dictionary<string, object>>(appSettingsJson);
-
-                        // Update the "SelectedConfig" property
-                        if (appSettingsObject.ContainsKey("SelectedConfig"))
-                        {
-                            appSettingsObject["SelectedConfig"] = configName;
-
-                            // Write the updated JSON back to the appsettings.json file
-                            appSettingsJson = JsonSerializer.Serialize(appSettingsObject, new JsonSerializerOptions { WriteIndented = true });
-                            File.WriteAllText(appSettingsPath, appSettingsJson);
-                            Debug.WriteLine("SelectedConfig updated in appsettings.json.");
-                        }
-                        else
-                        {
-                            Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                            toastService.ShowError("SelectedConfig property not found in appsettings.json.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine($"Error updating SelectedConfig in appsettings.json: {ex.Message}");
-                        toastService.ShowError($"Error updating SelectedConfig in appsettings.json: {ex.Message}");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine("appsettings.json file not found.");
-                    toastService.ShowError("appsettings.json file not found.");
-
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading config file: {ex.Message}");
-                toastService.ShowError($"Error loading config file: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("Config file does not exist.");
-            toastService.ShowError("Config file does not exist.");
-        }
-    }
-
-    private void SaveConfig()
-    {
-        string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        if (!Directory.Exists(configFolderPath))
-        {
-            Directory.CreateDirectory(configFolderPath);
-        }
-
-        string configFilePath = Path.Combine(configFolderPath, $"{configuration.ConfigName}.json");
-        var json = JsonSerializer.Serialize(configuration);
-        File.WriteAllText(configFilePath, json);
-        Debug.WriteLine("Configuration saved.");
-        toastService.ShowSuccess("Configuration saved successfully");
-    }
-
-    private void DeleteConfig()
-    {
-        if (!string.IsNullOrWhiteSpace(NewConfigName))
-        {
-            if (ConfigNames.Contains(NewConfigName))
-            {
-                // Remove the configuration from the list
-                ConfigNames.Remove(NewConfigName);
-
-                // Update appsettings.json with the updated ConfigNames list
-                string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-                if (File.Exists(appSettingsPath))
-                {
-                    try
-                    {
-                        // Read the existing appsettings.json file
-                        string json = File.ReadAllText(appSettingsPath);
-                        var appSettingsObject = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
-
-                        // Update the ConfigNames property with the updated list of config names
-                        if (appSettingsObject.ContainsKey("ConfigNames"))
-                        {
-                            // Convert the updated ConfigNames list to JsonElement
-                            var updatedConfigNamesJson = JsonSerializer.Deserialize<JsonElement>(JsonSerializer.Serialize(ConfigNames));
-                            appSettingsObject["ConfigNames"] = updatedConfigNamesJson;
-                        }
-                        else
-                        {
-                            Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                            toastService.ShowError("ConfigNames property not found in appsettings.json.");
-                        }
-
-                        // Write the updated JSON back to the appsettings.json file
-                        json = JsonSerializer.Serialize(appSettingsObject, new JsonSerializerOptions { WriteIndented = true });
-                        File.WriteAllText(appSettingsPath, json);
-                        Debug.WriteLine("ConfigNames updated in appsettings.json.");
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                        toastService.ShowError($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine("appsettings.json file not found.");
-                    toastService.ShowError("appsettings.json file not found.");
-                }
-
-                // Delete the configuration file
-                string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-                string configFilePath = Path.Combine(configFolderPath, $"{NewConfigName}.json");
-                if (File.Exists(configFilePath))
-                {
-                    File.Delete(configFilePath);
-                }
-
-                // If the deleted config is the currently loaded one, clear the configuration
-                if (configuration.ConfigName == NewConfigName)
-                {
-                    configuration = new Configuration();
-                }
-
-                // Automatically select the Default config
-                configuration.ConfigName = "Default";
-
-                // Load the Default config
-                LoadConfig(configuration.ConfigName);
-
-                // Update the UI
-                StateHasChanged();
-            }
-            else
-            {
-                Debug.WriteLine($"Configuration '{NewConfigName}' does not exist.");
-                toastService.ShowError($"Configuration '{NewConfigName}' does not exist.");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("Please enter a valid configuration name.");
-            toastService.ShowError("Please enter a valid configuration name.");
-        }
-        NewConfigName = string.Empty;
-    }
-
 }

@@ -27,8 +27,8 @@
         <ApplicationId>com.arieslr.aetherium</ApplicationId>
 
         <!-- Versions -->
-        <ApplicationDisplayVersion>0.0.2</ApplicationDisplayVersion>
-        <ApplicationVersion>2</ApplicationVersion>
+        <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
+        <ApplicationVersion>12</ApplicationVersion>
 
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
@@ -52,17 +52,17 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
       <ApplicationId>com.arieslr.aetherium</ApplicationId>
-      <ApplicationDisplayVersion>0.0.9</ApplicationDisplayVersion>
+      <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
       <ApplicationIdGuid>68E5DB6E-5DC1-4441-9860-F1833955CD39</ApplicationIdGuid>
-      <ApplicationVersion>9</ApplicationVersion>
+      <ApplicationVersion>12</ApplicationVersion>
       <ApplicationTitle>Aetherium</ApplicationTitle>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
       <ApplicationId>com.arieslr.aetherium</ApplicationId>
-      <ApplicationDisplayVersion>0.0.9</ApplicationDisplayVersion>
+      <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
       <ApplicationIdGuid>68E5DB6E-5DC1-4441-9860-F1833955CD39</ApplicationIdGuid>
-      <ApplicationVersion>9</ApplicationVersion>
+      <ApplicationVersion>12</ApplicationVersion>
       <ApplicationTitle>Aetherium</ApplicationTitle>
     </PropertyGroup>
 

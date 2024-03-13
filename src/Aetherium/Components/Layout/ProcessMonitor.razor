@@ -2,6 +2,9 @@
 @using System.Diagnostics;
 @using System.Threading.Tasks;
 @using Aetherium.Components.Pages;
+@using Aetherium.Components.Functions;
+@using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Server;
 
 <div class="container">
     <div class="processcontainer">
@@ -17,8 +20,8 @@
             </div>
             <div class="col d-flex justify-content-center">
                 <div class="process-status">
-                    <span class="badge bg-@(Server.serverProcess != null && !Server.serverProcess.HasExited ? "success" : "danger")">
-                        @((Server.serverProcess != null && !Server.serverProcess.HasExited) ? "Server Running" : "Server Off")
+                    <span class="badge bg-@(AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited ? "success" : "danger")">
+                        @((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) ? "Server Running" : "Server Off")
                     </span>
                 </div>
             </div>
@@ -48,14 +51,14 @@
         while (true)
         {
             // Wait until the server process is started
-            while (Server.serverProcess == null || Server.serverProcess.HasExited)
+            while (AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited)
             {
                 await Task.Delay(TimeSpan.FromSeconds(1)); // Delay for 1 second before checking again
             }
 
             // Once the process starts, initialize and start monitoring
             resourceMonitor = new ResourceMonitor(UpdateState); // Pass a reference to the UpdateState method
-            await resourceMonitor.StartMonitoring(Server.serverProcess, 1); // Monitor every 1 second
+            await resourceMonitor.StartMonitoring(AppConfig.serverProcess, 1); // Monitor every 1 second
 
             // Stop monitoring when the server process is closed
             resourceMonitor.Dispose();
@@ -85,8 +88,8 @@
         {
             this.updateStateAction = updateStateAction;
 
-            cpuCounter = new PerformanceCounter("Process", "% Processor Time", Server.serverProcess?.ProcessName);
-            ramCounter = new PerformanceCounter("Process", "Working Set", Server.serverProcess?.ProcessName);
+            cpuCounter = new PerformanceCounter("Process", "% Processor Time", AppConfig.serverProcess?.ProcessName);
+            ramCounter = new PerformanceCounter("Process", "Working Set", AppConfig.serverProcess?.ProcessName);
         }
 
         public async Task StartMonitoring(Process process, int intervalSeconds)
@@ -100,7 +103,7 @@
             {
                 await Task.Delay(TimeSpan.FromSeconds(intervalSeconds)); // Wait for the specified interval
 
-                if (Server.serverProcess == null || Server.serverProcess.HasExited)
+                if (AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited)
                 {
                     Console.WriteLine("Process is not running or has exited.");
                     StopMonitoring(); // Stop monitoring if the process has exited

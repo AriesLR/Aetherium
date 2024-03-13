@@ -7,27 +7,28 @@
 @using System.Text.Json;
 @using System.Threading;
 @using System.Threading.Tasks;
-@using Aetherium.Components.Shared;
 @using Aetherium.Components.Pages;
+@using Aetherium.Components.Functions;
+@using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Server;
 @inject IJSRuntime JSRuntime
-@inject IToastService toastService
 
 
 <div class="container">
     <div class="row">
         <div class="col">
             <h5>Server Output</h5>
-            <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@serverOutput</textarea>
+            <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.serverOutput</textarea>
             <div class="input-group mt-1">
-                <input type="text" class="form-control rcon-input" placeholder="Enter server input" @bind="serverInput">
-                <button class="btn btn-primary btn-sm rcon-button" @onclick="SendServerInput">Send</button>
+                <input type="text" class="form-control rcon-input" placeholder="Enter server input" @bind="AppConfig.serverInput">
+                <button class="btn btn-primary btn-sm rcon-button" @onclick="ServerInput.SendServerInput">Send</button>
             </div>
         </div>
     </div>
     <div class="row mb-4">
         <div class="col d-flex justify-content-center">
-            <button class="btn btn-success bg-gradient btn-sm m-1" @onclick="StartServerAsync" disabled="@((serverProcess != null && !serverProcess.HasExited) || serverStarting)">Start Server</button>
-            <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="StopServer" disabled="@((serverProcess == null || serverProcess.HasExited) || serverStopping)">Stop Server</button>
+            <button class="btn btn-success bg-gradient btn-sm m-1" @onclick="ServerStart.StartServer" disabled="@((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) || AppConfig.serverStarting)">Start Server</button>
+            <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="ServerStop.StopServer" disabled="@((AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited) || AppConfig.serverStopping)">Stop Server</button>
         </div>
     </div>
     <div class="row">
@@ -38,7 +39,7 @@
                         <span>Automatic Restarts</span>
                     </div>
                     <div class="form-check form-switch toggle-switch">
-                        <input type="checkbox" class="form-check-input" checked="@automaticRestarts" @onchange="ToggleRestart">
+                        <input type="checkbox" class="form-check-input" checked="@AppConfig.automaticRestarts" @onchange="RestartToggle.ToggleRestart">
                     </div>
                 </div>
             </div>
@@ -52,7 +53,7 @@
                         <span>Save Backups</span>
                     </div>
                     <div class="form-check form-switch toggle-switch">
-                        <input type="checkbox" class="form-check-input" checked="@saveBackupsEnabled" @onchange="ToggleSaveBackups">
+                        <input type="checkbox" class="form-check-input" checked="@AppConfig.saveBackupsEnabled" @onchange="BackupToggle.ToggleBackup">
                     </div>
                 </div>
             </div>
@@ -61,420 +62,58 @@
 </div>
 
 @code {
-    private string? launchParams;
-    private bool automaticRestarts;
-    private bool saveBackupsEnabled;
-    private Configuration configuration = new Configuration();
-    private string serverPath = "";
-    public static Process? serverProcess;
-    private Timer? restartTimer;
-    private string? serverOutput = "";
-    private string serverInput = "";
-    private bool serverStarting = false;
-    private bool serverStopping = false;
-    public System.Timers.Timer? backupTimer;
-    private List<string> ConfigNames = new List<string>();
-
     protected override async Task OnInitializedAsync()
     {
 
-        LoadConfigurations();
-        LoadConfig();
+        AppSettingsLoad.LoadAppConfig();
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
 
-        // Retrieve server output from session storage
-        serverOutput = await GetItem("serverOutput");
+        AppConfig.serverOutput = await GetItem("serverOutput");
+
+        ServerStart.OnOutputDataReceived += HandleOutputDataReceived;
+        ServerStart.OnErrorDataReceived += HandleErrorDataReceived;
+        ServerStart.OnProcessExited += HandleProcessExited;
     }
 
-    private void LoadConfigurations()
+    private void HandleOutputDataReceived(string data)
     {
-        string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
-        if (File.Exists(appSettingsPath))
+        if (!string.IsNullOrEmpty(data))
         {
-            try
-            {
-                string json = File.ReadAllText(appSettingsPath);
-                var jsonObject = JsonDocument.Parse(json).RootElement;
-                if (jsonObject.TryGetProperty("ConfigNames", out JsonElement configNamesElement))
-                {
-                    ConfigNames = JsonSerializer.Deserialize<List<string>>(configNamesElement.GetRawText());
-                }
-                else
-                {
-                    Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                    toastService.ShowError("ConfigNames property not found in appsettings.json.");
-                }
-                if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
-                {
-                    configuration.ConfigName = selectedConfigElement.GetString();
-                }
-                else
-                {
-                    Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                    toastService.ShowError("SelectedConfig property not found in appsettings.json.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
-                toastService.ShowError($"Error loading appsettings file: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("appsettings.json file not found.");
-            toastService.ShowError("appsettings.json file not found.");
+            AppConfig.serverOutput += data + Environment.NewLine;
+            var _ = SetItem("serverOutput", AppConfig.serverOutput);
+            OutputUpdate();
         }
     }
 
-    private void LoadConfig()
+    private void HandleErrorDataReceived(string data)
     {
-        string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        if (!Directory.Exists(configFolderPath))
+        if (!string.IsNullOrEmpty(data))
         {
-            Directory.CreateDirectory(configFolderPath);
-        }
-
-        string configFilePath = Path.Combine(configFolderPath, $"{configuration.ConfigName}.json");
-
-        // Check if the config file exists
-        if (File.Exists(configFilePath))
-        {
-            try
-            {
-                // Read the contents of the config file
-                string json = File.ReadAllText(configFilePath);
-
-                // Deserialize the JSON data into a Configuration object
-                configuration = JsonSerializer.Deserialize<Configuration>(json) ?? new Configuration();
-
-                // Load the automatic restarts status
-                automaticRestarts = configuration.AutomaticRestarts;
-
-                // Load the save backups status
-                saveBackupsEnabled = configuration.SaveBackupsEnabled;
-
-                // Load the launch parameters
-                launchParams = configuration.LaunchParams;
-
-                // Load the server path
-                serverPath = configuration.ServerPath;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading config file: {ex.Message}");
-                toastService.ShowError($"Error loading config file: {ex.Message}");
-            }
-        }
-        else
-        {
-            Debug.WriteLine("Configuration file not found.");
-            toastService.ShowError("Configuration file not found.");
+            AppConfig.serverOutput += data + Environment.NewLine;
+            var _ = SetItem("serverOutput", AppConfig.serverOutput);
+            OutputUpdate();
         }
     }
 
-    private async Task StartServerAsync()
+    // Method to handle process exit
+    private void HandleProcessExited()
     {
-        if (serverStarting)
-        {
-            return; // Prevent starting multiple instances
-        }
-
-        if (serverProcess != null && !serverProcess.HasExited)
-        {
-            Debug.WriteLine("Server is already running.");
-            toastService.ShowWarning("Server is already running.");
-            return;
-        }
-
-        if (string.IsNullOrEmpty(serverPath))
-        {
-            Debug.WriteLine("Server path is empty.");
-            toastService.ShowError("Server path is empty.");
-            return;
-        }
-
-        if (!File.Exists(serverPath))
-        {
-            Debug.WriteLine("Server executable not found.");
-            toastService.ShowError("Server executable not found.");
-            return;
-        }
-
-        try
-        {
-            serverStarting = true; // Disable start button while starting
-
-            serverProcess = new Process
-                {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = serverPath,
-                        Arguments = launchParams,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        RedirectStandardInput = true,
-                        UseShellExecute = false,
-                        CreateNoWindow = true
-                    },
-                    EnableRaisingEvents = true
-                };
-
-            // Attach event handler to capture output
-            serverProcess.OutputDataReceived += async (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    await InvokeAsync(() => StateHasChanged()); // Update UI
-                    serverOutput += e.Data + Environment.NewLine;
-                    await UpdateServerOutput();
-                    await InvokeAsync(() => StateHasChanged()); // Update UI
-                    await SetItem("serverOutput", serverOutput);
-                }
-            };
-
-            // Attach event handler to capture error output
-            serverProcess.ErrorDataReceived += async (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    await InvokeAsync(() => StateHasChanged()); // Update UI
-                    serverOutput += e.Data + Environment.NewLine;
-                    await UpdateServerOutput();
-                    await InvokeAsync(() => StateHasChanged()); // Update UI
-                    await SetItem("serverOutput", serverOutput);
-                }
-            };
-
-            // Event handler for process exit
-            serverProcess.Exited += (sender, e) =>
-            {
-                Debug.WriteLine("Server process exited.");
-                serverProcess.Dispose();
-                serverProcess = null;
-                InvokeAsync(() => StateHasChanged()); // Update UI
-            };
-
-            serverProcess.Start();
-            serverProcess.BeginOutputReadLine(); // Begin asynchronous read of standard output
-            serverProcess.BeginErrorReadLine(); // Begin asynchronous read of standard error
-
-            // Start the restart timer if automatic restarts are enabled
-            if (automaticRestarts)
-            {
-                StartRestartTimer();
-            }
-            // Start the backup timer if save backups are enabled
-            if (saveBackupsEnabled)
-            {
-                StartSaveBackups();
-                Debug.WriteLine("Starting Backups");
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error starting server: {ex.Message}");
-            toastService.ShowError($"Error starting server: {ex.Message}");
-        }
-        finally
-        {
-            serverStarting = false; // Re-enable start button
-        }
+        AppConfig.serverProcess.Dispose();
+        AppConfig.serverProcess = null;
+        InvokeAsync(StateHasChanged);
     }
 
-
-    private async Task UpdateServerOutput()
+    // Scroll textarea and Update UI
+    private async void OutputUpdate()
     {
         await JSRuntime.InvokeVoidAsync("scrollToBottom");
-        await InvokeAsync(() => StateHasChanged()); // Update UI
+        await InvokeAsync(StateHasChanged);
     }
 
-    private void StopServer()
-    {
-        if (serverStopping)
-        {
-            return; // Prevent stopping multiple times
-        }
-
-        if (serverProcess != null && !serverProcess.HasExited)
-        {
-            serverStopping = true; // Disable stop button while stopping
-
-            serverProcess.Kill();
-            serverProcess.Dispose();
-            serverProcess = null;
-
-            // Stop the restart timer
-            StopRestartTimer();
-
-            // Stop backup timer
-            StopBackupTimer();
-            Debug.WriteLine("Stopping Backups");
-
-            serverStopping = false; // Re-enable stop button
-        }
-        else
-        {
-            Debug.WriteLine("Server is not running.");
-            toastService.ShowWarning("Server is not running.");
-        }
-    }
-
-    private async Task SendServerInput()
-    {
-        try
-        {
-            if (serverProcess != null && !serverProcess.HasExited)
-            {
-                await serverProcess.StandardInput.WriteLineAsync(serverInput);
-                await serverProcess.StandardInput.FlushAsync();
-                serverInput = "";
-                await UpdateServerOutput();
-                await InvokeAsync(() => StateHasChanged());
-            }
-            else
-            {
-                // Handle the case when the server process is not running
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error sending server input: {ex.Message}");
-            toastService.ShowError($"Error sending server input: {ex.Message}");
-        }
-    }
-
-    private void ToggleRestart(ChangeEventArgs e)
-    {
-        automaticRestarts = (bool)(e?.Value ?? false);
-        configuration.AutomaticRestarts = automaticRestarts;
-        SaveConfig();
-    }
-
-    private void ToggleSaveBackups(ChangeEventArgs e)
-    {
-        saveBackupsEnabled = (bool)(e?.Value ?? false);
-        configuration.SaveBackupsEnabled = saveBackupsEnabled;
-        SaveConfig();
-    }
-
-    private void StartSaveBackups()
-    {
-        // Check if save backups are enabled
-        if (saveBackupsEnabled)
-        {
-            try
-            {
-                // Only start backup if the backup timer is not running
-                if (backupTimer == null)
-                {
-                    // Get the backup interval in minutes
-                    int backupIntervalMinutes = configuration.BackupInterval;
-
-                    // Create a new backup timer
-                    backupTimer = new System.Timers.Timer();
-                    backupTimer.Interval = backupIntervalMinutes * 60000; // Convert minutes to milliseconds
-                    backupTimer.Elapsed += async (sender, e) => await PerformBackup();
-                    backupTimer.AutoReset = true;
-                    backupTimer.Start();
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error starting save backups: {ex.Message}");
-                toastService.ShowError($"Error starting save backups: {ex.Message}");
-            }
-        }
-    }
-
-    private async Task PerformBackup()
-    {
-        try
-        {
-            // Get the backup path
-            string backupFolderPath = configuration.BackupPath;
-
-            // Construct the save folder path
-            string saveFolderPath = configuration.SavePath;
-
-            // Check if the save folder exists
-            if (Directory.Exists(saveFolderPath))
-            {
-                // Create a temporary folder for backup
-                string tempBackupFolder = Path.Combine(Path.GetTempPath(), "Aetherium_Backup_" + Guid.NewGuid().ToString());
-
-                // Copy the save folder to the temporary location
-                Directory.CreateDirectory(tempBackupFolder);
-                DirectoryCopy(saveFolderPath, tempBackupFolder, true);
-
-                // Compress the backup folder
-                string zipFileName = $"{configuration.ConfigName}_backup_{DateTime.Now:MM-dd-yyyy-HHmm}.zip";
-                string zipFilePath = Path.Combine(backupFolderPath, zipFileName);
-                ZipFile.CreateFromDirectory(tempBackupFolder, zipFilePath);
-
-                // Remove the temporary backup folder
-                Directory.Delete(tempBackupFolder, true);
-
-            }
-            else
-            {
-                Debug.WriteLine("Save folder not found.");
-                toastService.ShowError("Save folder not found.");
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error performing save backups: {ex.Message}");
-            toastService.ShowError($"Error performing save backups: {ex.Message}");
-        }
-    }
-
-    private void StopBackupTimer()
-    {
-        backupTimer?.Stop();
-        backupTimer?.Dispose();
-        backupTimer = null;
-    }
-
-    private void StartRestartTimer()
-    {
-        // Calculate the restart interval in milliseconds
-        int restartIntervalMs = configuration.RestartInterval * 60 * 1000;
-        restartTimer = new Timer(async (_) =>
-        {
-            if (serverProcess != null && !serverProcess.HasExited)
-            {
-                serverProcess.Kill();
-                await Task.Delay(10000); // Wait for 10 seconds
-                await StartServerAsync(); // Start the server
-            }
-        }, null, restartIntervalMs, restartIntervalMs);
-    }
-
-    private void StopRestartTimer()
-    {
-        restartTimer?.Dispose();
-    }
-
-    private void SaveConfig()
-    {
-        string configFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium");
-        if (!Directory.Exists(configFolderPath))
-        {
-            Directory.CreateDirectory(configFolderPath);
-        }
-
-        string configFilePath = Path.Combine(configFolderPath, $"{configuration.ConfigName}.json");
-
-        // Serialize the configuration data to JSON
-        var json = JsonSerializer.Serialize(configuration);
-
-        // Write the JSON to the config file
-        File.WriteAllText(configFilePath, json);
-        Debug.WriteLine("Configuration saved.");
-    }
-
-
-    private async Task SetItem(string key, string value)
+    private async Task SetItem(string key, string? value)
     {
         await JSRuntime.InvokeVoidAsync("sessionStorageInterop.setItem", key, value);
     }
@@ -484,55 +123,13 @@
         return await JSRuntime.InvokeAsync<string>("sessionStorageInterop.getItem", key);
     }
 
-
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
-
     protected virtual void Dispose(bool disposing)
     {
         if (disposing)
         {
             // Dispose managed resources
-            StopServer();
-            StopBackupTimer(); // Also stop the backup timer on dispose
-        }
-    }
-
-    // Helper method to copy directory
-    private void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
-    {
-        DirectoryInfo dir = new DirectoryInfo(sourceDirName);
-        DirectoryInfo[] dirs = dir.GetDirectories();
-
-        if (!dir.Exists)
-        {
-            throw new DirectoryNotFoundException(
-                "Source directory does not exist or could not be found: "
-                + sourceDirName);
-        }
-
-        if (!Directory.Exists(destDirName))
-        {
-            Directory.CreateDirectory(destDirName);
-        }
-
-        FileInfo[] files = dir.GetFiles();
-        foreach (FileInfo file in files)
-        {
-            string temppath = Path.Combine(destDirName, file.Name);
-            file.CopyTo(temppath, false);
-        }
-
-        if (copySubDirs)
-        {
-            foreach (DirectoryInfo subdir in dirs)
-            {
-                string temppath = Path.Combine(destDirName, subdir.Name);
-                DirectoryCopy(subdir.FullName, temppath, copySubDirs);
-            }
+            ServerStop.StopServer();
+            BackupTimerStop.StopBackupTimer(); // Also stop the backup timer on dispose
         }
     }
 }

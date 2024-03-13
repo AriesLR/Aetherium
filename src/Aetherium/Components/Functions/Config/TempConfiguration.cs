@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Aetherium.Components.Shared
+﻿namespace Aetherium.Components.Functions.Config
 {
-    public class Configuration
+    public class TempConfiguration
     {
-        public string ConfigName { get; set; } = "";
+        public string? ConfigName { get; set; } = "";
         public string ServerPath { get; set; } = "";
         public string BackupPath { get; set; } = "";
         public string SavePath { get; set; } = "";

@@ -4917,7 +4917,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.0.9",
+    "version": "0.1.2",
     "restore": {
       "projectUniqueName": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
       "projectName": "Aetherium",

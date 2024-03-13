@@ -1,13 +1,4 @@
-﻿using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Aetherium.Components.Pages;
-using System.Diagnostics;
-using Aetherium.Components.Layout;
-using static Aetherium.Components.Layout.ProcessMonitor;
-using Microsoft.Maui.Devices;
+﻿using Aetherium.Components.Functions.Config;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -39,21 +30,17 @@ namespace Aetherium
 
             window.Destroying += (s, e) =>
             {
-                // Create an instance of the Server class
-                var server = new Server();
-
-                // Access the backupTimer field through the instance
-                server.backupTimer?.Stop();
-                server.backupTimer?.Dispose();
-                server.backupTimer = null;
+                AppConfig.backupTimer?.Stop();
+                AppConfig.backupTimer?.Dispose();
+                AppConfig.backupTimer = null;
 
                 // Stop the server process if it's running
-                if (Server.serverProcess != null && !Server.serverProcess.HasExited)
+                if (AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited)
                 {
                     // Kill the server process
-                    Server.serverProcess.Kill();
-                    Server.serverProcess.Dispose();
-                    Server.serverProcess = null;
+                    AppConfig.serverProcess.Kill();
+                    AppConfig.serverProcess.Dispose();
+                    AppConfig.serverProcess = null;
                 }
             };
 
