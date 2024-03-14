@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Config
@@ -68,32 +69,32 @@ namespace Aetherium.Components.Functions.Config
                             else
                             {
                                 Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                                AppServices.ToastService.ShowError("SelectedConfig property not found in appsettings.json.");
+                                ToastService.Toast("SelectedConfig property not found in appsettings.json.", "");
                             }
                         }
                         catch (Exception ex)
                         {
                             Debug.WriteLine($"Error updating SelectedConfig in appsettings.json: {ex.Message}");
-                            AppServices.ToastService.ShowError($"Error updating SelectedConfig in appsettings.json: {ex.Message}");
+                            ToastService.Toast("Error updating SelectedConfig in appsettings.json:", ex.Message);
                         }
                     }
                     else
                     {
                         Debug.WriteLine("appsettings.json file not found.");
-                        AppServices.ToastService.ShowError("appsettings.json file not found.");
+                        ToastService.Toast("appsettings.json file not found.", "");
 
                     }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error loading config file: {ex.Message}");
-                    AppServices.ToastService.ShowError($"Error loading config file: {ex.Message}");
+                    ToastService.Toast("Error loading config file:", ex.Message);
                 }
             }
             else
             {
                 Debug.WriteLine("Config file does not exist.");
-                AppServices.ToastService.ShowError("Config file does not exist.");
+                ToastService.Toast("Config file does not exist.", "");
             }
         }
     }

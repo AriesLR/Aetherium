@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
 using System.IO.Compression;
 
@@ -38,13 +39,13 @@ namespace Aetherium.Components.Functions.Server
                 else
                 {
                     Debug.WriteLine("[DEBUG]: Save folder not found.");
-                    AppServices.ToastService.ShowError("Save folder not found.");
+                    ToastService.Toast("Save folder not found.", "");
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"[DEBUG]: Error performing save backups: {ex.Message}");
-                AppServices.ToastService.ShowError($"Error performing save backups: {ex.Message}");
+                ToastService.Toast("Error performing save backups:", ex.Message);
             }
         }
 

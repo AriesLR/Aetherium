@@ -49,10 +49,6 @@
       "PackagePath": "staticwebassets\\js\\scrollToBottom.js"
     },
     {
-      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\sessionStorageInterop.js",
-      "PackagePath": "staticwebassets\\js\\sessionStorageInterop.js"
-    },
-    {
       "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.Aetherium.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

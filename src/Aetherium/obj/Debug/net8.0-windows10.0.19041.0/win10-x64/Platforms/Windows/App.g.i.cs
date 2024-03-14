@@ -20,7 +20,7 @@ namespace Aetherium.WinUI
         [global::System.Runtime.InteropServices.DllImport("Microsoft.ui.xaml.dll")]
         private static extern void XamlCheckProcessRequirements();
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.STAThreadAttribute]
         static void Main(string[] args)
@@ -39,12 +39,12 @@ namespace Aetherium.WinUI
 
     partial class App : global::Microsoft.Maui.MauiWinUIApplication
     {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         private bool _contentLoaded;
         /// <summary>
         /// InitializeComponent()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void InitializeComponent()
         {
@@ -58,6 +58,12 @@ namespace Aetherium.WinUI
 
 #if DEBUG && !DISABLE_XAML_GENERATED_BINDING_DEBUG_OUTPUT
             DebugSettings.BindingFailed += (sender, args) =>
+            {
+                global::System.Diagnostics.Debug.WriteLine(args.Message);
+            };
+#endif
+#if DEBUG && !DISABLE_XAML_GENERATED_RESOURCE_REFERENCE_DEBUG_OUTPUT
+            DebugSettings.XamlResourceReferenceFailed  += (sender, args) =>
             {
                 global::System.Diagnostics.Debug.WriteLine(args.Message);
             };

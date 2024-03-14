@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Server
@@ -23,7 +24,7 @@ namespace Aetherium.Components.Functions.Server
             catch (Exception ex)
             {
                 Debug.WriteLine($"[DEBUG]: Error sending server input: {ex.Message}");
-                AppServices.ToastService.ShowError($"Error sending server input: {ex.Message}");
+                ToastService.Toast("Error sending server input:", ex.Message);
             }
         }
     }

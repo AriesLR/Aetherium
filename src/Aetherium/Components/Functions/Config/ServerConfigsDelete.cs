@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Config
@@ -34,7 +35,7 @@ namespace Aetherium.Components.Functions.Config
                             else
                             {
                                 Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                                AppServices.ToastService.ShowError("ConfigNames property not found in appsettings.json.");
+                                ToastService.Toast("ConfigNames property not found in appsettings.json.", "");
                             }
 
                             // Write the updated JSON back to the appsettings.json file
@@ -45,13 +46,13 @@ namespace Aetherium.Components.Functions.Config
                         catch (Exception ex)
                         {
                             Debug.WriteLine($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                            AppServices.ToastService.ShowError($"Error updating ConfigNames in appsettings.json: {ex.Message}");
+                            ToastService.Toast("Error updating ConfigNames in appsettings.json:", ex.Message);
                         }
                     }
                     else
                     {
                         Debug.WriteLine("appsettings.json file not found.");
-                        AppServices.ToastService.ShowError("appsettings.json file not found.");
+                        ToastService.Toast("appsettings.json file not found.", "");
                     }
 
                     // Delete the configuration file
@@ -80,13 +81,13 @@ namespace Aetherium.Components.Functions.Config
                 else
                 {
                     Debug.WriteLine($"Configuration '{AppConfig.NewConfigName}' does not exist.");
-                    AppServices.ToastService.ShowError($"Configuration '{AppConfig.NewConfigName}' does not exist.");
+                    ToastService.Toast($"Configuration '{AppConfig.NewConfigName}' does not exist.", "");
                 }
             }
             else
             {
                 Debug.WriteLine("Please enter a valid configuration name.");
-                AppServices.ToastService.ShowError("Please enter a valid configuration name.");
+                ToastService.Toast("Please enter a valid configuration name.", "");
             }
             AppConfig.NewConfigName = string.Empty;
         }

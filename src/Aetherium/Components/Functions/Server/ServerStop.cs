@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Server
@@ -41,7 +42,7 @@ namespace Aetherium.Components.Functions.Server
             else
             {
                 Debug.WriteLine("[DEBUG]: Server is not running.");
-                AppServices.ToastService.ShowWarning("Server is not running.");
+                ToastService.Toast("Server is not running.", "");
             }
         }
     }

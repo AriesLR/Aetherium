@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:deployment="http://schemas.microsoft.com/appx/manifest/deployment/windows10" IgnorableNamespaces="mp deployment" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="Microsoft.WindowsAppRuntime.1.3" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProcessorArchitecture="x64" Version="3000.934.1904.0" />
+  <Identity Name="Microsoft.WindowsAppRuntime.1.4" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProcessorArchitecture="x64" Version="4000.1136.2333.0" />
   <Properties>
     <Framework>true</Framework>
-    <DisplayName>WindowsAppRuntime.1.3</DisplayName>
+    <DisplayName>WindowsAppRuntime.1.4</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
-    <Description>Microsoft Windows App Runtime 1.3 (3000.934.1904.0 x64 )</Description>
+    <Description>Microsoft Windows App Runtime 1.4 (4000.1136.2333.0 x64 )</Description>
     <Logo>WindowsAppRuntime.png</Logo>
   </Properties>
   <Resources>
@@ -662,7 +662,6 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ColorPicker" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.CommandBarFlyout" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.DropDownButton" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ElementAnimator" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ElementFactory" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Expander" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.FlowLayout" ThreadingModel="both" />
@@ -674,12 +673,15 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.InfoBar" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemContainer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemsRepeater" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemsRepeaterScrollHost" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemsSourceView" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ItemsView" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LayoutPanel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LinedFlowLayout" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemCollectionTransitionProvider" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBar" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBarItem" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBarItemFlyout" ThreadingModel="both" />
@@ -714,7 +716,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.RepeatedScrollSnapPoint" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.RepeatedZoomSnapPoint" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerInteractionRequestedEventArgs" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter" ThreadingModel="both" />
@@ -734,8 +736,6 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.RefreshContainer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.RefreshVisualizer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.RevealListViewItemPresenter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.RiverFlowLayout" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.RiverFlowLayoutElementAnimator" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ScrollingScrollOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ScrollingZoomOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ScrollView" ThreadingModel="both" />
@@ -830,6 +830,7 @@
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
       <InProcessServer>
         <Path>CoreMessagingXP.dll</Path>
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Dispatching.DispatcherExitDeferral" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Dispatching.DispatcherQueue" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Dispatching.DispatcherQueueController" ThreadingModel="both" />
       </InProcessServer>
@@ -901,12 +902,23 @@
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
       <InProcessServer>
+        <Path>Microsoft.UI.dll</Path>
+        <ActivatableClass ActivatableClassId="Microsoft.UI.System.ThemeSettings" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+    <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+      <InProcessServer>
         <Path>Microsoft.UI.Input.dll</Path>
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentAppWindowBridge" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentCoordinates" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentCoordinateConverter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentExternalBackdropLink" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentExternalOutputLink" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentIsland" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentIslandEnvironment" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentSite" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentSiteEnvironment" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentSiteEnvironmentView" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ContentSiteView" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.CoreWindowSiteBridge" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.DesktopChildSiteBridge" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.DesktopSiteBridge" ThreadingModel="both" />
@@ -923,9 +935,11 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputCustomCursor" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputDesktopResourceCursor" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputDesktopNamedResourceCursor" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputFocusController" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputKeyboardSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputLightDismissAction" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputObject" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputPreTranslateKeyboardSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputNonClientPointerSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputPointerSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputSystemCursor" ThreadingModel="both" />
@@ -958,6 +972,14 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
+    <Extension Category="windows.activatableClass.proxyStub" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+      <ProxyStub ClassId="93022121-B6C9-4A22-90DB-763E24FD99E1">
+        <Path>Microsoft.Windows.Widgets.dll</Path>
+        <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProvider2" InterfaceId="38C3A963-DD93-479D-9276-04BF84EE1816" />
+        <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics" InterfaceId="661985A5-D187-482D-9EEF-6FDA05D21845" />
+        <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors" InterfaceId="90C1B5F0-0D3A-4AC6-ABB7-C97B367B8FCC" />
+      </ProxyStub>
+    </Extension>
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
       <InProcessServer>
         <Path>Microsoft.Windows.Widgets.dll</Path>
@@ -973,5 +995,5 @@
       </deployment:DeploymentExtensionHandler>
     </deployment:Extension>
   </Extensions>
-  <mp:PhoneIdentity PhoneProductId="22099139-f66c-4668-92b1-527ba739fcd4" PhonePublisherId="a8099e80-050d-411d-9b45-4ea107a7be6b" />
+  <mp:PhoneIdentity PhoneProductId="b9e8b971-ee94-4737-a270-9ed595dc59f3" PhonePublisherId="a8099e80-050d-411d-9b45-4ea107a7be6b" />
 </Package>

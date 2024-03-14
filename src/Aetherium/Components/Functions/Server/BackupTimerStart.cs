@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Server
@@ -29,7 +30,7 @@ namespace Aetherium.Components.Functions.Server
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"[DEBUG]: Error starting save backups: {ex.Message}");
-                    AppServices.ToastService.ShowError($"Error starting save backups: {ex.Message}");
+                    ToastService.Toast("Error starting save backups:", ex.Message);
                 }
             }
         }

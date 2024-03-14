@@ -1,7 +1,4 @@
-﻿using Aetherium.Components.Functions.Config;
-using Blazored.Toast;
-using Blazored.Toast.Services;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
 namespace Aetherium
 {
@@ -12,26 +9,19 @@ namespace Aetherium
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
             builder.Services.AddMauiBlazorWebView();
-            builder.Services.AddBlazoredToast();
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
             builder.Logging.AddDebug();
 #endif
 
-            var app = builder.Build();
-
-            // Assign IToastService to the static property in AppServices
-            AppServices.ToastService = app.Services.GetService<IToastService>();
-
-            return app;
+            return builder.Build();
         }
     }
 }

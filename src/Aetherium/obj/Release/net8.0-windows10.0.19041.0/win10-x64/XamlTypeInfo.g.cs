@@ -12,10 +12,10 @@ namespace Aetherium.WinUI
 {
     public partial class App : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         private global::Aetherium.Aetherium_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::Aetherium.Aetherium_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
@@ -32,7 +32,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXamlType(Type)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
@@ -42,7 +42,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXamlType(String)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
         {
@@ -52,7 +52,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXmlnsDefinitions()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.XmlnsDefinition[] GetXmlnsDefinitions()
         {
@@ -66,7 +66,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     /// <summary>
     /// Main class for providing metadata for the app or library
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
@@ -110,7 +110,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
@@ -224,7 +224,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[32];
+            _typeNameTable = new string[35];
             _typeNameTable[0] = "Microsoft.Maui.MauiWinUIApplication";
             _typeNameTable[1] = "Microsoft.UI.Xaml.Application";
             _typeNameTable[2] = "Microsoft.UI.Xaml.LaunchActivatedEventArgs";
@@ -257,8 +257,11 @@ namespace Aetherium.Aetherium_XamlTypeInfo
             _typeNameTable[29] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
             _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
             _typeNameTable[31] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[33] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[34] = "Int32";
 
-            _typeTable = new global::System.Type[32];
+            _typeTable = new global::System.Type[35];
             _typeTable[0] = typeof(global::Microsoft.Maui.MauiWinUIApplication);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Microsoft.UI.Xaml.LaunchActivatedEventArgs);
@@ -291,6 +294,9 @@ namespace Aetherium.Aetherium_XamlTypeInfo
             _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
             _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
             _typeTable[31] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[33] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[34] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -330,10 +336,17 @@ namespace Aetherium.Aetherium_XamlTypeInfo
         private object Activate_7_MauiNavigationView() { return new global::Microsoft.Maui.Platform.MauiNavigationView(); }
         private object Activate_8_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
         private object Activate_30_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
+        private object Activate_32_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void VectorAdd_19_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_33_IList(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
             collection.Add(newItem);
         }
 
@@ -562,6 +575,31 @@ namespace Aetherium.Aetherium_XamlTypeInfo
                 break;
 
             case 31:   //  Microsoft.UI.Xaml.DependencyObject
+                xamlType = new global::Aetherium.Aetherium_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 32:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+                userType = new global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_32_TreeViewNode;
+                userType.AddMemberName("Children");
+                userType.AddMemberName("Content");
+                userType.AddMemberName("Depth");
+                userType.AddMemberName("HasChildren");
+                userType.AddMemberName("HasUnrealizedChildren");
+                userType.AddMemberName("IsExpanded");
+                userType.AddMemberName("Parent");
+                userType.SetIsBindable();
+                xamlType = userType;
+                break;
+
+            case 33:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+                userType = new global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.CollectionAdd = VectorAdd_33_IList;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 34:   //  Int32
                 xamlType = new global::Aetherium.Aetherium_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -999,6 +1037,56 @@ namespace Aetherium.Aetherium_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.TemplateSettings;
         }
+        private object get_41_TreeViewNode_Children(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Children;
+        }
+        private object get_42_TreeViewNode_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Content;
+        }
+        private void set_42_TreeViewNode_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.Content = (global::System.Object)Value;
+        }
+        private object get_43_TreeViewNode_Depth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Depth;
+        }
+        private object get_44_TreeViewNode_HasChildren(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.HasChildren;
+        }
+        private object get_45_TreeViewNode_HasUnrealizedChildren(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.HasUnrealizedChildren;
+        }
+        private void set_45_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.HasUnrealizedChildren = (global::System.Boolean)Value;
+        }
+        private object get_46_TreeViewNode_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.IsExpanded;
+        }
+        private void set_46_TreeViewNode_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
+        }
+        private object get_47_TreeViewNode_Parent(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
+            return that.Parent;
+        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1291,12 +1379,58 @@ namespace Aetherium.Aetherium_XamlTypeInfo
                 xamlMember.Getter = get_40_NavigationView_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
+                xamlMember.Getter = get_41_TreeViewNode_Children;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "Content", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_42_TreeViewNode_Content;
+                xamlMember.Setter = set_42_TreeViewNode_Content;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_43_TreeViewNode_Depth;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_44_TreeViewNode_HasChildren;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
+                xamlMember.Getter = get_45_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_45_TreeViewNode_HasUnrealizedChildren;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_46_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_46_TreeViewNode_IsExpanded;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
+                userType = (global::Aetherium.Aetherium_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember = new global::Aetherium.Aetherium_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
+                xamlMember.Getter = get_47_TreeViewNode_Parent;
+                xamlMember.SetIsReadOnly();
+                break;
             }
             return xamlMember;
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlSystemBaseType : global::Microsoft.UI.Xaml.Markup.IXamlType
     {
@@ -1346,7 +1480,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     internal delegate object CreateFromStringMethod(string args);
     internal delegate object BoxInstanceMethod(object instance);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlUserType : global::Aetherium.Aetherium_XamlTypeInfo.XamlSystemBaseType
         , global::Microsoft.UI.Xaml.Markup.IXamlType
@@ -1577,7 +1711,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     internal delegate object Getter(object instance);
     internal delegate void Setter(object instance, object value);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2307")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Microsoft.UI.Xaml.Markup.IXamlMember
     {

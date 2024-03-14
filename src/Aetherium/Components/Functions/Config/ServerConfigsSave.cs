@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Config
@@ -19,8 +20,8 @@ namespace Aetherium.Components.Functions.Config
             // Serialize the current state of the Configuration instance
             var json = JsonSerializer.Serialize(Configuration.Instance, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(configFilePath, json);
-            Debug.WriteLine("Configuration saved.");
-            AppServices.ToastService.ShowSuccess("Configuration saved successfully");
+            Debug.WriteLine("Configuration saved successfully");
+            ToastService.Toast("Configuration saved successfully", "");
         }
     }
 }

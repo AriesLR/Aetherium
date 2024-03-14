@@ -5,7 +5,7 @@
   },
   "projects": {
     "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj": {
-      "version": "0.1.2",
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
         "projectName": "Aetherium",
@@ -51,17 +51,13 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
-            "Blazored.Toast": {
-              "target": "Package",
-              "version": "[4.2.0, )"
-            },
             "CoreRCON": {
               "target": "Package",
               "version": "[5.4.0, )"
             },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -73,11 +69,19 @@
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Toolkit.Uwp.Notifications": {
+              "target": "Package",
+              "version": "[7.1.3, )"
             },
             "System.Diagnostics.PerformanceCounter": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
@@ -93,8 +97,24 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
               "name": "Microsoft.Windows.SDK.NET.Ref",
               "version": "[10.0.19041.31, 10.0.19041.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
             }
           ],
           "frameworkReferences": {

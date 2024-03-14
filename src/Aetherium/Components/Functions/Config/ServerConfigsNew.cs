@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Config
@@ -38,13 +39,13 @@ namespace Aetherium.Components.Functions.Config
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error creating configuration file '{configName}.json': {ex.Message}");
-                    AppServices.ToastService.ShowError($"Error creating configuration file '{configName}.json': {ex.Message}");
+                    ToastService.Toast($"Error creating configuration file '{configName}.json':", ex.Message);
                 }
             }
             else
             {
                 Debug.WriteLine($"Configuration file '{configName}.json' already exists.");
-                AppServices.ToastService.ShowError($"Configuration file '{configName}.json' already exists.");
+                ToastService.Toast($"Configuration file '{configName}.json' already exists.", "");
             }
         }
     }

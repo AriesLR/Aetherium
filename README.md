@@ -18,11 +18,10 @@
 
 ## Prerequisites
 
-- [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.201-windows-x64-installer)
-- [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH)
+- Windows Notifications need to be turned on for warning/error/save messages, don't worry notifications from the app are silent. 
 
  > [!NOTE]  
-> No manual installation is required for these components. If they're missing, Aetherium will prompt you to download them. Based on my testing, both components will likely be necessary for Windows Server systems. For regular Windows systems, WebView2 should already be installed, but you may receive a prompt to install .NET 8.0.
+> No manual installation is required for any prerequisites. If they're missing, Aetherium will prompt you to download them. Based on my testing, both components will likely be necessary for Windows Server systems. For regular Windows systems, [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH) should already be installed, but you may receive a prompt to install [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.201-windows-x64-installer).
 
 ## Features
 
@@ -94,8 +93,6 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 
 ## Acknowledgements
 - [CoreRCON](https://github.com/Challengermode/CoreRcon) - For the .NET Standard implementation of the Source RCON Protocol.
-
-- [Blazored.Toast](https://github.com/Blazored/Toast) - For the JavaScript free toast library.
 
 - [Darkbyte](https://github.com/darkbyte42) - For all the input they've given so far, their suggestions are giving me direction on what features to add.
 

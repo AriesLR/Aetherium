@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Config
 {
@@ -27,13 +28,13 @@ namespace Aetherium.Components.Functions.Config
                 else
                 {
                     Debug.WriteLine($"Configuration '{AppConfig.NewConfigName}' already exists.");
-                    AppServices.ToastService.ShowError($"Configuration '{AppConfig.NewConfigName}' already exists.");
+                    ToastService.Toast($"Configuration '{AppConfig.NewConfigName}' already exists.", "");
                 }
             }
             else
             {
                 Debug.WriteLine("Please enter a valid configuration name.");
-                AppServices.ToastService.ShowError("Please enter a valid configuration name.");
+                ToastService.Toast("Please enter a valid configuration name.", "");
             }
             AppConfig.NewConfigName = string.Empty;
         }

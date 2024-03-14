@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 
@@ -25,7 +26,7 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                        AppServices.ToastService.ShowError("ConfigNames property not found in appsettings.json.");
+                        ToastService.Toast("ConfigNames property not found in appsettings.json.", "");
                     }
                     if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
                     {
@@ -34,19 +35,19 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                        AppServices.ToastService.ShowError("SelectedConfig property not found in appsettings.json.");
+                        ToastService.Toast("SelectedConfig property not found in appsettings.json.", "");
                     }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
-                    AppServices.ToastService.ShowError($"Error loading appsettings file: {ex.Message}");
+                    ToastService.Toast("Error loading appsettings file:", ex.Message);
                 }
             }
             else
             {
                 Debug.WriteLine("appsettings.json file not found.");
-                AppServices.ToastService.ShowError("appsettings.json file not found.");
+                ToastService.Toast("appsettings.json file not found.", "");
             }
         }
     }

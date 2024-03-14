@@ -12,6 +12,7 @@
 @using Aetherium.Components.Functions.Config;
 @using Aetherium.Components.Functions.Server;
 @inject IJSRuntime JSRuntime
+@implements IDisposable
 
 
 <div class="container">
@@ -71,65 +72,51 @@
             ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
         }
 
-        AppConfig.serverOutput = await GetItem("serverOutput");
-
         ServerStart.OnOutputDataReceived += HandleOutputDataReceived;
         ServerStart.OnErrorDataReceived += HandleErrorDataReceived;
         ServerStart.OnProcessExited += HandleProcessExited;
     }
 
-    private void HandleOutputDataReceived(string data)
+    public void HandleOutputDataReceived(string data)
     {
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
-            var _ = SetItem("serverOutput", AppConfig.serverOutput);
             OutputUpdate();
         }
     }
 
-    private void HandleErrorDataReceived(string data)
+    public void HandleErrorDataReceived(string data)
     {
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
-            var _ = SetItem("serverOutput", AppConfig.serverOutput);
             OutputUpdate();
         }
     }
 
     // Method to handle process exit
-    private void HandleProcessExited()
+    public void HandleProcessExited()
     {
-        AppConfig.serverProcess.Dispose();
+        AppConfig.serverProcess?.Dispose();
         AppConfig.serverProcess = null;
-        InvokeAsync(StateHasChanged);
+        OutputUpdate();
     }
 
     // Scroll textarea and Update UI
-    private async void OutputUpdate()
+    public async void OutputUpdate()
     {
-        await JSRuntime.InvokeVoidAsync("scrollToBottom");
-        await InvokeAsync(StateHasChanged);
-    }
-
-    private async Task SetItem(string key, string? value)
-    {
-        await JSRuntime.InvokeVoidAsync("sessionStorageInterop.setItem", key, value);
-    }
-
-    private async Task<string?> GetItem(string key)
-    {
-        return await JSRuntime.InvokeAsync<string>("sessionStorageInterop.getItem", key);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        if (disposing)
+        if (JSRuntime != null)
         {
-            // Dispose managed resources
-            ServerStop.StopServer();
-            BackupTimerStop.StopBackupTimer(); // Also stop the backup timer on dispose
+            await JSRuntime.InvokeVoidAsync("scrollToBottom");
+            await InvokeAsync((StateHasChanged));
         }
+    }
+
+    public void Dispose()
+    {
+        ServerStart.OnOutputDataReceived -= HandleOutputDataReceived;
+        ServerStart.OnErrorDataReceived -= HandleErrorDataReceived;
+        ServerStart.OnProcessExited -= HandleProcessExited;
     }
 }

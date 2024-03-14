@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Config
@@ -43,13 +44,13 @@ namespace Aetherium.Components.Functions.Config
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                    AppServices.ToastService.ShowError($"Error updating ConfigNames in appsettings.json: {ex.Message}");
+                    ToastService.Toast("Error updating ConfigNames in appsettings.json:", ex.Message);
                 }
             }
             else
             {
                 Debug.WriteLine("appsettings.json file not found.");
-                AppServices.ToastService.ShowError("appsettings.json file not found.");
+                ToastService.Toast("appsettings.json file not found.", "");
             }
         }
     }

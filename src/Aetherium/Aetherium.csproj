@@ -82,13 +82,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Blazored.Toast" Version="4.2.0" />
         <PackageReference Include="CoreRCON" Version="5.4.0" />
-        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
+        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.10" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
         <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+        <PackageReference Include="System.Drawing.Common" Version="8.0.3" />
     </ItemGroup>
 
     <ItemGroup>

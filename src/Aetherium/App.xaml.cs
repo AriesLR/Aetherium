@@ -1,4 +1,6 @@
-﻿using Aetherium.Components.Functions.Config;
+﻿using Aetherium.Components.Pages;
+using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Server;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -30,6 +32,12 @@ namespace Aetherium
 
             window.Destroying += (s, e) =>
             {
+                // Unsubscribe from the server events
+                Server server = new Server();
+                ServerStart.OnOutputDataReceived -= server.HandleOutputDataReceived;
+                ServerStart.OnErrorDataReceived -= server.HandleErrorDataReceived;
+                ServerStart.OnProcessExited -= server.HandleProcessExited;
+
                 AppConfig.backupTimer?.Stop();
                 AppConfig.backupTimer?.Dispose();
                 AppConfig.backupTimer = null;

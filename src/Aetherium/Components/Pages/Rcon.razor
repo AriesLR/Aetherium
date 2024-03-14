@@ -7,6 +7,7 @@
 @using Aetherium.Components.Functions;
 @using Aetherium.Components.Functions.Config;
 @using Aetherium.Components.Functions.Server;
+@using Aetherium.Components.Functions.Toasts;
 @inject IJSRuntime JSRuntime
 
 
@@ -36,8 +37,6 @@
         {
             ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
         }
-
-        AppConfig.rconOutput = await GetItem("rconOutput");
     }
 
     // Scroll textarea and Update UI
@@ -46,17 +45,6 @@
         await JSRuntime.InvokeVoidAsync("scrollToBottom");
         await InvokeAsync(StateHasChanged);
     }
-
-    private async Task SetItem(string key, string value)
-    {
-        await JSRuntime.InvokeVoidAsync("sessionStorageInterop.setItem", key, value);
-    }
-
-    private async Task<string?> GetItem(string key)
-    {
-        return await JSRuntime.InvokeAsync<string>("sessionStorageInterop.getItem", key);
-    }
-
 
     public async Task RconConnect()
     {
@@ -79,8 +67,6 @@
         {
             AppConfig.rconOutput += "[Rcon] Configuration not found or incomplete.\n";
         }
-
-        await SetItem("rconOutput", AppConfig.rconOutput);
     }
 
 
@@ -92,18 +78,15 @@
             {
                 var response = await AppConfig.rcon.SendCommandAsync(AppConfig.rconCommand);
                 AppConfig.rconOutput += $"\n{response}";
-                await SetItem("rconOutput", AppConfig.rconOutput);
             }
             catch (Exception ex)
             {
                 AppConfig.rconOutput += $"Server: {ex.Message}\n";
-                await SetItem("rconOutput", AppConfig.rconOutput);
             }
         }
         else if (!AppConfig.isConnected)
         {
             AppConfig.rconOutput += "[Rcon] Not connected.\n";
-            await SetItem("rconOutput", AppConfig.rconOutput);
         }
     }
 
@@ -120,7 +103,7 @@
             catch (Exception ex)
             {
                 Debug.WriteLine($"RCON is not connected: {ex.Message}");
-                AppServices.ToastService.ShowError($"RCON is not connected");
+                ToastService.Toast("RCON is not connected:", ex.Message);
             }
         }
     }
