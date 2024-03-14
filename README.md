@@ -1,4 +1,4 @@
-![Aetherium Banner](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/bannerlogo.png)
+![Aetherium Banner](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/bannerlogo-alt.png)
 
 # 
 
