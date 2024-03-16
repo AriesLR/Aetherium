@@ -1,6 +1,6 @@
-﻿using Aetherium.Components.Pages;
-using Aetherium.Components.Functions.Config;
+﻿using Aetherium.Components.Functions.Config;
 using Aetherium.Components.Functions.Server;
+using Aetherium.Components.Pages;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 

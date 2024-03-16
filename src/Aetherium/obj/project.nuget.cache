@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/a25NKJuEzEd0kyR3AG8CVK7pCnOFUi8R9hU5TMz2i7jxtTQ/xHVhbC5DGawEgQrPbf4XESK+pKx731O22u1vQ==",
+  "dgSpecHash": "P/5+JXdtkmDtiFvHGkec5SOrSvyqjsTI5XTpmLoUsCYKp2TDFUSBLLNG21XUL7JgcavOixM9t0wpKOnuXMvonw==",
   "success": true,
   "projectFilePath": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gelli\\.nuget\\packages\\communitytoolkit.maui\\7.0.1\\communitytoolkit.maui.7.0.1.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\communitytoolkit.maui.core\\7.0.1\\communitytoolkit.maui.core.7.0.1.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\corercon\\5.4.0\\corercon.5.4.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",
@@ -58,6 +60,7 @@
     "C:\\Users\\gelli\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\gelli\\.nuget\\packages\\system.speech\\8.0.0-rc.2.23479.6\\system.speech.8.0.0-rc.2.23479.6.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\gelli\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",

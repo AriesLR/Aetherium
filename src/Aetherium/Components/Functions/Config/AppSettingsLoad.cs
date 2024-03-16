@@ -31,6 +31,7 @@ namespace Aetherium.Components.Functions.Config
                     if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
                     {
                         config.ConfigName = selectedConfigElement.GetString();
+                        AppConfig.SelectedConfig = selectedConfigElement.GetString();
                     }
                     else
                     {

@@ -44,7 +44,7 @@ namespace Aetherium.Components.Functions.Config
                     AppConfig.rconPort = Configuration.Instance.RconPort;
 
                     // Load the rcon Password
-                    AppConfig.rconPassword = Configuration.Instance.AdminPassword;
+                    AppConfig.rconPassword = Configuration.Instance.RconPassword;
 
                     // Update SelectedConfig in appsettings.json
                     string appSettingsPath = Path.Combine(configFolderPath, "appsettings.json");

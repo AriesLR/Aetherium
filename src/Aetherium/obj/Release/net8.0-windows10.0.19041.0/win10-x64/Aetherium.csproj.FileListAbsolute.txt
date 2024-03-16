@@ -871,7 +871,6 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\bannerlogo-alt.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\js\scrollToBottom.js
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.UI.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\RestartAgent.exe
@@ -939,3 +938,8 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Orbitron-VariableFont_wght.ttf
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\Orbitron-VariableFont_wght.ttf

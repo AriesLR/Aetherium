@@ -7,6 +7,7 @@ namespace Aetherium.Components.Functions.Config
     {
         public static List<string> ConfigNames = [];
         public static string? NewConfigName;
+        public static string? SelectedConfig;
         public static bool automaticRestarts;
         public static bool saveBackupsEnabled;
         public static string serverPath = "";

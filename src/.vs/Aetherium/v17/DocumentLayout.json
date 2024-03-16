@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "G:\\#Github#\\Aetherium\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\functions\\server\\serverstart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\functions\\server\\serverstart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\aetherium.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\aetherium.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\server.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\server.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\functions\\server\\serverstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\functions\\server\\serverstop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\functions\\config\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\functions\\config\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -44,11 +44,10 @@
               "RelativeDocumentMoniker": "Aetherium\\wwwroot\\css\\app.css",
               "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\app.css",
               "RelativeToolTip": "Aetherium\\wwwroot\\css\\app.css",
-              "ViewState": "AQIAACEAAAAAAAAAAAAIwDwAAAApAAAA",
+              "ViewState": "AQIAAE0BAAAAAAAAAAAAAGMBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-07T07:01:58.451Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -58,62 +57,59 @@
               "RelativeDocumentMoniker": "Aetherium\\Components\\Layout\\MainLayout.razor.css",
               "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Layout\\MainLayout.razor.css",
               "RelativeToolTip": "Aetherium\\Components\\Layout\\MainLayout.razor.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-07T07:42:56.143Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Aetherium",
+              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
+              "RelativeDocumentMoniker": "Aetherium\\Aetherium.csproj",
+              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
+              "RelativeToolTip": "Aetherium\\Aetherium.csproj",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-16T17:31:04.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Aetherium\\App.xaml.cs",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\App.xaml.cs",
-              "RelativeToolTip": "Aetherium\\App.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACMAAAAtAAAA",
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Config\\Configuration.cs",
+              "RelativeDocumentMoniker": "Aetherium\\Components\\Functions\\Config\\Configuration.cs",
+              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Config\\Configuration.cs",
+              "RelativeToolTip": "Aetherium\\Components\\Functions\\Config\\Configuration.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T19:14:16.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServerStart.cs",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\ServerStart.cs",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Functions\\Server\\ServerStart.cs",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\ServerStart.cs",
-              "RelativeToolTip": "Aetherium\\Components\\Functions\\Server\\ServerStart.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T18:21:18.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-16T17:18:31.864Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServerStop.cs",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\ServerStop.cs",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Functions\\Server\\ServerStop.cs",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\ServerStop.cs",
-              "RelativeToolTip": "Aetherium\\Components\\Functions\\Server\\ServerStop.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T17:09:45.425Z",
-              "EditorCaption": ""
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+              "RelativeDocumentMoniker": "Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+              "RelativeToolTip": "Aetherium\\wwwroot\\css\\bootstrap\\bootstrap.css",
+              "ViewState": "AQIAAF4JAAAAAAAAAAAewGwJAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-16T17:01:13.174Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Server.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Server.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Server.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Server.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\Server.razor",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHQAAAAFAAAA",
+              "Title": "Config.razor",
+              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
+              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Config.razor",
+              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
+              "RelativeToolTip": "Aetherium\\Components\\Pages\\Config.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-14T14:06:56.234Z",
+              "WhenOpened": "2024-03-16T13:39:12.349Z",
               "EditorCaption": ""
             }
           ]

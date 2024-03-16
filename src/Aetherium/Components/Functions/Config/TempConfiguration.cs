@@ -8,7 +8,7 @@
         public string SavePath { get; set; } = "";
         public string RconIp { get; set; } = "";
         public string RconPort { get; set; } = "";
-        public string AdminPassword { get; set; } = "";
+        public string RconPassword { get; set; } = "";
         public string LaunchParams { get; set; } = "";
         public int BackupInterval { get; set; }
         public int RestartInterval { get; set; }

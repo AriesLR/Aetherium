@@ -1,6 +1,6 @@
-﻿using System.Diagnostics;
-using Aetherium.Components.Functions.Config;
+﻿using Aetherium.Components.Functions.Config;
 using Aetherium.Components.Functions.Toasts;
+using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Server
 {

@@ -2,6 +2,7 @@ Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
 Components\Layout\ProcessMonitor.razor.css
 OpenSans-Regular.ttf
+Orbitron-VariableFont_wght.ttf
 icon.ico
 iconLargeTile.scale-100.png
 iconLargeTile.scale-125.png
@@ -58,7 +59,6 @@ wwwroot\Aetherium.bundle.scp.css
 AboutAssets.txt
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.css
-wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\favicon.png
 wwwroot\images\bannerlogo-alt.png
 wwwroot\images\bannerlogo.png

@@ -1,8 +1,6 @@
 ﻿html, body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: url(https://i.imgur.com/jTR7b91.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #1b1b1b;
 }
 
 .content {
@@ -98,15 +96,15 @@ h1:focus {
     --bs-btn-disabled-color: rgb(255, 255, 255, 0.80);
     --bs-btn-disabled-bg: rgb(255, 255, 255, 0.1);
     --bs-btn-disabled-border-color: rgb(255, 255, 255, 0.15);
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.25) 0%, rgba(0,221,255,0.25) 100%);
+    background-image: linear-gradient(0deg, rgba(173,0,255,0.25) 0%, rgba(0,221,255,0.25) 100%);
 }
 
     .btn-primary:hover {
-        background-image: linear-gradient(45deg, rgba(173,0,255,0.50) 0%, rgba(0,221,255,0.50) 100%);
+        background-image: linear-gradient(0deg, rgba(173,0,255,0.50) 0%, rgba(0,221,255,0.50) 100%);
     }
 
         .btn-primary:active {
-            background-image: linear-gradient(45deg, rgba(173,0,255,0.90) 0%, rgba(0,221,255,0.90) 100%);
+            background-image: linear-gradient(0deg, rgba(173,0,255,0.90) 0%, rgba(0,221,255,0.90) 100%);
         }
 
 .btn-secondary {
@@ -247,9 +245,7 @@ h1:focus {
 }
 
 /* Custom CSS Below */
-.footer {
-    color: rgb(255, 255, 255, 0.05);
-}
+
 
 /* Blazored Toasts CSS Override */
 .blazored-toast {
@@ -272,78 +268,66 @@ h1:focus {
 
 /* Config.razor */
 
+.configheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-color: rgb(255, 255, 255, 0.05);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 5vh;
+    background: rgb(255, 255, 255, 0.15);
+}
+
+.configheadertext {
+    font-family: "Orbitron", Arial, sans-serif;
+    letter-spacing: 0.15rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.configcontainer {
+    padding: 0.75rem;
+}
+
 .configlabel {
+    display: flex;
+    justify-content: center;
     font-weight: 600;
     font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 8rem;
 }
 
-.configheaderpaths {
-    border: solid 1px;
-    border-color: rgb(255, 255, 255, 0.05);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    height: 5.5vh;
-    padding: 0.25rem;
-    background: rgb(255, 255, 255, 0.15);
+.configlabel2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 12rem;
 }
 
-.configbgpaths {
-    border: solid 1px;
-    border-radius: 1rem;
-    border-color: rgb(255, 255, 255, 0.05);
-    height: 12rem;
-    margin-bottom: 1rem;
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.03) 0%, rgba(0,221,255,0.03) 100%);
-}
-
-.configcontainerpaths {
-    padding: 0.5rem;
-}
-
-.configheaderparams {
-    border: solid 1px;
-    border-color: rgb(255, 255, 255, 0.05);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    height: 5.5vh;
-    padding: 0.25rem;
-    background: rgb(255, 255, 255, 0.15);
-}
-
-.configbgparams {
-    border: solid 1px;
-    border-radius: 1rem;
-    border-color: rgb(255, 255, 255, 0.05);
-    height: 7rem;
-    margin-bottom: 1rem;
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.03) 0%, rgba(0,221,255,0.03) 100%);
-}
-
-.configcontainerparams {
-    padding: 0.5rem;
-}
-
-.configheader {
-    border: solid 1px;
-    border-color: rgb(255, 255, 255, 0.05);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    height: 5.5vh;
-    padding: 0.25rem;
-    background: rgb(255, 255, 255, 0.15);
+.configlabel3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 7rem;
 }
 
 .configbg {
     border: solid 1px;
     border-radius: 1rem;
     border-color: rgb(255, 255, 255, 0.05);
-    height: 12rem;
+    height: auto;
     margin-bottom: 1rem;
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.03) 0%, rgba(0,221,255,0.03) 100%);
-}
-
-.configcontainer {
-    padding: 0.5rem;
+    background-color: rgb(105, 17, 207, 0.03);
 }
 
 .configname {
@@ -356,6 +340,12 @@ h1:focus {
 }
 
 .configbutton {
+    --bs-btn-border-color: rgb(118, 118, 118, 1);
+    --bs-btn-hover-border-color: rgb(118, 118, 118, 1);
+    --bs-btn-active-border-color: rgb(118, 118, 118, 1);
+}
+
+.filepickerbtn {
     --bs-btn-border-color: rgb(118, 118, 118, 1);
     --bs-btn-hover-border-color: rgb(118, 118, 118, 1);
     --bs-btn-active-border-color: rgb(118, 118, 118, 1);
@@ -382,7 +372,7 @@ h1:focus {
     border: solid 1px;
     border-radius: 1rem;
     border-color: rgb(255, 255, 255, 0.05);
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%);
+    background-color: rgb(105, 17, 207, 0.05);
     width: 15rem;
     margin-bottom: 1rem;
 }

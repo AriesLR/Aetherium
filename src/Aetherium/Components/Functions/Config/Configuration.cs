@@ -10,7 +10,7 @@
         public string SavePath { get; set; } = "";
         public string RconIp { get; set; } = "";
         public string RconPort { get; set; } = "";
-        public string AdminPassword { get; set; } = "";
+        public string RconPassword { get; set; } = "";
         public string LaunchParams { get; set; } = "";
         public int BackupInterval { get; set; }
         public int RestartInterval { get; set; }
@@ -50,7 +50,7 @@
             this.SavePath = tempConfig.SavePath;
             this.RconIp = tempConfig.RconIp;
             this.RconPort = tempConfig.RconPort;
-            this.AdminPassword = tempConfig.AdminPassword;
+            this.RconPassword = tempConfig.RconPassword;
             this.LaunchParams = tempConfig.LaunchParams;
             this.BackupInterval = tempConfig.BackupInterval;
             this.RestartInterval = tempConfig.RestartInterval;

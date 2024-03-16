@@ -27,8 +27,8 @@
         <ApplicationId>com.arieslr.aetherium</ApplicationId>
 
         <!-- Versions -->
-        <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
-        <ApplicationVersion>12</ApplicationVersion>
+        <ApplicationDisplayVersion>0.1.3</ApplicationDisplayVersion>
+        <ApplicationVersion>13</ApplicationVersion>
 
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
@@ -52,17 +52,17 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
       <ApplicationId>com.arieslr.aetherium</ApplicationId>
-      <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
+      <ApplicationDisplayVersion>0.1.3</ApplicationDisplayVersion>
       <ApplicationIdGuid>68E5DB6E-5DC1-4441-9860-F1833955CD39</ApplicationIdGuid>
-      <ApplicationVersion>12</ApplicationVersion>
+      <ApplicationVersion>13</ApplicationVersion>
       <ApplicationTitle>Aetherium</ApplicationTitle>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
       <ApplicationId>com.arieslr.aetherium</ApplicationId>
-      <ApplicationDisplayVersion>0.1.2</ApplicationDisplayVersion>
+      <ApplicationDisplayVersion>0.1.3</ApplicationDisplayVersion>
       <ApplicationIdGuid>68E5DB6E-5DC1-4441-9860-F1833955CD39</ApplicationIdGuid>
-      <ApplicationVersion>12</ApplicationVersion>
+      <ApplicationVersion>13</ApplicationVersion>
       <ApplicationTitle>Aetherium</ApplicationTitle>
     </PropertyGroup>
 
@@ -82,6 +82,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
         <PackageReference Include="CoreRCON" Version="5.4.0" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.10" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.10" />

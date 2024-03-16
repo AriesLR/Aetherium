@@ -19,14 +19,15 @@
     <div class="row">
         <div class="col">
             <h5>Server Output</h5>
-            <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-image: linear-gradient(45deg, rgba(173,0,255,0.05) 0%, rgba(0,221,255,0.05) 100%); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.serverOutput</textarea>
+            <h6>Loaded Config: @AppConfig.SelectedConfig</h6>
+            <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-color: rgb(105, 17, 207, 0.05); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.serverOutput</textarea>
             <div class="input-group mt-1">
                 <input type="text" class="form-control rcon-input" placeholder="Enter server input" @bind="AppConfig.serverInput">
                 <button class="btn btn-primary btn-sm rcon-button" @onclick="ServerInput.SendServerInput">Send</button>
             </div>
         </div>
     </div>
-    <div class="row mb-4">
+    <div class="row mb-1">
         <div class="col d-flex justify-content-center">
             <button class="btn btn-success bg-gradient btn-sm m-1" @onclick="ServerStart.StartServer" disabled="@((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) || AppConfig.serverStarting)">Start Server</button>
             <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="ServerStop.StopServer" disabled="@((AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited) || AppConfig.serverStopping)">Stop Server</button>
@@ -104,13 +105,10 @@
     }
 
     // Scroll textarea and Update UI
-    public async void OutputUpdate()
+    private async void OutputUpdate()
     {
-        if (JSRuntime != null)
-        {
-            await JSRuntime.InvokeVoidAsync("scrollToBottom");
-            await InvokeAsync((StateHasChanged));
-        }
+        await JSRuntime.InvokeVoidAsync("scrollToBottom");
+        await InvokeAsync((StateHasChanged));
     }
 
     public void Dispose()
