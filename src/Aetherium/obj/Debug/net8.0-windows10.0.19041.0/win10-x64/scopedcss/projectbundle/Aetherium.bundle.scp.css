@@ -3,15 +3,11 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    background: url(https://i.imgur.com/jTR7b91.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main[b-na97djipdv] {
     position: relative;
     flex: 1;
-    color: white;
 }
 
 .sidebar[b-na97djipdv] {
@@ -191,6 +187,26 @@ main[b-na97djipdv] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.loaded-config[b-6i4mk2ao84] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serverbadge[b-6i4mk2ao84] {
+    height: 1.5rem;
+    width: 8rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.configbadge[b-6i4mk2ao84] {
+    height: 1.5rem;
+    width: auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .bi-cpu-fill-process-monitor[b-6i4mk2ao84] {

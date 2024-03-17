@@ -19,7 +19,6 @@
     <div class="row">
         <div class="col">
             <h5>Server Output</h5>
-            <h6>Loaded Config: @AppConfig.SelectedConfig</h6>
             <textarea id="outputTextarea" class="form-control mb-1" rows="10" readonly style="background-color: rgb(105, 17, 207, 0.05); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.serverOutput</textarea>
             <div class="input-group mt-1">
                 <input type="text" class="form-control rcon-input" placeholder="Enter server input" @bind="AppConfig.serverInput">
@@ -83,6 +82,7 @@
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
+            Debug.WriteLine(AppConfig.serverOutput);
             OutputUpdate();
         }
     }
@@ -92,6 +92,7 @@
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
+            Debug.WriteLine(AppConfig.serverOutput);
             OutputUpdate();
         }
     }

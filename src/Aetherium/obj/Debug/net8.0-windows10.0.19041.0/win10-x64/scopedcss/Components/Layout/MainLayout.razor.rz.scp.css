@@ -2,15 +2,11 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    background: url(https://i.imgur.com/jTR7b91.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main[b-na97djipdv] {
     position: relative;
     flex: 1;
-    color: white;
 }
 
 .sidebar[b-na97djipdv] {

@@ -18,9 +18,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex flex-column justify-content-center">
+                <div class="loaded-config mb-1">
+                    <span class="badge bg-success configbadge">
+                        @Configuration.Instance.ConfigName
+                    </span>
+                </div>
                 <div class="process-status">
-                    <span class="badge bg-@(AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited ? "success" : "danger")">
+                    <span class="badge bg-@(AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited ? "success" : "danger") serverbadge">
                         @((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) ? "Server Running" : "Server Off")
                     </span>
                 </div>
@@ -43,6 +48,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        AppSettingsLoad.LoadAppConfig();
         await WaitForProcessStart();
     }
 
@@ -54,6 +60,7 @@
             while (AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited)
             {
                 await Task.Delay(TimeSpan.FromSeconds(1)); // Delay for 1 second before checking again
+                UpdateState();
             }
 
             // Once the process starts, initialize and start monitoring
@@ -66,10 +73,9 @@
         }
     }
 
-
-    public void UpdateState()
+    public async void UpdateState()
     {
-        StateHasChanged(); // Call StateHasChanged method to update the UI
+        await InvokeAsync(StateHasChanged);
     }
 
     public class ResourceMonitor : IDisposable

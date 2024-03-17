@@ -1,6 +1,28 @@
-﻿html, body {
+﻿:root {
+    --background: url(https://i.imgur.com/jTR7b91.png);
+    --background-color: #000;
+    --text-color: #fff;
+}
+
+html[data-theme="a-dark"] {
+    --background: url(https://i.imgur.com/jTR7b91.png);
+    --background-color: #000;
+    --text-color: #fff;
+}
+
+html[data-theme="a-light"] {
+    --background: url(https://i.imgur.com/yukWTeL.png);
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+html, body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #1b1b1b;
+    background: var(--background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .content {
@@ -228,7 +250,6 @@ h1:focus {
 
 /* Bootstrap Badge */
 .badge {
-    width: 7rem !important;
     border: solid 1px;
     border-radius: 1rem;
     border-color: rgb(255, 255, 255, 0.05);
@@ -242,6 +263,28 @@ h1:focus {
     background-color: rgb(255, 255, 255, 0) !important;
     background-image: linear-gradient(45deg, rgba(173,0,255,0.10) 0%, rgba(0,221,255,0.10) 100%) !important;
     color: rgb(255, 255, 255, 0.75) !important;
+}
+
+/* Bootstrap Form Control */
+.form-control {
+    background-color: rgb(105, 17, 207, 0.05);
+}
+    .form-control:hover {
+        background-color: rgb(105, 17, 207, 0.05);
+    }
+
+    .form-control:active {
+        background-color: rgb(105, 17, 207, 0.05);
+    }
+
+    .form-control:focus {
+        background-color: rgb(105, 17, 207, 0.05);
+    }
+
+/* Bootstrap Form Control */
+.input-group {
+    height: 2rem !important;
+    line-height: 2rem !important;
 }
 
 /* Custom CSS Below */
@@ -352,12 +395,6 @@ h1:focus {
 }
 
 /* Rcon.razor */
-
-.rcon-input {
-    height: 2rem !important;
-    line-height: 2rem !important;
-}
-
 .rcon-button {
     --bs-btn-border-color: rgb(118, 118, 118, 1);
     --bs-btn-hover-border-color: rgb(118, 118, 118, 1);

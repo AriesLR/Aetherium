@@ -20,7 +20,7 @@
             <div class="input-group mt-1">
                 <button class="btn btn-success bg-gradient btn-sm rcon-button" @onclick="RconConnect">Connect</button>
                 <button class="btn btn-danger bg-gradient btn-sm rcon-button" @onclick="RconDisconnect">Disconnect</button>
-                <input type="text" class="form-control rcon-input" placeholder="Enter RCON Command" @bind="AppConfig.rconCommand">
+                <input type="text" class="form-control" placeholder="Enter RCON Command" @bind="AppConfig.rconCommand">
                 <button class="btn btn-primary btn-sm rcon-button" @onclick="RconSendCommand">Send</button>
             </div>
         </div>

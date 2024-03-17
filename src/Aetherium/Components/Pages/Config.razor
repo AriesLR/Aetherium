@@ -104,7 +104,7 @@
                             <li><button class="dropdown-item" @onclick="() => ServerConfigsLoad.LoadServerConfig(configName)">@configName</button></li>
                         }
                     </ul>
-                    <input type="text" class="form-control newconfigname" @bind="AppConfig.NewConfigName" placeholder="Enter new config name" />
+                    <input type="text" class="form-control newconfigname" @bind="AppConfig.NewConfigName" placeholder="Enter config name" />
                     <button class="btn btn-success bg-gradient btn-sm configbutton" @onclick="ServerConfigsAdd.AddNewConfig">Add Config</button>
                     <button class="btn btn-danger bg-gradient btn-sm configbutton" @onclick="ServerConfigsDelete.DeleteConfig">Delete Config</button>
                 </div>

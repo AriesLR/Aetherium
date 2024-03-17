@@ -66,3 +66,4 @@ wwwroot\index.html
 wwwroot\js\bootstrap.bundle.min.js
 wwwroot\js\bootstrap.bundle.min.js.map
 wwwroot\js\scrollToBottom.js
+wwwroot\js\themeSwitcher.js

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mHesAb2t8JwZKEnNXqvKzLLf6iAAMjHyOvw5Fvelhf0=",
+  "Hash": "XMYWwzdS069ZMK8VfSa0GfLzlxf8qCcJnMJAoYqVkZA=",
   "Source": "Aetherium",
   "BasePath": "/",
   "Mode": "Root",
@@ -243,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\scrollToBottom.js"
+    },
+    {
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\themeSwitcher.js",
+      "SourceId": "Aetherium",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/themeSwitcher.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\themeSwitcher.js"
     }
   ]
 }

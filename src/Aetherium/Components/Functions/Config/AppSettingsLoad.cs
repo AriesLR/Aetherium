@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Toasts;
+using Aetherium.Components.Layout;
 using System.Diagnostics;
 using System.Text.Json;
 
@@ -7,8 +8,6 @@ namespace Aetherium.Components.Functions.Config
 {
     public class AppSettingsLoad
     {
-
-
         public static void LoadAppConfig()
         {
             string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");

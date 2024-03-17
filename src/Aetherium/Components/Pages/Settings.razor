@@ -1,10 +1,13 @@
 ﻿@page "/settings"
 @using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Services;
+@using System.Diagnostics;
+@inject ThemeService ThemeService
 
 <div class="container">
     <div class="row">
         <div class="col">
-            <h6>Version: v0.1.3</h6>
+            <h6>Version: v0.1.4</h6>
 
             <div class="themesdropdown">
                 <div class="dropdown">
@@ -12,13 +15,13 @@
                         Themes
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dark Theme (default)</a></li>
-                        <li><a class="dropdown-item" href="#">Light Theme</a></li>
+                        <li><button class="dropdown-item" @onclick="() => ChangeThemeDark()">Dark Theme</button></li>
+                        <li><button class="dropdown-item" @onclick="() => ChangeThemeLight()">Light Theme</button></li>
                     </ul>
                 </div>
             </div>
 
-            <p>Themes not implemented, yet.</p>
+            <p>Themes not fully implemented, yet.</p>
         </div>
     </div>
     <div class="row">
@@ -29,4 +32,17 @@
 </div>
 
 @code {
+    private async Task ChangeThemeDark()
+    {
+        var themeName = "a-dark";
+        Debug.WriteLine($"Changing theme to: {themeName}");
+        await ThemeService.SetThemeAsync(themeName);
+    }
+
+    private async Task ChangeThemeLight()
+    {
+        var themeName = "a-light";
+        Debug.WriteLine($"Changing theme to: {themeName}");
+        await ThemeService.SetThemeAsync(themeName);
+    }
 }

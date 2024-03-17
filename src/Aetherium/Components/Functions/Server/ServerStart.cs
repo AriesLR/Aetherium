@@ -1,6 +1,7 @@
 ﻿using Aetherium.Components.Functions.Config;
 using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
+using System.IO;
 
 namespace Aetherium.Components.Functions.Server
 {
@@ -40,54 +41,120 @@ namespace Aetherium.Components.Functions.Server
                 return;
             }
 
-            try
-            {
-                AppConfig.serverStarting = true; // Disable start button while starting
+            // Get the file extension
+            string fileExtension = Path.GetExtension(AppConfig.serverPath).ToLower();
 
-                AppConfig.serverProcess = new Process
+            // Get the directory path
+            string directoryPath = Path.GetDirectoryName(AppConfig.serverPath);
+
+            // Get the filename
+            string fileName = Path.GetFileName(AppConfig.serverPath);
+
+            if (fileExtension == ".exe")
+            {
+                try
                 {
-                    StartInfo = new ProcessStartInfo
+                    AppConfig.serverStarting = true; // Disable start button while starting
+
+                    AppConfig.serverProcess = new Process
                     {
-                        FileName = AppConfig.serverPath,
-                        Arguments = AppConfig.launchParams,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        RedirectStandardInput = true,
-                        UseShellExecute = false,
-                        CreateNoWindow = true
-                    },
-                    EnableRaisingEvents = true
-                };
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = AppConfig.serverPath,
+                            Arguments = AppConfig.launchParams,
+                            RedirectStandardOutput = true,
+                            RedirectStandardError = true,
+                            RedirectStandardInput = true,
+                            UseShellExecute = false,
+                            CreateNoWindow = true
+                        },
+                        EnableRaisingEvents = true
+                    };
 
-                AppConfig.serverProcess.OutputDataReceived += (sender, e) => OnOutputDataReceived?.Invoke(e.Data);
-                AppConfig.serverProcess.ErrorDataReceived += (sender, e) => OnErrorDataReceived?.Invoke(e.Data);
-                AppConfig.serverProcess.Exited += (sender, e) => OnProcessExited?.Invoke();
+                    AppConfig.serverProcess.OutputDataReceived += (sender, e) => OnOutputDataReceived?.Invoke(e.Data);
+                    AppConfig.serverProcess.ErrorDataReceived += (sender, e) => OnErrorDataReceived?.Invoke(e.Data);
+                    AppConfig.serverProcess.Exited += (sender, e) => OnProcessExited?.Invoke();
 
-                AppConfig.serverProcess.Start();
-                AppConfig.serverProcess.BeginOutputReadLine(); // Begin asynchronous read of standard output
-                AppConfig.serverProcess.BeginErrorReadLine(); // Begin asynchronous read of standard error
+                    AppConfig.serverProcess.Start();
+                    AppConfig.serverProcess.BeginOutputReadLine(); // Begin asynchronous read of standard output
+                    AppConfig.serverProcess.BeginErrorReadLine(); // Begin asynchronous read of standard error
 
-                // Start the restart timer if automatic restarts are enabled
-                if (AppConfig.automaticRestarts)
-                {
-                    RestartTimerStart.StartRestartTimer();
-                    Debug.WriteLine("[DEBUG]: Starting Restart Timer");
+                    // Start the restart timer if automatic restarts are enabled
+                    if (AppConfig.automaticRestarts)
+                    {
+                        RestartTimerStart.StartRestartTimer();
+                        Debug.WriteLine("[DEBUG]: Starting Restart Timer");
+                    }
+                    // Start the backup timer if save backups are enabled
+                    if (AppConfig.saveBackupsEnabled)
+                    {
+                        BackupTimerStart.StartBackupTimer();
+                        Debug.WriteLine("[DEBUG]: Starting Backup Timer");
+                    }
                 }
-                // Start the backup timer if save backups are enabled
-                if (AppConfig.saveBackupsEnabled)
+                catch (Exception ex)
                 {
-                    BackupTimerStart.StartBackupTimer();
-                    Debug.WriteLine("[DEBUG]: Starting Backup Timer");
+                    Debug.WriteLine($"Error starting server: {ex.Message}");
+                    ToastService.Toast("Error starting server:", ex.Message);
+                }
+                finally
+                {
+                    AppConfig.serverStarting = false; // Re-enable start button
                 }
             }
-            catch (Exception ex)
+
+            if (fileExtension == ".jar")
             {
-                Debug.WriteLine($"Error starting server: {ex.Message}");
-                ToastService.Toast("Error starting server:", ex.Message);
-            }
-            finally
-            {
-                AppConfig.serverStarting = false; // Re-enable start button
+                try
+                {
+                    AppConfig.serverStarting = true; // Disable start button while starting
+
+                    AppConfig.serverProcess = new Process
+                    {
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = "C:\\Program Files\\Java\\jdk-17\\bin\\java.exe",
+                            WorkingDirectory = directoryPath,
+                            Arguments = $"{AppConfig.launchParams} -jar {fileName} -nogui",
+                            RedirectStandardOutput = true,
+                            RedirectStandardError = true,
+                            RedirectStandardInput = true,
+                            UseShellExecute = false,
+                            CreateNoWindow = true
+                        },
+                        EnableRaisingEvents = true
+                    };
+
+                    AppConfig.serverProcess.OutputDataReceived += (sender, e) => OnOutputDataReceived?.Invoke(e.Data);
+                    AppConfig.serverProcess.ErrorDataReceived += (sender, e) => OnErrorDataReceived?.Invoke(e.Data);
+                    AppConfig.serverProcess.Exited += (sender, e) => OnProcessExited?.Invoke();
+
+                    AppConfig.serverProcess.Start();
+                    AppConfig.serverProcess.BeginOutputReadLine(); // Begin asynchronous read of standard output
+                    AppConfig.serverProcess.BeginErrorReadLine(); // Begin asynchronous read of standard error
+
+                    // Start the restart timer if automatic restarts are enabled
+                    if (AppConfig.automaticRestarts)
+                    {
+                        RestartTimerStart.StartRestartTimer();
+                        Debug.WriteLine("[DEBUG]: Starting Restart Timer");
+                    }
+                    // Start the backup timer if save backups are enabled
+                    if (AppConfig.saveBackupsEnabled)
+                    {
+                        BackupTimerStart.StartBackupTimer();
+                        Debug.WriteLine("[DEBUG]: Starting Backup Timer");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error starting server: {ex.Message}");
+                    ToastService.Toast("Error starting server:", ex.Message);
+                }
+                finally
+                {
+                    AppConfig.serverStarting = false; // Re-enable start button
+                }
             }
         }
     }
