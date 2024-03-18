@@ -17,17 +17,17 @@
                     <span class="configheadertext">File Paths</span>
                 </div>
                 <div class="configcontainer">
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel">Server Path</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.ServerPath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         <button class="btn btn-light btn-sm filepickerbtn" @onclick="FilepickerService.PickServerPath">Browse Files</button>
                     </div>
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel">Save Path</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.SavePath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         <button class="btn btn-light btn-sm filepickerbtn" @onclick="FilepickerService.PickSavePath">Browse Files</button>
                     </div>
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel">Backup Path</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.BackupPath" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                         <button class="btn btn-light btn-sm filepickerbtn" @onclick="FilepickerService.PickBackupPath">Browse Files</button>
@@ -43,7 +43,7 @@
                     <span class="configheadertext">Parameters</span>
                 </div>
                 <div class="configcontainer">
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel2">Launch Parameters</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.LaunchParams" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>
@@ -58,15 +58,15 @@
                     <span class="configheadertext">Rcon</span>
                 </div>
                 <div class="configcontainer">
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel3">IP</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.RconIp" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel3">Port</span>
                         <input type="text" class="form-control" @bind-value="Configuration.Instance.RconPort" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel3">Password</span>
                         <input type="password" class="form-control" @bind-value="Configuration.Instance.RconPassword" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>
@@ -79,11 +79,11 @@
                     <span class="configheadertext">Intervals (minutes)</span>
                 </div>
                 <div class="configcontainer">
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel3">Backup</span>
                         <input type="number" class="form-control" @bind-value="Configuration.Instance.BackupInterval" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>
-                    <div class="input-group mb-1">
+                    <div class="input-group">
                         <span class="input-group-text configlabel3">Restart</span>
                         <input type="number" class="form-control" @bind-value="Configuration.Instance.RestartInterval" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
                     </div>

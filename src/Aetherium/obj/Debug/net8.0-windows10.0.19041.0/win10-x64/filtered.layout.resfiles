@@ -59,9 +59,14 @@ AboutAssets.txt
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.css
 wwwroot\favicon.png
-wwwroot\images\bannerlogo.png
-wwwroot\images\bannerlogo-alt.png
-wwwroot\images\logo.png
+wwwroot\images\dark\background-dark.png
+wwwroot\images\dark\bannerlogo-alt-dark.png
+wwwroot\images\dark\bannerlogo-dark.png
+wwwroot\images\dark\logo-dark.png
+wwwroot\images\light\background-light.png
+wwwroot\images\light\bannerlogo-alt-light.png
+wwwroot\images\light\bannerlogo-light.png
+wwwroot\images\light\logo-light.png
 wwwroot\index.html
 wwwroot\js\bootstrap.bundle.min.js
 wwwroot\js\bootstrap.bundle.min.js.map

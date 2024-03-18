@@ -15,7 +15,7 @@ main[b-na97djipdv] {
     flex-direction: column;
     left: 0;
     border-right: solid 1px;
-    border-color: rgb(255, 255, 255, 0.20);
+    border-color: var(--border-heavy);
     width: 15rem;
     height: 100vh;
 }
@@ -26,14 +26,22 @@ main[b-na97djipdv] {
 }
 
 .sidebar-header[b-na97djipdv] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-bottom: solid 1px;
-    border-color: rgb(255, 255, 255, 0.20);
+    border-color: var(--border-heavy);
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+.header-logo[b-na97djipdv] {
+    display: block;
+    margin: auto;
+    width: 210px;
+    height: 3rem;
+    background-image: var(--banner-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .sidebar-footer[b-na97djipdv] {
     display: flex;
@@ -58,6 +66,6 @@ main[b-na97djipdv] {
     left: 15rem;
     right: 0;
     border-top: solid 1px;
-    border-color: rgb(255, 255, 255, 0.20);
+    border-color: var(--border-heavy);
     height: auto;
 }
