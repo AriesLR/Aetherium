@@ -3,8 +3,10 @@
     --banner-logo-alt: url('../images/dark/bannerlogo-alt-dark.png');
     --background: url('../images/dark/background-dark.png');
     --background-color: #000;
-    --text-color: #fff;
-    --text-color-alt: rgb(255, 255, 255, 0.80);
+    --glass-bg: rgb(105, 17, 207, 0.10);
+    --header-bg: rgb(255, 255, 255, 0.25);
+    --text-color: rgb(255, 255, 255, 0.90);
+    --text-color-alt: rgb(255, 255, 255, 0.75);
     --text-color-disabled: rgb(255, 255, 255, 0.60);
     --border-heavy: rgb(255, 255, 255, 0.20);
     --border-light: rgb(255, 255, 255, 0.05);
@@ -22,8 +24,10 @@ html[data-theme="a-dark"] {
     --banner-logo-alt: url('../images/dark/bannerlogo-alt-dark.png');
     --background: url('../images/dark/background-dark.png');
     --background-color: #000;
-    --text-color: #fff;
-    --text-color-alt: rgb(255, 255, 255, 0.80);
+    --glass-bg: rgb(105, 17, 207, 0.10);
+    --header-bg: rgb(255, 255, 255, 0.25);
+    --text-color: rgb(255, 255, 255, 0.90);
+    --text-color-alt: rgb(255, 255, 255, 0.75);
     --text-color-disabled: rgb(255, 255, 255, 0.60);
     --border-heavy: rgb(255, 255, 255, 0.20);
     --border-light: rgb(255, 255, 255, 0.05);
@@ -41,8 +45,10 @@ html[data-theme="a-light"] {
     --banner-logo-alt: url('../images/light/bannerlogo-alt-light.png');
     --background: url('../images/light/background-light.png');
     --background-color: #fff;
-    --text-color: #000;
-    --text-color-alt: rgb(0, 0, 0, 0.80);
+    --glass-bg: rgb(105, 17, 207, 0.25);
+    --header-bg: rgb(255, 255, 255, 0.25);
+    --text-color: rgb(0, 0, 0, 0.90);
+    --text-color-alt: rgb(0, 0, 0, 0.75);
     --text-color-disabled: rgb(0, 0, 0, 0.60);
     --border-heavy: rgb(0, 0, 0, 0.20);
     --border-light: rgb(0, 0, 0, 0.05);
@@ -147,26 +153,17 @@ h1:focus {
 }
 
 .btn-primary {
-    --bs-btn-bg: rgb(255, 255, 255, 0.1);
-    --bs-btn-border-color: rgb(255, 255, 255, 0.15);
-    --bs-btn-hover-bg: rgb(255, 255, 255, 0.1);
-    --bs-btn-hover-border-color: rgb(255, 255, 255, 0.15);
+    --bs-btn-bg: rgb(105, 17, 207, 0.25);
+    --bs-btn-border-color: rgb(105, 17, 207, 0.25);
+    --bs-btn-hover-bg: rgb(105, 17, 207, 0.50);
+    --bs-btn-hover-border-color: rgb(105, 17, 207, 0.50);
     --bs-btn-focus-shadow-rgb: 235, 81, 150;
-    --bs-btn-active-bg: rgb(255, 255, 255, 0.1);
-    --bs-btn-active-border-color: rgb(255, 255, 255, 0.15);
+    --bs-btn-active-bg: rgb(105, 17, 207, 0.90);
+    --bs-btn-active-border-color: rgb(105, 17, 207, 0.90);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-bg: rgb(255, 255, 255, 0.1);
-    --bs-btn-disabled-border-color: rgb(255, 255, 255, 0.15);
-    background-image: linear-gradient(0deg, rgba(173,0,255,0.25) 0%, rgba(0,221,255,0.25) 100%);
+    --bs-btn-disabled-bg: rgb(105, 17, 207, 0.25);
+    --bs-btn-disabled-border-color: rgb(105, 17, 207, 0.25);
 }
-
-    .btn-primary:hover {
-        background-image: linear-gradient(0deg, rgba(173,0,255,0.50) 0%, rgba(0,221,255,0.50) 100%);
-    }
-
-        .btn-primary:active {
-            background-image: linear-gradient(0deg, rgba(173,0,255,0.90) 0%, rgba(0,221,255,0.90) 100%);
-        }
 
 .btn-secondary {
     --bs-btn-bg: rgb(69, 69, 69, 0.25);
@@ -278,34 +275,20 @@ h1:focus {
 }
 
 /* Bootstrap Form Control */
-.form-control {
+.form-control,
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
     color: var(--text-color);
-    border-color: var(--border-heavy);
-    background-color: rgb(105, 17, 207, 0.05);
+    border-color: var(--border-light);
+    background-color: var(--glass-bg);
 }
-    .form-control:hover {
-        color: var(--text-color);
-        border-color: var(--border-heavy);
-        background-color: rgb(105, 17, 207, 0.05);
-    }
-
-    .form-control:active {
-        color: var(--text-color);
-        border-color: var(--border-heavy);
-        background-color: rgb(105, 17, 207, 0.05);
-    }
-
-    .form-control:focus {
-        color: var(--text-color);
-        border-color: var(--border-heavy);
-        background-color: rgb(105, 17, 207, 0.05);
-    }
 
 .form-control::placeholder {
     color: var(--text-color-disabled);
 }
 
-/* Bootstrap Form Control */
+/* Bootstrap Input Group */
 .input-group {
     margin-bottom: 0.50rem;
     height: 2rem !important;
@@ -351,7 +334,7 @@ h1:focus {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     height: 5vh;
-    background: rgb(255, 255, 255, 0.15);
+    background: var(--header-bg);
 }
 
 .configheadertext {
@@ -401,7 +384,7 @@ h1:focus {
     border-color: var(--border-light);
     height: auto;
     margin-bottom: 1rem;
-    background-color: rgb(105, 17, 207, 0.03);
+    background-color: var(--glass-bg);
 }
 
 .configname {
@@ -414,33 +397,54 @@ h1:focus {
 }
 
 .configbutton {
-    --bs-btn-border-color: var(--border-heavy);
-    --bs-btn-hover-border-color: var(--border-heavy);
-    --bs-btn-active-border-color: var(--border-heavy);
+    --bs-btn-border-color: var(--border-light);
+    --bs-btn-hover-border-color: var(--border-light);
+    --bs-btn-active-border-color: var(--border-light);
 }
 
 .filepickerbtn {
-    --bs-btn-border-color: var(--border-heavy);
-    --bs-btn-hover-border-color: var(--border-heavy);
-    --bs-btn-active-border-color: var(--border-heavy);
+    --bs-btn-border-color: var(--border-light);
+    --bs-btn-hover-border-color: var(--border-light);
+    --bs-btn-active-border-color: var(--border-light);
 }
 
 /* Rcon.razor */
+
+.rconoutput,
+.rconoutput:hover,
+.rconoutput:active,
+.rconoutput:focus {
+    background-color: var(--glass-bg);
+    color: var(--text-color);
+    border-color: var(--border-light);
+    resize: none;
+}
+
 .rcon-button {
-    --bs-btn-border-color: var(--border-heavy);
-    --bs-btn-hover-border-color: var(--border-heavy);
-    --bs-btn-active-border-color: var(--border-heavy);
+    --bs-btn-border-color: var(--border-light);
+    --bs-btn-hover-border-color: var(--border-light);
+    --bs-btn-active-border-color: var(--border-light);
 }
 
 /* Server.razor */
+
+.serveroutput,
+.serveroutput:hover,
+.serveroutput:active,
+.serveroutput:focus {
+    background-color: var(--glass-bg);
+    color: var(--text-color);
+    border-color: var(--border-light);
+    resize: none;
+}
 
 .togglebg {
     display: inline-block;
     padding: 0.75rem 0.75rem 0.75rem 0.75rem;
     border: solid 1px;
     border-radius: 1rem;
-    border-color: rgb(255, 255, 255, 0.05);
-    background-color: rgb(105, 17, 207, 0.05);
+    border-color: var(--border-light);
+    background-color: var(--glass-bg);
     width: 15rem;
     margin-bottom: 1rem;
 }

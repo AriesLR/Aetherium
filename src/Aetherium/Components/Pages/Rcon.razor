@@ -15,13 +15,13 @@
     <div class="row">
         <div class="col">
             <h5>RCON Console</h5>
-            <textarea id="outputTextarea" class="form-control" rows="10" readonly style="background-color: rgb(105, 17, 207, 0.05); color: rgb(255, 255, 255, 0.90); border-color: rgb(255, 255, 255, 0.05); resize: none; margin-top: 0.25rem; margin-bottom: 0.25rem;">@AppConfig.rconOutput</textarea>
+            <textarea id="outputTextarea" class="form-control rconoutput" rows="10" readonly>@AppConfig.rconOutput</textarea>
 
             <div class="input-group mt-1">
                 <button class="btn btn-success bg-gradient btn-sm rcon-button" @onclick="RconConnect">Connect</button>
                 <button class="btn btn-danger bg-gradient btn-sm rcon-button" @onclick="RconDisconnect">Disconnect</button>
                 <input type="text" class="form-control" placeholder="Enter RCON Command" @bind="AppConfig.rconCommand">
-                <button class="btn btn-primary btn-sm rcon-button" @onclick="RconSendCommand">Send</button>
+                <button class="btn btn-light bg-gradient btn-sm rcon-button" @onclick="RconSendCommand">Send</button>
             </div>
         </div>
     </div>
