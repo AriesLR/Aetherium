@@ -1,0 +1,80 @@
+.processcontainer {
+    padding: 0.75rem 3.25rem 0.75rem 3.25rem;
+}
+
+.process-monitor {
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: var(--border-light);
+    background-color: var(--glass-bg);
+    width: 16rem;
+}
+
+.process-monitor-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bi {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    justify-content: left;
+}
+
+.process-monitor-labeltext {
+    display: flex;
+    font-family: var(--fancy-font);
+    letter-spacing: 0.10rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color);
+    width: 5rem;
+}
+
+.process-monitor-usagetext {
+    display: flex;
+    font-family: var(--fancy-font);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-color-alt);
+    width: 5.5rem;
+    justify-content: right;
+}
+
+.process-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded-config {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serverbadge {
+    height: 1.5rem;
+    width: 8rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.configbadge {
+    height: 1.5rem;
+    width: auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bi-cpu-fill-process-monitor {
+    background-image: var(--icon-cpu);
+}
+
+.bi-memory-process-monitor {
+    background-image: var(--icon-ram);
+}
