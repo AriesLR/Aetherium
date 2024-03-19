@@ -111,7 +111,7 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 
 ###### Firstly, this is my first windows application ever. I have web development experience as well as various other programming experience, but this has been a learning journey for me.
 
-###### ~~This was created as a .NET Maui Blazor Hyrbid App. While .NET Maui seems to be a pretty capable framework, it has some limits. ~~
+###### ~~This was created as a .NET Maui Blazor Hyrbid App. While .NET Maui seems to be a pretty capable framework, it has some limits.~~
 
 ###### ~~My main example being an issue I encountered trying to use the windows file picker for the config setup. While I could get it to work partially, I found that it's likely impossible to get the full file path since .NET Maui Blazor Hybrids are technically web apps and for security reasons a browser can't get that kind of detailed information about a users file structure.~~
 
