@@ -28,6 +28,7 @@
 - Start and stop server.
 - Monitor server output in real-time.
 - Automatic server restarts.
+- Graceful shutdowns.
 - Automatic save backups.
 - RCON integration.
 - Resource monitoring.
