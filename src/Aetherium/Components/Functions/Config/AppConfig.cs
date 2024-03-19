@@ -26,5 +26,6 @@ namespace Aetherium.Components.Functions.Config
         public static string rconCommand = "";
         public static string? rconOutput = "";
         public static bool isConnected = false;
+        public static bool advRestartType;
     }
 }

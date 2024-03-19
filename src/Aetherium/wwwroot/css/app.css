@@ -4,7 +4,9 @@
     --background: url('../images/dark/background-dark.png');
     --background-color: #000;
     --glass-bg: rgb(105, 17, 207, 0.10);
+    --glass-bg-heavy: rgb(105, 17, 207, 0.50);
     --header-bg: rgb(255, 255, 255, 0.25);
+    --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(255, 255, 255, 0.90);
     --text-color-alt: rgb(255, 255, 255, 0.75);
     --text-color-disabled: rgb(255, 255, 255, 0.60);
@@ -25,7 +27,9 @@ html[data-theme="a-dark"] {
     --background: url('../images/dark/background-dark.png');
     --background-color: #000;
     --glass-bg: rgb(105, 17, 207, 0.10);
+    --glass-bg-heavy: rgb(105, 17, 207, 0.50);
     --header-bg: rgb(255, 255, 255, 0.25);
+    --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(255, 255, 255, 0.90);
     --text-color-alt: rgb(255, 255, 255, 0.75);
     --text-color-disabled: rgb(255, 255, 255, 0.60);
@@ -46,7 +50,9 @@ html[data-theme="a-light"] {
     --background: url('../images/light/background-light.png');
     --background-color: #fff;
     --glass-bg: rgb(105, 17, 207, 0.25);
+    --glass-bg-heavy: rgb(105, 17, 207, 0.50);
     --header-bg: rgb(255, 255, 255, 0.25);
+    --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(0, 0, 0, 0.90);
     --text-color-alt: rgb(0, 0, 0, 0.75);
     --text-color-disabled: rgb(0, 0, 0, 0.60);
@@ -138,8 +144,6 @@ h1:focus {
         padding-left: env(safe-area-inset-left);
     }
 }
-
-
 
 /* Bootstrap Overrides CSS Below */
 
@@ -264,13 +268,11 @@ h1:focus {
     border-color: var(--border-light);
 }
 .bg-success {
-    background-color: rgb(255, 255, 255, 0) !important;
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.30) 0%, rgba(0,221,255,0.30) 100%) !important;
+    background-color: var(--glass-bg-heavy) !important;
 }
 
 .bg-danger {
-    background-color: rgb(255, 255, 255, 0) !important;
-    background-image: linear-gradient(45deg, rgba(173,0,255,0.10) 0%, rgba(0,221,255,0.10) 100%) !important;
+    background-color: var(--glass-bg) !important;
     color: var(--text-color-disabled) !important;
 }
 
@@ -338,7 +340,7 @@ h1:focus {
 }
 
 .configheadertext {
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: var(--fancy-font);
     letter-spacing: 0.15rem;
     font-weight: 800;
     font-size: 1.2rem;
@@ -356,6 +358,21 @@ h1:focus {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 8rem;
+}
+
+.advconfiglabel {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 10rem;
+}
+
+.restarttype {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .configlabel2 {

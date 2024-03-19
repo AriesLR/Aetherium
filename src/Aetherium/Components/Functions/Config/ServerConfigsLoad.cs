@@ -29,6 +29,9 @@ namespace Aetherium.Components.Functions.Config
                     // Load the automatic restarts status
                     AppConfig.automaticRestarts = Configuration.Instance.AutomaticRestarts;
 
+                    // Load the advanced restart settings
+                    AppConfig.advRestartType = Configuration.Instance.AdvRestartType;
+
                     // Load the save backups status
                     AppConfig.saveBackupsEnabled = Configuration.Instance.SaveBackupsEnabled;
 

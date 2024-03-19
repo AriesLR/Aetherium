@@ -27,7 +27,7 @@
 
 .process-monitor-labeltext {
     display: flex;
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: var(--fancy-font);
     letter-spacing: 0.10rem;
     font-weight: 700;
     font-size: 1rem;
@@ -37,7 +37,7 @@
 
 .process-monitor-usagetext {
     display: flex;
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: var(--fancy-font);
     font-weight: 500;
     font-size: 1rem;
     color: var(--text-color-alt);

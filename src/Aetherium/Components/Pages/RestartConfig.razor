@@ -1,0 +1,58 @@
+﻿@page "/restartconfig"
+@using System;
+@using System.Diagnostics;
+@using System.Collections.Generic;
+@using System.IO;
+@using System.Linq;
+@using System.Text.Json;
+@using Aetherium.Components.Functions;
+@using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Toasts;
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="configbg">
+                <div class="configheader">
+                    <span class="configheadertext">Advanced Settings</span>
+                </div>
+                <div class="configcontainer">
+                    <div class="restarttype">
+                        <div class="togglebg">
+                            <div class="togglecontents">
+                                <div class="toggle-label">
+                                    <span>Local</span>
+                                </div>
+                                <div class="form-check form-switch toggle-switch">
+                                    <input type="checkbox" class="form-check-input" checked="@AppConfig.advRestartType" @onchange="AdvRestart.AdvRestartToggle">
+                                </div>
+                                <div class="toggle-label">
+                                    <span>Rcon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text advconfiglabel">Restart Command</span>
+                        <input type="text" class="form-control" placeholder="Leave empty for force shutdown" @bind-value="Configuration.Instance.AdvRestartCommand" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <NavLink class="btn btn-light btn-sm filepickerbtn" href="config">Go Back</NavLink>
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        AppSettingsInit.InitAppSettings(); // Create appsettings.json if it doesn't exist
+        AppSettingsLoad.LoadAppConfig(); // Load existing Configurations
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
+    }
+}

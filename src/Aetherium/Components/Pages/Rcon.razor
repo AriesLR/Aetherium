@@ -46,7 +46,7 @@
         await InvokeAsync((StateHasChanged));
     }
 
-    public async Task RconConnect()
+    public static async Task RconConnect()
     {
         // Assuming AppConfig.rconIp, AppConfig.rconPort, and AppConfig.rconPassword are already populated
         if (!string.IsNullOrWhiteSpace(AppConfig.rconIp) && !string.IsNullOrWhiteSpace(AppConfig.rconPort) && !string.IsNullOrWhiteSpace(AppConfig.rconPassword))
@@ -70,14 +70,15 @@
     }
 
 
-    private async Task RconSendCommand()
+    public static async Task RconSendCommand()
     {
         if (AppConfig.isConnected && AppConfig.rcon != null && !string.IsNullOrWhiteSpace(AppConfig.rconCommand))
         {
             try
             {
                 var response = await AppConfig.rcon.SendCommandAsync(AppConfig.rconCommand);
-                AppConfig.rconOutput += $"\n{response}";
+                AppConfig.rconOutput += $"{response}\n";
+                AppConfig.rconCommand = "";
             }
             catch (Exception ex)
             {
@@ -90,7 +91,7 @@
         }
     }
 
-    private void RconDisconnect()
+    public static void RconDisconnect()
     {
         if (AppConfig.rcon != null)
         {

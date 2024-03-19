@@ -17,16 +17,36 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo-alt.png",
-      "PackagePath": "staticwebassets\\images\\bannerlogo-alt.png"
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\background-dark.png",
+      "PackagePath": "staticwebassets\\images\\dark\\background-dark.png"
     },
     {
-      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\bannerlogo.png",
-      "PackagePath": "staticwebassets\\images\\bannerlogo.png"
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\bannerlogo-alt-dark.png",
+      "PackagePath": "staticwebassets\\images\\dark\\bannerlogo-alt-dark.png"
     },
     {
-      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\logo.png",
-      "PackagePath": "staticwebassets\\images\\logo.png"
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\bannerlogo-dark.png",
+      "PackagePath": "staticwebassets\\images\\dark\\bannerlogo-dark.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\logo-dark.png",
+      "PackagePath": "staticwebassets\\images\\dark\\logo-dark.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\light\\background-light.png",
+      "PackagePath": "staticwebassets\\images\\light\\background-light.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\light\\bannerlogo-alt-light.png",
+      "PackagePath": "staticwebassets\\images\\light\\bannerlogo-alt-light.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\light\\bannerlogo-light.png",
+      "PackagePath": "staticwebassets\\images\\light\\bannerlogo-light.png"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\light\\logo-light.png",
+      "PackagePath": "staticwebassets\\images\\light\\logo-light.png"
     },
     {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\index.html",
@@ -43,6 +63,10 @@
     {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\scrollToBottom.js",
       "PackagePath": "staticwebassets\\js\\scrollToBottom.js"
+    },
+    {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\js\\themeSwitcher.js",
+      "PackagePath": "staticwebassets\\js\\themeSwitcher.js"
     },
     {
       "Id": "obj\\Release\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.Aetherium.Microsoft.AspNetCore.StaticWebAssets.props",

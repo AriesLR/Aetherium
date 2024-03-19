@@ -14,5 +14,7 @@
         public int RestartInterval { get; set; }
         public bool AutomaticRestarts { get; set; }
         public bool SaveBackupsEnabled { get; set; }
+        public bool AdvRestartType { get; set; }
+        public string? AdvRestartCommand { get; set; } = "";
     }
 }

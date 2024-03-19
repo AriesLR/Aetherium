@@ -16,6 +16,9 @@
         public int RestartInterval { get; set; }
         public bool AutomaticRestarts { get; set; }
         public bool SaveBackupsEnabled { get; set; }
+        public bool AdvRestartType { get; set; }
+        public string? AdvRestartCommand { get; set; } = "";
+
 
         // Private constructor ensures that a new instance cannot be created from outside the class
         private Configuration() { }
@@ -56,6 +59,8 @@
             this.RestartInterval = tempConfig.RestartInterval;
             this.AutomaticRestarts = tempConfig.AutomaticRestarts;
             this.SaveBackupsEnabled = tempConfig.SaveBackupsEnabled;
+            this.AdvRestartType = tempConfig.AdvRestartType;
+            this.AdvRestartCommand = tempConfig.AdvRestartCommand;
         }
     }
 }

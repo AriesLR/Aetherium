@@ -883,6 +883,14 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\favicon.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\background-dark.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\bannerlogo-alt-dark.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\bannerlogo-dark.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\logo-dark.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\background-light.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\bannerlogo-alt-light.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\bannerlogo-light.png
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\logo-light.png
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\index.html
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\js\bootstrap.bundle.min.js
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\js\bootstrap.bundle.min.js.map
@@ -1379,11 +1387,3 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\background-dark.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\bannerlogo-alt-dark.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\bannerlogo-dark.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\logo-dark.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\background-light.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\bannerlogo-alt-light.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\bannerlogo-light.png
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\light\logo-light.png
