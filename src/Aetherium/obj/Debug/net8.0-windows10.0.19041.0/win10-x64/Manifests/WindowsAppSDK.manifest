@@ -3065,11 +3065,6 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
-            name='Microsoft.UI.Xaml.Controls.ElementAnimator'
-            threadingModel='both'
-            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
-
-        <activatableClass
             name='Microsoft.UI.Xaml.Controls.ElementFactory'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
@@ -3125,6 +3120,11 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
+            name='Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
             name='Microsoft.UI.Xaml.Controls.ItemContainer'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
@@ -3151,6 +3151,16 @@
 
         <activatableClass
             name='Microsoft.UI.Xaml.Controls.LayoutPanel'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Xaml.Controls.LinedFlowLayout'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemCollectionTransitionProvider'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
@@ -3325,7 +3335,7 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
-            name='Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerInteractionRequestedEventArgs'
+            name='Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
@@ -3421,16 +3431,6 @@
 
         <activatableClass
             name='Microsoft.UI.Xaml.Controls.RevealListViewItemPresenter'
-            threadingModel='both'
-            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
-
-        <activatableClass
-            name='Microsoft.UI.Xaml.Controls.RiverFlowLayout'
-            threadingModel='both'
-            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
-
-        <activatableClass
-            name='Microsoft.UI.Xaml.Controls.RiverFlowLayoutElementAnimator'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
@@ -3813,6 +3813,11 @@
     </asmv3:file>
     <asmv3:file name='CoreMessagingXP.dll'>
         <activatableClass
+            name='Microsoft.UI.Dispatching.DispatcherExitDeferral'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
             name='Microsoft.UI.Dispatching.DispatcherQueue'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
@@ -4102,6 +4107,13 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
     </asmv3:file>
+    <asmv3:file name='Microsoft.UI.dll'>
+        <activatableClass
+            name='Microsoft.UI.System.ThemeSettings'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+    </asmv3:file>
     <asmv3:file name='Microsoft.UI.Input.dll'>
         <activatableClass
             name='Microsoft.UI.Content.ContentAppWindowBridge'
@@ -4109,7 +4121,12 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
-            name='Microsoft.UI.Content.ContentCoordinates'
+            name='Microsoft.UI.Content.ContentCoordinateConverter'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Content.ContentExternalBackdropLink'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
@@ -4124,7 +4141,27 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
+            name='Microsoft.UI.Content.ContentIslandEnvironment'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
             name='Microsoft.UI.Content.ContentSite'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Content.ContentSiteEnvironment'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Content.ContentSiteEnvironmentView'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Content.ContentSiteView'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
@@ -4209,6 +4246,11 @@
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 
         <activatableClass
+            name='Microsoft.UI.Input.InputFocusController'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
             name='Microsoft.UI.Input.InputKeyboardSource'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
@@ -4220,6 +4262,11 @@
 
         <activatableClass
             name='Microsoft.UI.Input.InputObject'
+            threadingModel='both'
+            xmlns='urn:schemas-microsoft-com:winrt.v1'/>
+
+        <activatableClass
+            name='Microsoft.UI.Input.InputPreTranslateKeyboardSource'
             threadingModel='both'
             xmlns='urn:schemas-microsoft-com:winrt.v1'/>
 

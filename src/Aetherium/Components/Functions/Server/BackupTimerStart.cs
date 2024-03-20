@@ -22,7 +22,7 @@ namespace Aetherium.Components.Functions.Server
                         // Create a new backup timer
                         AppConfig.backupTimer = new System.Timers.Timer();
                         AppConfig.backupTimer.Interval = backupIntervalMinutes * 60000; // Convert minutes to milliseconds
-                        AppConfig.backupTimer.Elapsed += async (sender, e) => await Backup.PerformBackup();
+                        AppConfig.backupTimer.Elapsed += async (sender, e) => Backup.PerformBackup();
                         AppConfig.backupTimer.AutoReset = true;
                         AppConfig.backupTimer.Start();
                     }

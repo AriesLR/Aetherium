@@ -40,7 +40,7 @@
         <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
         <GenerateTestArtifacts>True</GenerateTestArtifacts>
         <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-        <PlatformTarget>x64</PlatformTarget>
+        <PlatformTarget>AnyCPU</PlatformTarget>
         <PackageIcon>icon.png</PackageIcon>
         <NeutralLanguage>en-US</NeutralLanguage>
 		
@@ -82,10 +82,13 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="AlphaFS.New" Version="2.3.0" />
+        <PackageReference Include="AlphaVSS" Version="2.0.3" />
         <PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
         <PackageReference Include="CoreRCON" Version="5.4.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.10" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.6" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
         <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
         <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />

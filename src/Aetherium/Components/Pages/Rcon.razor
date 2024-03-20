@@ -53,19 +53,20 @@
         {
             try
             {
+                AppConfig.rconOutput = "";
                 AppConfig.rcon = new RCON(IPAddress.Parse(AppConfig.rconIp), ushort.Parse(AppConfig.rconPort), AppConfig.rconPassword);
                 await AppConfig.rcon.ConnectAsync();
                 AppConfig.isConnected = true;
-                AppConfig.rconOutput += "[Rcon] Connected successfully.\n";
+                AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] RCON Connected\n";
             }
             catch (Exception ex)
             {
-                AppConfig.rconOutput += $"[Rcon] Failed to connect: {ex.Message}\n";
+                AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] RCON failed to connect: {ex.Message}\n";
             }
         }
         else
         {
-            AppConfig.rconOutput += "[Rcon] Configuration not found or incomplete.\n";
+            AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] Configuration not found or incomplete.\n";
         }
     }
 
@@ -79,15 +80,17 @@
                 var response = await AppConfig.rcon.SendCommandAsync(AppConfig.rconCommand);
                 AppConfig.rconOutput += $"{response}\n";
                 AppConfig.rconCommand = "";
+                Rcon rcon = new Rcon();
+                rcon.OutputUpdate();
             }
             catch (Exception ex)
             {
-                AppConfig.rconOutput += $"Server: {ex.Message}\n";
+                AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] {ex.Message}\n";
             }
         }
         else if (!AppConfig.isConnected)
         {
-            AppConfig.rconOutput += "[Rcon] Not connected.\n";
+            AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] RCON is not connected.\n";
         }
     }
 
@@ -99,7 +102,8 @@
             {
                 AppConfig.rcon.Dispose();
                 AppConfig.isConnected = false;
-                AppConfig.rconOutput += "[Rcon] Disconnected successfully.\n";
+                AppConfig.rconOutput = "";
+                AppConfig.rconOutput += $"[{Configuration.Instance.Prefix}] RCON Disconnected\n";
             }
             catch (Exception ex)
             {

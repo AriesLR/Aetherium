@@ -2,6 +2,67 @@
   "version": 3,
   "targets": {
     "net8.0-windows10.0.19041": {
+      "AlphaFS.New/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.IO.FileSystem.AccessControl": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AlphaFS.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/AlphaFS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AlphaVSS/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "AlphaVSS.Native.NetCore": "[2.0.3]"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AlphaVSS.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AlphaVSS.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AlphaVSS.Native.NetCore/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/AlphaVSS.x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/Ijwhost.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/AlphaVSS.x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/Ijwhost.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -150,7 +211,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebView.Maui/8.0.10": {
+      "Microsoft.AspNetCore.Components.WebView.Maui/8.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authorization": "8.0.0",
@@ -1116,6 +1177,27 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.IO.FileSystem.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.IO.Pipelines/8.0.0": {
         "type": "package",
         "compile": {
@@ -1178,6 +1260,20 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Permissions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {}
         }
       },
       "System.Security.Principal.Windows/4.7.0": {
@@ -1273,6 +1369,53 @@
       }
     },
     "net8.0-windows10.0.19041/win10-x64": {
+      "AlphaFS.New/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.IO.FileSystem.AccessControl": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AlphaFS.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/AlphaFS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AlphaVSS/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "AlphaVSS.Native.NetCore": "[2.0.3]"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AlphaVSS.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AlphaVSS.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AlphaVSS.Native.NetCore/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/AlphaVSS.x64.dll": {},
+          "runtimes/win-x64/native/Ijwhost.dll": {}
+        }
+      },
       "CommunityToolkit.Maui/7.0.1": {
         "type": "package",
         "dependencies": {
@@ -1421,7 +1564,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.WebView.Maui/8.0.10": {
+      "Microsoft.AspNetCore.Components.WebView.Maui/8.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authorization": "8.0.0",
@@ -2322,6 +2465,21 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.IO.FileSystem.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        }
+      },
       "System.IO.Pipelines/8.0.0": {
         "type": "package",
         "compile": {
@@ -2378,6 +2536,20 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Permissions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {}
         }
       },
       "System.Security.Principal.Windows/4.7.0": {
@@ -2452,6 +2624,58 @@
     }
   },
   "libraries": {
+    "AlphaFS.New/2.3.0": {
+      "sha512": "c5lct9JId/1YZnY64eXaOTLEYVylF7MpkguY9Fy/cOe29qV0TAQCTI0gkFXiyx0/6jxe+lPQRlHMgvwUIjOOHQ==",
+      "type": "package",
+      "path": "alphafs.new/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "alphafs.new.2.3.0.nupkg.sha512",
+        "alphafs.new.nuspec",
+        "lib/net45/AlphaFS.dll",
+        "lib/net45/AlphaFS.xml",
+        "lib/net46/AlphaFS.dll",
+        "lib/net46/AlphaFS.xml",
+        "lib/net47/AlphaFS.dll",
+        "lib/net47/AlphaFS.xml",
+        "lib/netstandard2.0/AlphaFS.dll",
+        "lib/netstandard2.0/AlphaFS.xml"
+      ]
+    },
+    "AlphaVSS/2.0.3": {
+      "sha512": "XN7wk1WcWCqifpNqe4hEBAhk4ykTre25SvA+fVDFMk0fZSUJk0hj2VyYD9rTawVYSftG7f4xlyX5wSfn7mb/aA==",
+      "type": "package",
+      "path": "alphavss/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "alphavss.2.0.3.nupkg.sha512",
+        "alphavss.nuspec",
+        "lib/net45/AlphaVSS.Common.dll",
+        "lib/net45/AlphaVSS.Common.pdb",
+        "lib/net45/AlphaVSS.Common.xml",
+        "lib/netcoreapp3.1/AlphaVSS.Common.dll",
+        "lib/netcoreapp3.1/AlphaVSS.Common.pdb",
+        "lib/netcoreapp3.1/AlphaVSS.Common.xml"
+      ]
+    },
+    "AlphaVSS.Native.NetCore/2.0.3": {
+      "sha512": "hUJThzRUMfcNBjnCX6u0CvNj4wlyeAlB59hnP4IWgcsRrCXqEOcXriLekGy765JZTg4Re4iErA28j7OnbA08Wg==",
+      "type": "package",
+      "path": "alphavss.native.netcore/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "alphavss.native.netcore.2.0.3.nupkg.sha512",
+        "alphavss.native.netcore.nuspec",
+        "lib/netcoreapp3.1/_._",
+        "runtimes/win-x64/native/AlphaVSS.x64.dll",
+        "runtimes/win-x64/native/Ijwhost.dll",
+        "runtimes/win-x86/native/AlphaVSS.x86.dll",
+        "runtimes/win-x86/native/Ijwhost.dll"
+      ]
+    },
     "CommunityToolkit.Maui/7.0.1": {
       "sha512": "ecgi4LwhP8uMftmRdriPA9/I+BP4nDuwrW408e7cnCthMArog0W9/A50RyEP65WH/+T7nM0gUlrz4xLpmIiXRQ==",
       "type": "package",
@@ -2615,10 +2839,10 @@
         "microsoft.aspnetcore.components.webview.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.WebView.Maui/8.0.10": {
-      "sha512": "E/kjVnJD1f3MdPC7mRxyUyEyeIsgWoot1bqAdEsf3o+ngOJ6k97eKnabiuVH76NhtRu5Oze8t17A4+14afsX7w==",
+    "Microsoft.AspNetCore.Components.WebView.Maui/8.0.6": {
+      "sha512": "Ol/wJSSFPQpydEA2tnIZ5PsJe+Zue6Oh4dUhDLhvzY3i7dRU9dOjXXmupyJoaNyi/1u+TYmsAudjT/KDoK3lKw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.webview.maui/8.0.10",
+      "path": "microsoft.aspnetcore.components.webview.maui/8.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2631,12 +2855,12 @@
         "lib/net8.0-android34.0/Microsoft.AspNetCore.Components.WebView.Maui.dll",
         "lib/net8.0-android34.0/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
         "lib/net8.0-android34.0/Microsoft.AspNetCore.Components.WebView.Maui.xml",
-        "lib/net8.0-ios17.2/Microsoft.AspNetCore.Components.WebView.Maui.dll",
-        "lib/net8.0-ios17.2/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
-        "lib/net8.0-ios17.2/Microsoft.AspNetCore.Components.WebView.Maui.xml",
-        "lib/net8.0-maccatalyst17.2/Microsoft.AspNetCore.Components.WebView.Maui.dll",
-        "lib/net8.0-maccatalyst17.2/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
-        "lib/net8.0-maccatalyst17.2/Microsoft.AspNetCore.Components.WebView.Maui.xml",
+        "lib/net8.0-ios17.0/Microsoft.AspNetCore.Components.WebView.Maui.dll",
+        "lib/net8.0-ios17.0/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
+        "lib/net8.0-ios17.0/Microsoft.AspNetCore.Components.WebView.Maui.xml",
+        "lib/net8.0-maccatalyst17.0/Microsoft.AspNetCore.Components.WebView.Maui.dll",
+        "lib/net8.0-maccatalyst17.0/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
+        "lib/net8.0-maccatalyst17.0/Microsoft.AspNetCore.Components.WebView.Maui.xml",
         "lib/net8.0-tizen8.0/Microsoft.AspNetCore.Components.WebView.Maui.dll",
         "lib/net8.0-tizen8.0/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
         "lib/net8.0-tizen8.0/Microsoft.AspNetCore.Components.WebView.Maui.xml",
@@ -2649,7 +2873,7 @@
         "lib/net8.0/Microsoft.AspNetCore.Components.WebView.Maui.dll",
         "lib/net8.0/Microsoft.AspNetCore.Components.WebView.Maui.pdb",
         "lib/net8.0/Microsoft.AspNetCore.Components.WebView.Maui.xml",
-        "microsoft.aspnetcore.components.webview.maui.8.0.10.nupkg.sha512",
+        "microsoft.aspnetcore.components.webview.maui.8.0.6.nupkg.sha512",
         "microsoft.aspnetcore.components.webview.maui.nuspec"
       ]
     },
@@ -5295,6 +5519,45 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.IO.FileSystem.AccessControl/4.5.0": {
+      "sha512": "TYe6xstoqT5MlTly0OtPU6u9zWuNScLVMEx6sTCjjx+Hqdp0wCXoG6fnzMpTPMQACXQzi9pd2N5Tloow+5jQdQ==",
+      "type": "package",
+      "path": "system.io.filesystem.accesscontrol/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "ref/net46/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
+        "runtimes/win/lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "system.io.filesystem.accesscontrol.4.5.0.nupkg.sha512",
+        "system.io.filesystem.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.IO.Pipelines/8.0.0": {
       "sha512": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
       "type": "package",
@@ -5458,6 +5721,27 @@
         "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Security.Permissions/4.5.0": {
+      "sha512": "9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "type": "package",
+      "path": "system.security.permissions/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.xml",
+        "ref/netstandard2.0/System.Security.Permissions.dll",
+        "ref/netstandard2.0/System.Security.Permissions.xml",
+        "system.security.permissions.4.5.0.nupkg.sha512",
+        "system.security.permissions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Security.Principal.Windows/4.7.0": {
@@ -5695,9 +5979,11 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows10.0.19041": [
+      "AlphaFS.New >= 2.3.0",
+      "AlphaVSS >= 2.0.3",
       "CommunityToolkit.Maui >= 7.0.1",
       "CoreRCON >= 5.4.0",
-      "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.10",
+      "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.6",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.6",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.10",
@@ -5711,7 +5997,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.1.5",
+    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
       "projectName": "Aetherium",
@@ -5757,6 +6043,14 @@
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
         "dependencies": {
+          "AlphaFS.New": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
+          "AlphaVSS": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
           "CommunityToolkit.Maui": {
             "target": "Package",
             "version": "[7.0.1, )"
@@ -5767,7 +6061,7 @@
           },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
-            "version": "[8.0.10, )"
+            "version": "[8.0.6, )"
           },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
@@ -5807,8 +6101,24 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[8.0.2, 8.0.2]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+            "version": "[8.0.2, 8.0.2]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[8.0.2, 8.0.2]"
+          },
+          {
             "name": "Microsoft.Windows.SDK.NET.Ref",
             "version": "[10.0.19041.31, 10.0.19041.31]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[8.0.2, 8.0.2]"
           }
         ],
         "frameworkReferences": {

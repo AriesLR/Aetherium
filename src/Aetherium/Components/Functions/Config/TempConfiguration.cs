@@ -2,6 +2,7 @@
 {
     public class TempConfiguration
     {
+        public string? Prefix { get; set; } = "Aetherium";
         public string? ConfigName { get; set; } = "";
         public string ServerPath { get; set; } = "";
         public string BackupPath { get; set; } = "";

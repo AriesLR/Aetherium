@@ -334,11 +334,15 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\zh-HK\Microsoft.Maui.Controls.resources.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\zh-Hans\Microsoft.Maui.Controls.resources.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\zh-Hant\Microsoft.Maui.Controls.resources.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\AlphaVSS.x64.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Ijwhost.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Graphics.Canvas.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.UI.Xaml.Controls.pri
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\resources.pri
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.AspNetCore.Metadata.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Diagnostics.EventLog.Messages.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\AlphaFS.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\AlphaVSS.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\CommunityToolkit.Maui.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\CommunityToolkit.Maui.Core.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\CoreRCON.dll
@@ -396,5 +400,6 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.IO.Pipelines.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Security.Cryptography.ProtectedData.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Security.Permissions.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Speech.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Aetherium.dll

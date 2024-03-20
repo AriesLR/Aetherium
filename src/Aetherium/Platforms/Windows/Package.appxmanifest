@@ -28,6 +28,7 @@
 	<Capabilities>
 		<rescap:Capability Name="runFullTrust" />
 		<Capability Name="internetClientServer" />
+		<requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
 	</Capabilities>
 
 </Package>

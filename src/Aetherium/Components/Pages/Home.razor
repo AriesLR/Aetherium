@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using Microsoft.AspNetCore.Components.Routing
+@using Aetherium.Components.Functions.Config;
 
 <div class="container">
     <div class="row">
@@ -18,5 +19,12 @@
 
 
 @code {
-
+    protected override async Task OnInitializedAsync()
+    {
+        AppSettingsLoad.LoadAppConfig();
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿@page "/settings"
 @using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Server;
 @using Aetherium.Components.Functions.Services;
 @using System.Diagnostics;
 @inject ThemeService ThemeService
@@ -26,7 +27,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <button class="btn btn-secondary">DEBUG</button>
+            <button class="btn btn-light bg-gradient btn-sm rcon-button" @onclick="Backup.PerformBackup">Backup</button>
         </div>
     </div>
 </div>

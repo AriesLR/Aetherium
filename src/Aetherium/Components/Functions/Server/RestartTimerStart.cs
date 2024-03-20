@@ -12,7 +12,7 @@ namespace Aetherium.Components.Functions.Server
             {
                 if (AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited)
                 {
-                    AppConfig.serverProcess.Kill();
+                    await ServerStop.StopServer(); // Stop the server
                     await Task.Delay(10000); // Wait for 10 seconds
                     await ServerStart.StartServer(); // Start the server
                 }

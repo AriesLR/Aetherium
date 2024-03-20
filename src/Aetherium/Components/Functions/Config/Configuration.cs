@@ -4,6 +4,7 @@
     {
         private static Configuration _instance;
 
+        public string? Prefix { get; set; } = "Aetherium";
         public string? ConfigName { get; set; } = "";
         public string ServerPath { get; set; } = "";
         public string BackupPath { get; set; } = "";
@@ -47,6 +48,7 @@
         public void UpdateFrom(TempConfiguration tempConfig)
         {
             // Update each property from the 'other' instance
+            this.Prefix = tempConfig.Prefix;
             this.ConfigName = tempConfig.ConfigName;
             this.ServerPath = tempConfig.ServerPath;
             this.BackupPath = tempConfig.BackupPath;

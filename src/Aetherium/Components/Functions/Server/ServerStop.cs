@@ -2,7 +2,6 @@
 using Aetherium.Components.Functions.Toasts;
 using Aetherium.Components.Pages;
 using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace Aetherium.Components.Functions.Server
 {
@@ -12,7 +11,6 @@ namespace Aetherium.Components.Functions.Server
         {
             if (string.IsNullOrEmpty(Configuration.Instance.AdvRestartCommand))
             {
-                // Logic when advRestartCommand is null or empty
                 ForceStopServer();
             }
             else
@@ -31,7 +29,7 @@ namespace Aetherium.Components.Functions.Server
             }
         }
 
-        private static void ForceStopServer()
+        public static void ForceStopServer()
         {
             if (AppConfig.serverStopping)
             {
@@ -60,12 +58,14 @@ namespace Aetherium.Components.Functions.Server
             }
         }
 
-        private static void SendCommandViaServerInput(string command)
+        private static async Task SendCommandViaServerInput(string command)
         {
             Debug.WriteLine($"Sending command via server input: {command}");
             if (AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited)
             {
-                AppConfig.serverProcess.StandardInput.WriteLineAsync(command);
+                await AppConfig.serverProcess.StandardInput.WriteLineAsync(command);
+                await AppConfig.serverProcess.StandardInput.FlushAsync();
+                AppConfig.serverOutput = "";
             }
         }
 
@@ -79,9 +79,10 @@ namespace Aetherium.Components.Functions.Server
 
             if (AppConfig.isConnected)
             {
-                AppConfig.rconCommand = command; // Ensure this is the property used in RconSendCommand.
+                AppConfig.rconCommand = command;
                 await Rcon.RconSendCommand();
                 AppConfig.rconCommand = "";
+                AppConfig.serverOutput = "";
             }
 
             Rcon.RconDisconnect();

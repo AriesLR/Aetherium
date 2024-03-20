@@ -5,7 +5,7 @@
   },
   "projects": {
     "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj": {
-      "version": "0.1.5",
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Aetherium.csproj",
         "projectName": "Aetherium",
@@ -51,6 +51,14 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "AlphaFS.New": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "AlphaVSS": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "CommunityToolkit.Maui": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -61,7 +69,7 @@
             },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -101,8 +109,24 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
               "name": "Microsoft.Windows.SDK.NET.Ref",
               "version": "[10.0.19041.31, 10.0.19041.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.2, 8.0.2]"
             }
           ],
           "frameworkReferences": {

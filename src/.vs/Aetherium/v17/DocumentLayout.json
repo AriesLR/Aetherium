@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "G:\\#Github#\\Aetherium\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\restartconfig.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\restartconfig.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\functions\\server\\backuptimerstart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\functions\\server\\backuptimerstart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -26,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "app.css",
               "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\app.css",
               "RelativeDocumentMoniker": "Aetherium\\wwwroot\\css\\app.css",
               "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\css\\app.css",
               "RelativeToolTip": "Aetherium\\wwwroot\\css\\app.css",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEUAAAAMAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-07T07:01:58.451Z",
               "IsPinned": true,
@@ -44,13 +40,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "Aetherium\\Components\\Layout\\MainLayout.razor.css",
               "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Layout\\MainLayout.razor.css",
               "RelativeToolTip": "Aetherium\\Components\\Layout\\MainLayout.razor.css",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAADIAAAAaAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAIBJwDUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-07T07:42:56.143Z",
               "IsPinned": true
@@ -58,27 +54,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Config.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Config.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\Config.razor",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-19T22:34:54.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RestartConfig.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\RestartConfig.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\RestartConfig.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\RestartConfig.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\RestartConfig.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-19T20:09:22.704Z",
+              "Title": "BackupTimerStart.cs",
+              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\BackupTimerStart.cs",
+              "RelativeDocumentMoniker": "Aetherium\\Components\\Functions\\Server\\BackupTimerStart.cs",
+              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Functions\\Server\\BackupTimerStart.cs",
+              "RelativeToolTip": "Aetherium\\Components\\Functions\\Server\\BackupTimerStart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T05:41:20.211Z",
               "EditorCaption": ""
             }
           ]

@@ -29,7 +29,8 @@
     <div class="row mb-1">
         <div class="col d-flex justify-content-center">
             <button class="btn btn-success bg-gradient btn-sm m-1" @onclick="ServerStart.StartServer" disabled="@((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) || AppConfig.serverStarting)">Start Server</button>
-            <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="ServerStop.StopServer" disabled="@((AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited) || AppConfig.serverStopping)">Stop Server</button>
+            <button class="btn btn-warning bg-gradient btn-sm m-1" @onclick="ServerStop.StopServer" disabled="@((AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited) || AppConfig.serverStopping)">Stop Server</button>
+            <button class="btn btn-danger bg-gradient btn-sm m-1" @onclick="ServerStop.ForceStopServer" disabled="@((AppConfig.serverProcess == null || AppConfig.serverProcess.HasExited) || AppConfig.serverStopping)">Kill Server</button>
         </div>
     </div>
     <div class="row">
@@ -44,10 +45,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col d-flex justify-content-center">
             <div class="togglebg">
                 <div class="togglecontents">
                     <div class="toggle-label">
@@ -65,7 +62,6 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
-
         AppSettingsLoad.LoadAppConfig();
         if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
         {
@@ -82,7 +78,6 @@
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
-            Debug.WriteLine(AppConfig.serverOutput);
             OutputUpdate();
         }
     }
@@ -92,7 +87,6 @@
         if (!string.IsNullOrEmpty(data))
         {
             AppConfig.serverOutput += data + Environment.NewLine;
-            Debug.WriteLine(AppConfig.serverOutput);
             OutputUpdate();
         }
     }
