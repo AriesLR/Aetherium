@@ -39,7 +39,6 @@
 
 ## Planned Features
 
-- Light Theme (Currently dark by default)
 - Multi-Server Support (Currently only supports 1 active server process)
 - UI Overhaul
 
