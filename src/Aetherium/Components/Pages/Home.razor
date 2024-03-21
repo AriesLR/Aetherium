@@ -1,6 +1,8 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Routing;
 @using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Services;
+@inject ThemeService ThemeService
 
 <div class="container">
     <div class="row">
@@ -26,5 +28,7 @@
         {
             ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
         }
+
+        await ThemeService.SetThemeAsync(AppConfig.SelectedTheme);
     }
 }

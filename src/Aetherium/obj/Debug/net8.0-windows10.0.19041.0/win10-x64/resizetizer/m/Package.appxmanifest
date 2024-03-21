@@ -16,8 +16,8 @@
   </Resources>
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="allowElevation" />
     <Capability Name="internetClientServer" />
-    <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
   </Capabilities>
   <Applications>
     <Application>

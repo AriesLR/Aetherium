@@ -4,6 +4,9 @@
 
  #### Aetherium is your ultimate destination for streamlined game server management. Whether you're setting up a cozy gaming haven for friends on your local machine or harnessing the power of a Virtual Private Server (VPS), Aetherium empowers you every step of the way. Wave goodbye to clunky 'Start.bat' scripts and embrace the future of gaming with Aetherium at your side. Seamlessly launch, monitor, and maintain your game servers with ease.
 
+  > [!IMPORTANT]  
+> Aetherium does require to be run as administrator. This is due to the use of Windows Volume Shadow Copy Service (via AlphaVSS). I know it seems sketchy, but it's something VSS requires apparently. A good test you can do yourself before even downloading Aetherium is go to your command prompt and run `vssadmin list writers` and notice it won't work and tells you to run with elevated permissions. Now do the same thing running command prompt as admin and notice it works. While it's not the best proof, it's better than "Trust me bro."
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)

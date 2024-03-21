@@ -1,0 +1,36 @@
+﻿@page "/debugpage"
+@using Aetherium.Components.Functions.Config;
+@using Aetherium.Components.Functions.Server;
+@using Aetherium.Components.Functions.Services;
+@using System.ServiceProcess;
+@using System.Diagnostics;
+
+<h3>Debug</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-light bg-gradient btn-sm rcon-button m-1" @onclick="Backup.PerformBackup">Manual Save Backup</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <button class="btn btn-danger bg-gradient btn-sm rcon-button m-1" @onclick="RestartVSS">Restart Volume Shadow Copy Service</button>
+            <p>Only do this if there is an issue with the backups.</p>
+        </div>
+    </div>
+</div>
+
+@code {
+    public void RestartVSS()
+    {
+        ServiceController vssService = new ServiceController("VSS");
+        if (vssService.Status == ServiceControllerStatus.Running)
+        {
+            vssService.Stop();
+            vssService.WaitForStatus(ServiceControllerStatus.Stopped);
+        }
+        vssService.Start();
+        vssService.WaitForStatus(ServiceControllerStatus.Running);
+    }
+}

@@ -1,4 +1,5 @@
 ﻿@page "/settings"
+@using Microsoft.AspNetCore.Components.Routing;
 @using Aetherium.Components.Functions.Config;
 @using Aetherium.Components.Functions.Server;
 @using Aetherium.Components.Functions.Services;
@@ -8,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h6>Version: @AppConfig.AppVersion</h6>
+            <h6>Version: v@(AppConfig.AppVersion)</h6>
 
             <div class="themesdropdown">
                 <div class="dropdown">
@@ -21,13 +22,16 @@
                     </ul>
                 </div>
             </div>
-
-            <p>Themes not fully implemented, yet.</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col">
-            <button class="btn btn-light bg-gradient btn-sm rcon-button" @onclick="Backup.PerformBackup">Backup</button>
+            <button class="btn btn-info bg-gradient btn-sm rcon-button" @onclick="CheckForUpdates">Check for updates</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <NavLink href="debugpage" class="btn btn-danger bg-gradient btn-sm rcon-button">DEBUG MENU</NavLink>
         </div>
     </div>
 </div>
@@ -45,5 +49,10 @@
         var themeName = "a-light";
         Debug.WriteLine($"Changing theme to: {themeName}");
         await ThemeService.SetThemeAsync(themeName);
+    }
+
+    private async Task CheckForUpdates()
+    {
+        await UpdateChecker.ManualCheckForUpdatesAsync();
     }
 }

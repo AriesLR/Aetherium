@@ -1,4 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Toasts;
 using Alphaleonis.Win32.Vss;
 using System.Diagnostics;
 using System.IO.Compression;
@@ -10,24 +11,40 @@ namespace Aetherium.Components.Functions.Server
         public static void PerformBackup()
         {
             string sourceDir = Configuration.Instance.SavePath;
+            if (string.IsNullOrWhiteSpace(sourceDir) || !Directory.Exists(sourceDir))
+            {
+                Debug.WriteLine("SavePath is not set or does not exist. Backup process aborted.");
+                ToastService.Toast("SavePath is not set or does not exist.", "Backup process aborted.\n\nCheck your configuration.");
+                return;
+            }
+
             string tempBackupFolder = Path.Combine(Configuration.Instance.BackupPath, "Aetherium_Backup_" + Guid.NewGuid().ToString());
             string backupRoot = tempBackupFolder;
 
             using (VssBackup vss = new VssBackup())
             {
-                vss.Setup(Path.GetPathRoot(sourceDir));
-                string snapDirPath = vss.GetSnapshotPath(sourceDir);
+                try
+                {
+                    vss.Setup(Path.GetPathRoot(sourceDir));
+                    string snapDirPath = vss.GetSnapshotPath(sourceDir);
 
-                // Assuming you have a CopyDirectory method implemented
-                CopyDirectory(snapDirPath, backupRoot);
+                    // Assuming you have a CopyDirectory method implemented
+                    CopyDirectory(snapDirPath, backupRoot);
 
-                // Compress the backup folder
-                string zipFileName = $"{Configuration.Instance.ConfigName}_backup_{DateTime.Now:MM-dd-yyyy-HHmm-ss}.zip";
-                string zipFilePath = Path.Combine(Configuration.Instance.BackupPath, zipFileName);
-                ZipFile.CreateFromDirectory(tempBackupFolder, zipFilePath);
+                    // Compress the backup folder
+                    string zipFileName = $"{Configuration.Instance.ConfigName}_backup_{DateTime.Now:MM-dd-yyyy-HHmm-ss}.zip";
+                    string zipFilePath = Path.Combine(Configuration.Instance.BackupPath, zipFileName);
+                    ZipFile.CreateFromDirectory(tempBackupFolder, zipFilePath);
 
-                // Remove the temporary backup folder
-                Directory.Delete(tempBackupFolder, true);
+                    // Remove the temporary backup folder
+                    Directory.Delete(tempBackupFolder, true);
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"An error occurred during the backup process: {ex.Message}");
+                    ToastService.Toast($"An error occurred during the backup process:", ex.Message);
+                }
             }
         }
 
@@ -197,6 +214,7 @@ namespace Aetherium.Components.Functions.Server
                 try
                 {
                     _backup.BackupComplete();
+                    Debug.WriteLine("[DEBUG]: Backup Complete");
                 }
                 catch (VssBadStateException) { }
             }
