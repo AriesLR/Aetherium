@@ -4,38 +4,34 @@
 
  #### Aetherium is your ultimate destination for streamlined game server management. Whether you're setting up a cozy gaming haven for friends on your local machine or harnessing the power of a Virtual Private Server (VPS), Aetherium empowers you every step of the way. Wave goodbye to clunky 'Start.bat' scripts and embrace the future of gaming with Aetherium at your side. Seamlessly launch, monitor, and maintain your game servers with ease.
 
-  > [!IMPORTANT]  
-> Aetherium does require to be run as administrator. This is due to the use of Windows Volume Shadow Copy Service (via AlphaVSS). I know it seems sketchy, but it's something VSS requires apparently. A good test you can do yourself before even downloading Aetherium is go to your command prompt and run `vssadmin list writers` and notice it won't work and tells you to run with elevated permissions. Now do the same thing running command prompt as admin and notice it works. While it's not the best proof, it's better than "Trust me bro."
-
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
 - [Features](#features)
 - [Planned Features](#planned-features)
 - [Getting Started](#getting-started)
+    - [Installer Version](#installer-version)
+    - [Portable Version](#portable-version)
 - [Configuration](#configuration)
+    - [Config Help](#config-help)
+    - [Config Examples](#config-examples)
+        - [Palworld](#palworld)
+        - [Minecraft](#minecraft)
+        - [Arma 3](#arma-3)
+        - [Enshrouded](#enshrouded)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Tips](#tips)
 - [Notes](#notes)
 
-## Prerequisites
-
-- Windows Notifications need to be turned on for warning/error/save messages, don't worry notifications from the app are silent. 
-
- > [!NOTE]  
-> No manual installation is required for any prerequisites. If they're missing, Aetherium will prompt you to download them. Based on my testing, both components will likely be necessary for Windows Server systems. For regular Windows systems, [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH) should already be installed, but you may receive a prompt to install [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.201-windows-x64-installer).
-
 ## Features
 
-- Start and stop server.
-- Monitor server output in real-time.
-- Automatic server restarts.
-- Graceful shutdowns.
-- Automatic save backups.
-- RCON integration.
-- Resource monitoring.
-- Config profiles.
+- **Server Process Management** - `Start/Stop server process.`
+- **Server Resource Monitoring** - `Monitor CPU and RAM usage.`
+- **Automatic Server Restart** - `Restart server every x minutes.`
+- **Automatic Save Backup** - `Backup save every x minutes.`
+- **Graceful Server Shutdown** - `Set a command and input type (Local or Rcon) to run when the server is stopped/restarted.`
+- **RCON Client** - `Built-in RCON Client.`
+- **Config Profiles** - `Add/Remove configs so you can have a config for multiple different game servers.`
 
 ## Planned Features
 
@@ -81,9 +77,8 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 | *Rcon* | Password | Password, Game Specific | `SuperSecurePassword123` |
 | *Intervals* | Backup Interval (Minutes) | Time, in minutes | `30` | 
 | *Intervals* | Restart Interval (Minutes) | Time, in minutes | `180` |
-###### That's a random IP, no need to worry thinking I intentionally put my own IP there.
 
-### Example Configs
+### Config Examples
 
 #### Palworld
 ![Palworld Config](https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/images/config/palworld-config.png)
@@ -112,15 +107,14 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 [Buy Me a Coffee](https://www.buymeacoffee.com/arieslr)
 
 ## Notes
+  > [!IMPORTANT]  
+> Aetherium does require to be run as administrator. This is due to the use of Windows Volume Shadow Copy Service (via AlphaVSS). I know it seems sketchy, but it's something VSS requires apparently. A good test you can do yourself before even downloading Aetherium is go to your command prompt and run `vssadmin list writers` and notice it won't work and tells you to run with elevated permissions. Now do the same thing running command prompt as admin and notice it works. While it's not the best proof, it's better than "Trust me bro."
+#
 
-###### Firstly, this is my first windows application ever. I have web development experience as well as various other programming experience, but this has been a learning journey for me.
+ > [!NOTE]  
+> No manual installation is required for any prerequisites. If they're missing, Aetherium will prompt you to download them. Based on my testing, both components will likely be necessary for Windows Server systems. For regular Windows systems, [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH) should already be installed, but you may receive a prompt to install [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.201-windows-x64-installer).
+#
 
-###### ~~This was created as a .NET Maui Blazor Hyrbid App. While .NET Maui seems to be a pretty capable framework, it has some limits.~~
-
-###### ~~My main example being an issue I encountered trying to use the windows file picker for the config setup. While I could get it to work partially, I found that it's likely impossible to get the full file path since .NET Maui Blazor Hybrids are technically web apps and for security reasons a browser can't get that kind of detailed information about a users file structure.~~
-
-###### ~~While that's unfortunate and a slight inconvenience to the end-user I don't want to let something so small hold me back. I will continue to update and make this app as versatile as I can.~~
-
-###### Using C# I was able to get the file picker working.
+###### This is my first windows application ever. I have web development experience as well as various other programming experience, but this has been a learning journey for me.
 
 ###### Fun Fact: Aetherium's original name was Palhub. When I originally started this project it was really just me learning and trying to create a server launcher for Palworld to replace the batch script I wrote. 
