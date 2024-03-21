@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@using Aetherium.Components.Functions.Services
 
 <div class="page">
     <div class="sidebar">
@@ -9,7 +10,21 @@
             <NavMenu />
         </div>
         <div class="sidebar-footer">
-            <span class="sidebar-footer-text">Made by AriesLR</span>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a class="sidebar-footer-button" @onclick="OpenYoutube">
+                            <span class="icon bi-youtube" aria-hidden="true"></span>
+                        </a>
+                        <a class="sidebar-footer-button" @onclick="OpenTwitch">
+                            <span class="icon bi-twitch" aria-hidden="true"></span>
+                        </a>
+                        <a class="sidebar-footer-button" @onclick="OpenGithub">
+                            <span class="icon bi-github" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -24,3 +39,22 @@
         <ProcessMonitor />
     </div>
 </div>
+
+
+@code
+{
+    private static async Task OpenYoutube()
+    {
+        await UrlService.OpenUrl("https://www.youtube.com/channel/UCf8fK2ua6GiN52g4a-A0XAw");
+    }
+
+    private static async Task OpenTwitch()
+    {
+        await UrlService.OpenUrl("https://www.twitch.tv/arieslr");
+    }
+
+    private static async Task OpenGithub()
+    {
+        await UrlService.OpenUrl("https://github.com/AriesLR");
+    }
+}

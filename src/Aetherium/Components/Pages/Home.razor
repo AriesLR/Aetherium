@@ -24,11 +24,13 @@
     protected override async Task OnInitializedAsync()
     {
         AppSettingsLoad.LoadAppConfig();
-        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName))
         {
-            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName);
         }
 
         await ThemeService.SetThemeAsync(AppConfig.SelectedTheme);
+
+        await UpdateService.CheckForUpdatesPeriodically(60); // Minutes
     }
 }

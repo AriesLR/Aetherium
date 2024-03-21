@@ -19,6 +19,7 @@
                     <ul class="dropdown-menu">
                         <li><button class="dropdown-item" @onclick="() => ChangeThemeDark()">Dark Theme</button></li>
                         <li><button class="dropdown-item" @onclick="() => ChangeThemeLight()">Light Theme</button></li>
+                        <li><button class="dropdown-item" @onclick="() => ChangeThemeBlurple()">Blurple Theme</button></li>
                     </ul>
                 </div>
             </div>
@@ -51,8 +52,15 @@
         await ThemeService.SetThemeAsync(themeName);
     }
 
+    private async Task ChangeThemeBlurple()
+    {
+        var themeName = "a-blurple";
+        Debug.WriteLine($"Changing theme to: {themeName}");
+        await ThemeService.SetThemeAsync(themeName);
+    }
+
     private async Task CheckForUpdates()
     {
-        await UpdateChecker.ManualCheckForUpdatesAsync();
+        await UpdateService.ManualCheckForUpdatesAsync();
     }
 }

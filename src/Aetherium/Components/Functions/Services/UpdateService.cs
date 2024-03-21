@@ -1,13 +1,13 @@
 ﻿using Aetherium.Components.Functions.Config;
-using Aetherium.Components.Functions.Toasts;
 using System.Diagnostics;
 using System.Text.Json;
 
 namespace Aetherium.Components.Functions.Services
 {
-    public class UpdateChecker
+    public class UpdateService
     {
         private const string UpdateCheckUrl = "https://raw.githubusercontent.com/AriesLR/Aetherium/main/docs/version/update.json";
+        private static bool isCheckingForUpdates = false;
 
         public static async Task CheckForUpdatesAsync()
         {
@@ -36,7 +36,7 @@ namespace Aetherium.Components.Functions.Services
                             {
                                 try
                                 {
-                                    await Launcher.OpenAsync(new Uri(updateInfo.DownloadUrl));
+                                    await UrlService.OpenUrl(updateInfo.DownloadUrl);
                                 }
                                 catch (Exception ex)
                                 {
@@ -48,6 +48,14 @@ namespace Aetherium.Components.Functions.Services
                             {
                                 // Do Nothing
                             }
+                        }
+                    }
+                    if (latestVersion < currentVersion)
+                    {
+                        var currentPage = Application.Current?.MainPage;
+                        if (currentPage != null)
+                        {
+                            await currentPage.DisplayAlert("You're a wizard, Harry!", $"Your version is higher than the latest version\n\nCurrent Version: v{AppConfig.AppVersion}\nLatest Version: v{updateInfo.LatestVersion}", "OK");
                         }
                     }
                 }
@@ -86,7 +94,7 @@ namespace Aetherium.Components.Functions.Services
                             {
                                 try
                                 {
-                                    await Launcher.OpenAsync(new Uri(updateInfo.DownloadUrl));
+                                    await UrlService.OpenUrl(updateInfo.DownloadUrl);
                                 }
                                 catch (Exception ex)
                                 {
@@ -98,6 +106,14 @@ namespace Aetherium.Components.Functions.Services
                             {
                                 // Do Nothing
                             }
+                        }
+                    }
+                    if (latestVersion < currentVersion)
+                    {
+                        var currentPage = Application.Current?.MainPage;
+                        if (currentPage != null)
+                        {
+                            await currentPage.DisplayAlert("You're a wizard, Harry!", $"Your version is higher than the latest version\n\nCurrent Version: v{AppConfig.AppVersion}\nLatest Version: v{updateInfo.LatestVersion}", "OK");
                         }
                     }
                     else
@@ -114,6 +130,22 @@ namespace Aetherium.Components.Functions.Services
             {
                 Debug.WriteLine($"Error checking for updates: {ex.Message}");
                 ToastService.Toast($"Error checking for updates:", ex.Message);
+            }
+        }
+
+        public static async Task CheckForUpdatesPeriodically(int minutes)
+        {
+            if (!isCheckingForUpdates)
+            {
+                isCheckingForUpdates = true;
+
+                await CheckForUpdatesAsync();
+
+                while (true)
+                {
+                    await Task.Delay(TimeSpan.FromMinutes(minutes));
+                    await CheckForUpdatesAsync();
+                }
             }
         }
     }

@@ -49,10 +49,42 @@ main {
     align-items: center;
     text-align: center;
     border-top: solid 1px;
-    border-color: rgb(255, 255, 255, 0.00);
+    border-color: rgb(255, 255, 255, 0);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    height: 5.5rem;
+    height: 5.45rem;
+}
+
+.icon {
+    display: inline-block;
+    position: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    background-size: cover;
+}
+
+    .icon:hover {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .icon:active {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+.bi-youtube {
+    background-image: var(--icon-youtube);
+}
+
+.bi-twitch {
+    background-image: var(--icon-twitch);
+}
+
+.bi-github {
+    background-image: var(--icon-github);
 }
 
 .sidebar-footer-text {

@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {},
     ".NETCoreApp,Version=v8.0/win10-x64": {
-      "Aetherium/0.1.6": {
+      "Aetherium/0.1.7": {
         "dependencies": {
           "AlphaFS.New": "2.3.0",
           "AlphaVSS": "2.0.3",
@@ -854,7 +854,7 @@
     }
   },
   "libraries": {
-    "Aetherium/0.1.6": {
+    "Aetherium/0.1.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

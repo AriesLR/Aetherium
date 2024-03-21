@@ -1,5 +1,5 @@
 ﻿using Aetherium.Components.Functions.Config;
-using Aetherium.Components.Functions.Toasts;
+using Aetherium.Components.Functions.Services;
 using Aetherium.Components.Pages;
 using System.Diagnostics;
 

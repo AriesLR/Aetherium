@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\blurple\\background-blurple.png",
+      "PackagePath": "staticwebassets\\images\\blurple\\background-blurple.png"
+    },
+    {
       "Id": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\background-dark.png",
       "PackagePath": "staticwebassets\\images\\dark\\background-dark.png"
     },

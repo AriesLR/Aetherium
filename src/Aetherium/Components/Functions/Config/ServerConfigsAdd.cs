@@ -1,4 +1,4 @@
-﻿using Aetherium.Components.Functions.Toasts;
+﻿using Aetherium.Components.Functions.Services;
 using System.Diagnostics;
 
 namespace Aetherium.Components.Functions.Config

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mmtXpkyDnkt552zn/PuVeov3nQ0Xe8mPT0SxuwHtg4w=",
+  "Hash": "LbLKB1PqNGK/bFxkmII19sjNvTebzHbHNWasphYazag=",
   "Source": "Aetherium",
   "BasePath": "/",
   "Mode": "Root",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\blurple\\background-blurple.png",
+      "SourceId": "Aetherium",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/blurple/background-blurple.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\blurple\\background-blurple.png"
     },
     {
       "Identity": "G:\\#Github#\\Aetherium\\src\\Aetherium\\wwwroot\\images\\dark\\background-dark.png",
