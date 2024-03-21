@@ -68,7 +68,7 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 ### Config Help
 |Section | Option | Input Type | Example |
 | :---: | :---: | :---: | :---: |
-| *File Paths* | Server Path | EXE | `C:\PalworldServer\Pal\Binaries\Win64\PalServer-Win64-Test-Cmd.exe` |
+| *File Paths* | Server Path | Exe/Jar | `C:\PalworldServer\Pal\Binaries\Win64\PalServer-Win64-Test-Cmd.exe` |
 | *File Paths* | Save Path | Folder | `C:\PalworldServer\Pal\Saved\SaveGames\0` |
 | *File Paths* | Backup Path | Folder | `C:\PalworldServerBackups` |
 | *Parameters* | Launch Parameters | Game Specific | `-publiclobby -publicport=8211 -RCONPort=25575` |
