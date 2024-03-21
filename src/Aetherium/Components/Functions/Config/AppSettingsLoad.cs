@@ -1,5 +1,4 @@
 ﻿using Aetherium.Components.Functions.Toasts;
-using Aetherium.Components.Layout;
 using System.Diagnostics;
 using System.Text.Json;
 
@@ -30,12 +29,21 @@ namespace Aetherium.Components.Functions.Config
                     if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
                     {
                         config.ConfigName = selectedConfigElement.GetString();
-                        AppConfig.SelectedConfig = selectedConfigElement.GetString();
+                        AppConfig.SelectedConfig = selectedConfigElement.GetString(); // This isn't needed, change this to Configuration.Instance.ConfigName in other parts.
                     }
                     else
                     {
                         Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
                         ToastService.Toast("SelectedConfig property not found in appsettings.json.", "");
+                    }
+                    if (jsonObject.TryGetProperty("SelectedTheme", out JsonElement selectedThemeElement))
+                    {
+                        AppConfig.SelectedTheme = selectedThemeElement.GetString();
+                    }
+                    else
+                    {
+                        Debug.WriteLine("SelectedTheme property not found in appsettings.json.");
+                        ToastService.Toast("SelectedTheme property not found in appsettings.json.", "");
                     }
                 }
                 catch (Exception ex)

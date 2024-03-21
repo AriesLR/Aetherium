@@ -15,7 +15,8 @@ namespace Aetherium.Components.Functions.Config
                 var settings = new
                 {
                     ConfigNames = new List<string> { "Default" },
-                    SelectedConfig = "Default"
+                    SelectedConfig = "Default",
+                    SelectedTheme = "a-dark"
                 };
                 var json = JsonSerializer.Serialize(settings);
                 File.WriteAllText(appSettingsPath, json);

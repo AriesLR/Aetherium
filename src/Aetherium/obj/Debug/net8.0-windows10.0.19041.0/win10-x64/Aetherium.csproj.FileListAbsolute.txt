@@ -1183,6 +1183,8 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Aetherium.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Aetherium.pdb
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaFS.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaVSS.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CoreRCON.dll
@@ -1242,6 +1244,7 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
@@ -1277,6 +1280,8 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-HK\Microsoft.Maui.Controls.resources.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hans\Microsoft.Maui.Controls.resources.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaVSS.x64.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ijwhost.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
@@ -1387,8 +1392,3 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaVSS.Common.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaVSS.x64.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ijwhost.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AlphaFS.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll

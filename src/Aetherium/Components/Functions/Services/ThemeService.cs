@@ -16,6 +16,8 @@ namespace Aetherium.Components.Functions.Services
         public async Task SetThemeAsync(string themeName)
         {
             await _jsRuntime.InvokeVoidAsync("setTheme", themeName);
+            AppConfig.SelectedTheme = themeName;
+            AppSettingsSave.SaveConfigNames();
         }
     }
 }

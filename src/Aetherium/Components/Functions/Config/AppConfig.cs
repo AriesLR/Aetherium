@@ -5,9 +5,11 @@ namespace Aetherium.Components.Functions.Config
 {
     public static class AppConfig
     {
+        public static string AppVersion = "v0.1.6";
         public static List<string> ConfigNames = [];
         public static string? NewConfigName;
         public static string? SelectedConfig;
+        public static string? SelectedTheme;
         public static bool automaticRestarts;
         public static bool saveBackupsEnabled;
         public static string serverPath = "";

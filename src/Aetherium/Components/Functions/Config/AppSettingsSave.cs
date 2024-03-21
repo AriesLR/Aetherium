@@ -35,6 +35,22 @@ namespace Aetherium.Components.Functions.Config
                         appSettingsObject.Add("ConfigNames", AppConfig.ConfigNames);
                     }
 
+                    // Update the "SelectedConfig" property
+                    if (appSettingsObject.ContainsKey("SelectedTheme"))
+                    {
+                        appSettingsObject["SelectedTheme"] = AppConfig.SelectedTheme;
+
+                        // Write the updated JSON back to the appsettings.json file
+                        json = JsonSerializer.Serialize(appSettingsObject, new JsonSerializerOptions { WriteIndented = true });
+                        File.WriteAllText(appSettingsPath, json);
+                        Debug.WriteLine("SelectedTheme updated in appsettings.json.");
+                    }
+                    else
+                    {
+                        Debug.WriteLine("SelectedTheme property not found in appsettings.json.");
+                        ToastService.Toast("SelectedTheme property not found in appsettings.json.", "");
+                    }
+
                     // Write the updated JSON back to the appsettings.json file
                     json = JsonSerializer.Serialize(appSettingsObject, new JsonSerializerOptions { WriteIndented = true });
                     File.WriteAllText(appSettingsPath, json);

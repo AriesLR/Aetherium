@@ -1,0 +1,226 @@
+/* /Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-na97djipdv] {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+main[b-na97djipdv] {
+    position: relative;
+    flex: 1;
+}
+
+.sidebar[b-na97djipdv] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    border-right: solid 1px;
+    border-color: var(--border-heavy);
+    width: 15rem;
+    height: 100vh;
+}
+
+.sidebar-container[b-na97djipdv] {
+    display: flex;
+    height: 37rem;
+}
+
+.sidebar-header[b-na97djipdv] {
+    border-bottom: solid 1px;
+    border-color: var(--border-heavy);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.header-logo[b-na97djipdv] {
+    display: block;
+    margin: auto;
+    width: 210px;
+    height: 3rem;
+    background-image: var(--banner-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.sidebar-footer[b-na97djipdv] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: solid 1px;
+    border-color: rgb(255, 255, 255, 0.00);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 5.5rem;
+}
+
+.sidebar-footer-text[b-na97djipdv] {
+    color: rgb(255, 255, 255, 0.05);
+}
+
+
+.bottombar[b-na97djipdv] {
+    position: fixed;
+    bottom: 0;
+    left: 15rem;
+    right: 0;
+    border-top: solid 1px;
+    border-color: var(--border-heavy);
+    height: auto;
+}
+/* /Components/Layout/NavMenu.razor.rz.scp.css */
+.nav-item-text[b-3bdwor1p2n] {
+    display: inline-block;
+    position: center;
+    font-family: var(--fancy-font);
+    letter-spacing: 0.10rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color-alt);
+}
+
+.icon[b-3bdwor1p2n] {
+    display: inline-block;
+    position: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    background-size: cover;
+}
+
+.bi-house-door-fill[b-3bdwor1p2n] {
+    background-image: var(--icon-house);
+}
+
+.bi-hdd-stack-fill[b-3bdwor1p2n] {
+    background-image: var(--icon-hdd-stack);
+}
+
+.bi-tools-fill[b-3bdwor1p2n] {
+    background-image: var(--icon-tools);
+}
+
+.bi-gear-fill[b-3bdwor1p2n] {
+    background-image: var(--icon-gear);
+}
+
+.bi-server-fill[b-3bdwor1p2n] {
+    background-image: var(--icon-server);
+}
+
+.nav-item[b-3bdwor1p2n] {
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-3bdwor1p2n] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-3bdwor1p2n] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-3bdwor1p2n]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+        .nav-item[b-3bdwor1p2n]  a.active {
+            background-color: rgba(255,255,255,0.37);
+            color: white;
+        }
+
+        .nav-item[b-3bdwor1p2n]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+
+/* /Components/Layout/ProcessMonitor.razor.rz.scp.css */
+.processcontainer[b-6i4mk2ao84] {
+    padding: 0.75rem 3.25rem 0.75rem 3.25rem;
+}
+
+.process-monitor[b-6i4mk2ao84] {
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: var(--border-light);
+    background-color: var(--glass-bg);
+    width: 16rem;
+}
+
+.process-monitor-container[b-6i4mk2ao84] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bi[b-6i4mk2ao84] {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    justify-content: left;
+}
+
+.process-monitor-labeltext[b-6i4mk2ao84] {
+    display: flex;
+    font-family: var(--fancy-font);
+    letter-spacing: 0.10rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color);
+    width: 5rem;
+}
+
+.process-monitor-usagetext[b-6i4mk2ao84] {
+    display: flex;
+    font-family: var(--fancy-font);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-color-alt);
+    width: 5.5rem;
+    justify-content: right;
+}
+
+.process-status[b-6i4mk2ao84] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded-config[b-6i4mk2ao84] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serverbadge[b-6i4mk2ao84] {
+    height: 1.5rem;
+    width: 8rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.configbadge[b-6i4mk2ao84] {
+    height: 1.5rem;
+    width: auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bi-cpu-fill-process-monitor[b-6i4mk2ao84] {
+    background-image: var(--icon-cpu);
+}
+
+.bi-memory-process-monitor[b-6i4mk2ao84] {
+    background-image: var(--icon-ram);
+}
