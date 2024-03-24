@@ -95,7 +95,9 @@ As Aetherium strives for universality, it offers a broader range of configuratio
 ## Acknowledgements
 - [CoreRCON](https://github.com/Challengermode/CoreRcon) - For the .NET Standard implementation of the Source RCON Protocol.
 
-- [AlphaVSS](https://alphavss.alphaleonis.com) - For the .NET class library providing a managed API for the Volume Shadow Copy Service
+- [AlphaVSS](https://alphavss.alphaleonis.com) - For the .NET class library providing a managed API for the Volume Shadow Copy Service.
+
+- [CommonFileDialogs](https://github.com/emako/CommonFileDialogs) - For a file picker workaround.
 
 - [Darkbyte](https://github.com/darkbyte42) - For all the input they've given so far, their suggestions are giving me direction on what features to add.
 

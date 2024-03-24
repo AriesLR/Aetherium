@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Aetherium.Components.Functions.Services
+@using Aetherium.Components.Functions.Config
 
 <div class="page">
     <div class="sidebar">
@@ -24,6 +25,7 @@
                         </a>
                     </div>
                 </div>
+                <span class="sidebar-footer-version">Version: v@(AppConfig.AppVersion)</span>
             </div>
         </div>
     </div>
@@ -43,6 +45,8 @@
 
 @code
 {
+
+
     private static async Task OpenYoutube()
     {
         await UrlService.OpenUrl("https://www.youtube.com/channel/UCf8fK2ua6GiN52g4a-A0XAw");

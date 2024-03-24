@@ -39,13 +39,13 @@ namespace Aetherium.Components.Functions.Config
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error creating configuration file '{configName}.json': {ex.Message}");
-                    ToastService.Toast($"Error creating configuration file '{configName}.json':", ex.Message);
+                    ToastService.Alert($"Error creating configuration file '{configName}.json':\n{ex.Message}");
                 }
             }
             else
             {
                 Debug.WriteLine($"Configuration file '{configName}.json' already exists.");
-                ToastService.Toast($"Configuration file '{configName}.json' already exists.", "");
+                ToastService.Alert($"Configuration file '{configName}.json' already exists.");
             }
         }
     }

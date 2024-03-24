@@ -1,5 +1,10 @@
+.navcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-item-text {
-    display: inline-block;
+    display: flex;
     position: center;
     font-family: var(--fancy-font);
     letter-spacing: 0.10rem;
@@ -16,6 +21,7 @@
     margin-right: 0.75rem;
     margin-left: 0.75rem;
     background-size: cover;
+    filter: var(--icon-color-deselected);
 }
 
 .bi-house-door-fill {
@@ -60,13 +66,32 @@
     }
 
         .nav-item ::deep a.active {
-            background-color: rgba(255,255,255,0.37);
-            color: white;
+            background-color: rgba(255,255,255,0.00001);
         }
 
-        .nav-item ::deep a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
+            .nav-item ::deep a.active .icon,
+            .nav-item ::deep a.active:hover .icon {
+                width: 2.2rem;
+                height: 2.2rem;
+                filter: var(--icon-color-selected);
+            }
+
+            .nav-item ::deep a.active .nav-item-text,
+            .nav-item ::deep a.active:hover .nav-item-text {
+                font-size: 1.5rem;
+                color: var(--text-color);
+            }
+
+        .nav-item ::deep a:hover .icon {
+            width: 2rem;
+            height: 2rem;
+            background-color: rgba(255,255,255,0);
+            filter: var(--icon-color-selected);
+        }
+
+        .nav-item ::deep a:hover .nav-item-text {
+            font-size: 1.3rem;
+            color: var(--text-color);
         }
 
 

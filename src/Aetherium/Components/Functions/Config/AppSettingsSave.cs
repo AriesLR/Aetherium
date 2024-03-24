@@ -48,7 +48,7 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("SelectedTheme property not found in appsettings.json.");
-                        ToastService.Toast("SelectedTheme property not found in appsettings.json.", "");
+                        ToastService.Alert("SelectedTheme property not found in appsettings.json.");
                     }
 
                     // Write the updated JSON back to the appsettings.json file
@@ -60,13 +60,13 @@ namespace Aetherium.Components.Functions.Config
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error updating ConfigNames in appsettings.json: {ex.Message}");
-                    ToastService.Toast("Error updating ConfigNames in appsettings.json:", ex.Message);
+                    ToastService.Alert($"Error updating ConfigNames in appsettings.json:\n{ex.Message}");
                 }
             }
             else
             {
                 Debug.WriteLine("appsettings.json file not found.");
-                ToastService.Toast("appsettings.json file not found.", "");
+                ToastService.Alert("appsettings.json file not found.");
             }
         }
     }

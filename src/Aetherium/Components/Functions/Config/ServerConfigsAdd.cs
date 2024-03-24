@@ -28,13 +28,13 @@ namespace Aetherium.Components.Functions.Config
                 else
                 {
                     Debug.WriteLine($"Configuration '{AppConfig.NewConfigName}' already exists.");
-                    ToastService.Toast($"Configuration '{AppConfig.NewConfigName}' already exists.", "");
+                    ToastService.Alert($"Configuration '{AppConfig.NewConfigName}' already exists.");
                 }
             }
             else
             {
                 Debug.WriteLine("Please enter a valid configuration name.");
-                ToastService.Toast("Please enter a valid configuration name.", "");
+                ToastService.Alert("Please enter a valid configuration name.");
             }
             AppConfig.NewConfigName = string.Empty;
         }

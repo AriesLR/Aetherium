@@ -46,14 +46,30 @@ main[b-na97djipdv] {
 
 .sidebar-footer[b-na97djipdv] {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     border-top: solid 1px;
     border-color: rgb(255, 255, 255, 0);
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    height: 5.45rem;
+    padding-bottom: 0.25rem;
+    height: 7.75rem;
+}
+
+.sidebar-footer-button[b-na97djipdv] {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(255, 255, 255, 0.0000001)
+}
+
+.sidebar-footer-version[b-na97djipdv] {
+    display: inline-block;
+    height: 1rem;
+    width: auto;
+    padding-top: 0.6rem;
+    color: rgb(255, 255, 255, 0.1);
 }
 
 .icon[b-na97djipdv] {
@@ -61,8 +77,8 @@ main[b-na97djipdv] {
     position: center;
     width: 1.75rem;
     height: 1.75rem;
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     background-size: cover;
 }
 
@@ -103,8 +119,13 @@ main[b-na97djipdv] {
     height: auto;
 }
 /* /Components/Layout/NavMenu.razor.rz.scp.css */
+.navcontainer[b-3bdwor1p2n] {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-item-text[b-3bdwor1p2n] {
-    display: inline-block;
+    display: flex;
     position: center;
     font-family: var(--fancy-font);
     letter-spacing: 0.10rem;
@@ -121,6 +142,7 @@ main[b-na97djipdv] {
     margin-right: 0.75rem;
     margin-left: 0.75rem;
     background-size: cover;
+    filter: var(--icon-color-deselected);
 }
 
 .bi-house-door-fill[b-3bdwor1p2n] {
@@ -165,13 +187,32 @@ main[b-na97djipdv] {
     }
 
         .nav-item[b-3bdwor1p2n]  a.active {
-            background-color: rgba(255,255,255,0.37);
-            color: white;
+            background-color: rgba(255,255,255,0.00001);
         }
 
-        .nav-item[b-3bdwor1p2n]  a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
+            .nav-item[b-3bdwor1p2n]  a.active .icon,
+            .nav-item[b-3bdwor1p2n]  a.active:hover .icon {
+                width: 2.2rem;
+                height: 2.2rem;
+                filter: var(--icon-color-selected);
+            }
+
+            .nav-item[b-3bdwor1p2n]  a.active .nav-item-text,
+            .nav-item[b-3bdwor1p2n]  a.active:hover .nav-item-text {
+                font-size: 1.5rem;
+                color: var(--text-color);
+            }
+
+        .nav-item[b-3bdwor1p2n]  a:hover .icon {
+            width: 2rem;
+            height: 2rem;
+            background-color: rgba(255,255,255,0);
+            filter: var(--icon-color-selected);
+        }
+
+        .nav-item[b-3bdwor1p2n]  a:hover .nav-item-text {
+            font-size: 1.3rem;
+            color: var(--text-color);
         }
 
 

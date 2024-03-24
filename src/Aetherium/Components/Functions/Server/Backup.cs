@@ -8,19 +8,24 @@ namespace Aetherium.Components.Functions.Server
 {
     public static class Backup
     {
+        // Start the backup, I kinda understand this code. However the methods it uses are wizardry and therefore good luck with this, I can't help you.
         public static void PerformBackup()
         {
             string sourceDir = Configuration.Instance.SavePath;
             if (string.IsNullOrWhiteSpace(sourceDir) || !Directory.Exists(sourceDir))
             {
                 Debug.WriteLine("SavePath is not set or does not exist. Backup process aborted.");
-                ToastService.Toast("SavePath is not set or does not exist.", "Backup process aborted.\n\nCheck your configuration.");
+                ToastService.Alert("SavePath is not set or does not exist.\n\nBackup process aborted.\n\nCheck your configuration.");
                 return;
             }
 
+            // Make a temp folder and put the backup there first.
             string tempBackupFolder = Path.Combine(Configuration.Instance.BackupPath, "Aetherium_Backup_" + Guid.NewGuid().ToString());
+
+            // Set the backupRoot for the magic AlphaVSS code.
             string backupRoot = tempBackupFolder;
 
+            // Somewhat understandable magic
             using (VssBackup vss = new VssBackup())
             {
                 try
@@ -28,7 +33,6 @@ namespace Aetherium.Components.Functions.Server
                     vss.Setup(Path.GetPathRoot(sourceDir));
                     string snapDirPath = vss.GetSnapshotPath(sourceDir);
 
-                    // Assuming you have a CopyDirectory method implemented
                     CopyDirectory(snapDirPath, backupRoot);
 
                     // Compress the backup folder
@@ -43,11 +47,12 @@ namespace Aetherium.Components.Functions.Server
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"An error occurred during the backup process: {ex.Message}");
-                    ToastService.Toast($"An error occurred during the backup process:", ex.Message);
+                    ToastService.Alert($"An error occurred during the backup process:\n{ex.Message}");
                 }
             }
         }
 
+        // Can you read the method name? That's what it does.
         private static void CopyDirectory(string sourceDirName, string destDirName)
         {
             DirectoryInfo dir = new DirectoryInfo(sourceDirName);
@@ -77,7 +82,7 @@ namespace Aetherium.Components.Functions.Server
             }
         }
 
-        // Anything below this point is *Magic*
+        // Anything below this point is *Magic* Refer to AlphaVSS docs or just cry, I prefer to cry.
         public class VssBackup : IDisposable
         {
             bool ComponentMode = false;

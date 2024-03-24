@@ -20,12 +20,12 @@
             </div>
             <div class="col d-flex flex-column justify-content-center">
                 <div class="loaded-config mb-1">
-                    <span class="badge bg-success configbadge">
+                    <span class="badge bg-primary bg-gradient configbadge">
                         @Configuration.Instance.ConfigName
                     </span>
                 </div>
                 <div class="process-status">
-                    <span class="badge bg-@(AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited ? "success" : "danger") serverbadge">
+                    <span class="badge bg-@(AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited ? "success" : "danger") bg-gradient serverbadge">
                         @((AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited) ? "Server Running" : "Server Off")
                     </span>
                 </div>

@@ -22,21 +22,21 @@ namespace Aetherium.Components.Functions.Server
             if (AppConfig.serverProcess != null && !AppConfig.serverProcess.HasExited)
             {
                 Debug.WriteLine("[DEBUG]: Server is already running.");
-                ToastService.Toast("Server is already running.", "");
+                ToastService.Alert("Server is already running.");
                 return;
             }
 
             if (string.IsNullOrEmpty(AppConfig.serverPath))
             {
                 Debug.WriteLine("[DEBUG]: Server path is empty.");
-                ToastService.Toast("Server path is empty.", "");
+                ToastService.Alert("Server path is empty.");
                 return;
             }
 
             if (!File.Exists(AppConfig.serverPath))
             {
                 Debug.WriteLine("[DEBUG]: Server executable not found.");
-                ToastService.Toast("Server executable not found.", "");
+                ToastService.Alert("Server executable not found.");
                 return;
             }
 
@@ -94,7 +94,7 @@ namespace Aetherium.Components.Functions.Server
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error starting server: {ex.Message}");
-                    ToastService.Toast("Error starting server:", ex.Message);
+                    ToastService.Alert($"Error starting server:\n{ex.Message}");
                 }
                 finally
                 {
@@ -148,7 +148,7 @@ namespace Aetherium.Components.Functions.Server
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error starting server: {ex.Message}");
-                    ToastService.Toast("Error starting server:", ex.Message);
+                    ToastService.Alert($"Error starting server:\n{ex.Message}");
                 }
                 finally
                 {

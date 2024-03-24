@@ -24,7 +24,7 @@ namespace Aetherium.Components.Functions.Server
             catch (Exception ex)
             {
                 Debug.WriteLine($"[DEBUG]: Error sending server input: {ex.Message}");
-                ToastService.Toast("Error sending server input:", ex.Message);
+                ToastService.Alert($"Error sending server input:\n{ex.Message}");
             }
         }
     }

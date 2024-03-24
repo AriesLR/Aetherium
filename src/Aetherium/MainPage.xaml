@@ -5,6 +5,12 @@
              x:Class="Aetherium.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill">
+            <Label Text="Welcome to MAUI"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
     <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
         <BlazorWebView.RootComponents>
             <RootComponent Selector="#app" ComponentType="{x:Type local:Components.Routes}" />

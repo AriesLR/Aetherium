@@ -24,7 +24,7 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("ConfigNames property not found in appsettings.json.");
-                        ToastService.Toast("ConfigNames property not found in appsettings.json.", "");
+                        ToastService.Alert("ConfigNames property not found in appsettings.json.");
                     }
                     if (jsonObject.TryGetProperty("SelectedConfig", out JsonElement selectedConfigElement))
                     {
@@ -34,7 +34,7 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                        ToastService.Toast("SelectedConfig property not found in appsettings.json.", "");
+                        ToastService.Alert("SelectedConfig property not found in appsettings.json.");
                     }
                     if (jsonObject.TryGetProperty("SelectedTheme", out JsonElement selectedThemeElement))
                     {
@@ -43,19 +43,19 @@ namespace Aetherium.Components.Functions.Config
                     else
                     {
                         Debug.WriteLine("SelectedTheme property not found in appsettings.json.");
-                        ToastService.Toast("SelectedTheme property not found in appsettings.json.", "");
+                        ToastService.Alert("SelectedTheme property not found in appsettings.json.");
                     }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error loading appsettings file: {ex.Message}");
-                    ToastService.Toast("Error loading appsettings file:", ex.Message);
+                    ToastService.Alert($"Error loading appsettings file:\n{ex.Message}");
                 }
             }
             else
             {
                 Debug.WriteLine("appsettings.json file not found.");
-                ToastService.Toast("appsettings.json file not found.", "");
+                ToastService.Alert("appsettings.json file not found.");
             }
         }
     }

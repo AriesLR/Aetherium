@@ -54,7 +54,7 @@ namespace Aetherium.Components.Functions.Server
             else
             {
                 Debug.WriteLine("[DEBUG]: Server is not running.");
-                ToastService.Toast("Server is not running.", "");
+                ToastService.Alert("Server is not running.");
             }
         }
 

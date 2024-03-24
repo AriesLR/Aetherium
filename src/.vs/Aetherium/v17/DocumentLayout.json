@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\#Github#\\Aetherium\\src\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\config.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|g:\\#github#\\aetherium\\src\\aetherium\\components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D4DB64-8EA9-40EB-8F11-F7E0457EE277}|Aetherium\\Aetherium.csproj|solutionrelative:aetherium\\components\\pages\\settings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Home.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\Home.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-21T19:57:10.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Config.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Config.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Config.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\Config.razor",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-21T19:49:19.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Settings.razor",
-              "DocumentMoniker": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Settings.razor",
-              "RelativeDocumentMoniker": "Aetherium\\Components\\Pages\\Settings.razor",
-              "ToolTip": "G:\\#Github#\\Aetherium\\src\\Aetherium\\Components\\Pages\\Settings.razor",
-              "RelativeToolTip": "Aetherium\\Components\\Pages\\Settings.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-21T19:44:23.845Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

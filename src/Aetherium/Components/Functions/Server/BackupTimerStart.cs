@@ -30,7 +30,7 @@ namespace Aetherium.Components.Functions.Server
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"[DEBUG]: Error starting save backups: {ex.Message}");
-                    ToastService.Toast("Error starting save backups:", ex.Message);
+                    ToastService.Alert($"Error starting save backups:\n{ex.Message}");
                 }
             }
         }

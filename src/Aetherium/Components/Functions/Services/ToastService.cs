@@ -16,12 +16,12 @@ namespace Aetherium.Components.Functions.Services
                 });
         }
 
-        public static async Task Alert(string titleText, string messageText)
+        public static void Alert(string messageText)
         {
             var currentPage = Application.Current?.MainPage;
             if (currentPage != null)
             {
-                await currentPage.DisplayAlert(titleText, messageText, "OK");
+                currentPage.DisplayAlert("Error:", messageText, "OK");
             }
         }
 

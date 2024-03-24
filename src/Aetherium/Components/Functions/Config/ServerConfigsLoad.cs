@@ -72,32 +72,32 @@ namespace Aetherium.Components.Functions.Config
                             else
                             {
                                 Debug.WriteLine("SelectedConfig property not found in appsettings.json.");
-                                ToastService.Toast("SelectedConfig property not found in appsettings.json.", "");
+                                ToastService.Alert("SelectedConfig property not found in appsettings.json.");
                             }
                         }
                         catch (Exception ex)
                         {
                             Debug.WriteLine($"Error updating SelectedConfig in appsettings.json: {ex.Message}");
-                            ToastService.Toast("Error updating SelectedConfig in appsettings.json:", ex.Message);
+                            ToastService.Alert($"Error updating SelectedConfig in appsettings.json:\n{ex.Message}");
                         }
                     }
                     else
                     {
                         Debug.WriteLine("appsettings.json file not found.");
-                        ToastService.Toast("appsettings.json file not found.", "");
+                        ToastService.Alert("appsettings.json file not found.");
 
                     }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error loading config file: {ex.Message}");
-                    ToastService.Toast("Error loading config file:", ex.Message);
+                    ToastService.Alert($"Error loading config file:\n{ex.Message}");
                 }
             }
             else
             {
                 Debug.WriteLine("Config file does not exist.");
-                ToastService.Toast("Config file does not exist.", "");
+                ToastService.Alert("Config file does not exist.");
             }
         }
     }

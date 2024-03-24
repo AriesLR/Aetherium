@@ -40,7 +40,7 @@
     }
 
     // Scroll textarea and Update UI
-    private async void OutputUpdate()
+    private async Task OutputUpdate()
     {
         await JSRuntime.InvokeVoidAsync("scrollToBottom");
         await InvokeAsync((StateHasChanged));
@@ -81,7 +81,7 @@
                 AppConfig.rconOutput += $"{response}\n";
                 AppConfig.rconCommand = "";
                 Rcon rcon = new Rcon();
-                rcon.OutputUpdate();
+                await rcon.OutputUpdate();
             }
             catch (Exception ex)
             {

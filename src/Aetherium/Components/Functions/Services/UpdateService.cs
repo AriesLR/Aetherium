@@ -41,7 +41,7 @@ namespace Aetherium.Components.Functions.Services
                                 catch (Exception ex)
                                 {
                                     Debug.WriteLine($"An error occurred: {ex.Message}");
-                                    ToastService.Toast($"An error occurred:", ex.Message);
+                                    ToastService.Alert($"An error occurred:\n{ex.Message}");
                                 }
                             }
                             if (answer == false)

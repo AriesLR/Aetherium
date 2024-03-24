@@ -22,6 +22,16 @@
 </div>
 
 @code {
+    protected override void OnInitialized()
+    {
+        AppSettingsInit.InitAppSettings(); // Create appsettings.json if it doesn't exist
+        AppSettingsLoad.LoadAppConfig(); // Load existing Configurations
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
+    }
+
     public void RestartVSS()
     {
         ServiceController vssService = new ServiceController("VSS");

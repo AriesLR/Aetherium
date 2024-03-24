@@ -9,8 +9,6 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h6>Version: v@(AppConfig.AppVersion)</h6>
-
             <div class="themesdropdown">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,6 +36,16 @@
 </div>
 
 @code {
+    protected override void OnInitialized()
+    {
+        AppSettingsInit.InitAppSettings(); // Create appsettings.json if it doesn't exist
+        AppSettingsLoad.LoadAppConfig(); // Load existing Configurations
+        if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName)) // Ensure a config name is set before attempting to load, to avoid errors
+        {
+            ServerConfigsLoad.LoadServerConfig(Configuration.Instance.ConfigName); // Load selected Configuration
+        }
+    }
+
     private async Task ChangeThemeDark()
     {
         var themeName = "a-dark";
