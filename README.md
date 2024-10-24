@@ -4,6 +4,9 @@
 
  #### Aetherium is your ultimate destination for streamlined game server management. Whether you're setting up a cozy gaming haven for friends on your local machine or harnessing the power of a Virtual Private Server (VPS), Aetherium empowers you every step of the way. Wave goodbye to clunky 'Start.bat' scripts and embrace the future of gaming with Aetherium at your side. Seamlessly launch, monitor, and maintain your game servers with ease.
 
+> [!NOTE]
+> Project is not dead, I just need a break beacuse I was getting really burnt out. I will continue development as soon as I feel ready or if any issues arise.
+
 ## Table of Contents
 
 - [Features](#features)
