@@ -18,11 +18,11 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h5>Server Output</h5>
+            <span class="header-text">Server</span>
             <textarea id="outputTextarea" class="form-control serveroutput" rows="10" readonly>@AppConfig.serverOutput</textarea>
             <div class="input-group mt-1">
                 <input type="text" class="form-control" placeholder="Enter server input" @bind="AppConfig.serverInput">
-                <button class="btn btn-light bg-gradient btn-sm rcon-button" @onclick="ServerInput.SendServerInput">Send</button>
+                <button class="btn btn-primary bg-gradient btn-sm rcon-button" @onclick="ServerInput.SendServerInput">Send</button>
             </div>
         </div>
     </div>

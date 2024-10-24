@@ -344,7 +344,6 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -359,12 +358,8 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.EventLog.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.PerformanceCounter.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.ServiceProcess.ServiceController.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\WindowsAPICodePack.Shell.CommonFileDialogs.dll

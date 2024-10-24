@@ -49,6 +49,9 @@ namespace Aetherium.Components.Functions.Server
             // Get the filename
             string fileName = Path.GetFileName(AppConfig.serverPath);
 
+            // Minecraft filename (Java Install)
+            string mcfileName = Configuration.Instance.McJavaVersion;
+
             if (fileExtension == ".exe")
             {
                 try
@@ -112,9 +115,9 @@ namespace Aetherium.Components.Functions.Server
                     {
                         StartInfo = new ProcessStartInfo
                         {
-                            FileName = "C:\\Program Files\\Java\\jdk-17\\bin\\java.exe",
+                            FileName = mcfileName,
                             WorkingDirectory = directoryPath,
-                            Arguments = $"{AppConfig.launchParams} -jar {fileName} -nogui",
+                            Arguments = $"{AppConfig.launchParams} -jar {fileName} nogui",
                             RedirectStandardOutput = true,
                             RedirectStandardError = true,
                             RedirectStandardInput = true,

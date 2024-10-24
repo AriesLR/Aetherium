@@ -17,5 +17,6 @@
         public bool SaveBackupsEnabled { get; set; }
         public bool AdvRestartType { get; set; }
         public string? AdvRestartCommand { get; set; } = "";
+        public string? McJavaVersion { get; set; } = "";
     }
 }

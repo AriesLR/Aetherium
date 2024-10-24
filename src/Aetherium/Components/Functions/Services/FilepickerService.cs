@@ -90,5 +90,15 @@ namespace Aetherium.Components.Functions.Services
                 ServerConfigsSave.SaveConfig();
             }
         }
+
+        public static void PickJavaPath()
+        {
+            var filePath = PickFile();
+            if (!string.IsNullOrEmpty(filePath))
+            {
+                Configuration.Instance.McJavaVersion = filePath;
+                ServerConfigsSave.SaveConfig();
+            }
+        }
     }
 }

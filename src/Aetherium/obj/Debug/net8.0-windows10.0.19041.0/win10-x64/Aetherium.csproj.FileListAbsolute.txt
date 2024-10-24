@@ -3,7 +3,6 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\Aetherium.styles.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\Aetherium.bundle.scp.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\favicon.png
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\blurple\background-blurple.png
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\images\dark\background-dark.png
@@ -292,7 +291,6 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -307,12 +305,8 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.EventLog.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.PerformanceCounter.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.ServiceProcess.ServiceController.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WindowsAPICodePack.Shell.CommonFileDialogs.dll
@@ -410,3 +404,4 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+G:\#Github#\Aetherium\src\Aetherium\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.css

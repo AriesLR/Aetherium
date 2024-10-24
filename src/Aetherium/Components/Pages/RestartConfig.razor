@@ -33,15 +33,22 @@
                         </div>
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text advconfiglabel">Restart Command</span>
+                        <span class="input-group-text bg-gradient advconfiglabel">Restart Command</span>
                         <input type="text" class="form-control" placeholder="Leave empty for force shutdown" @bind-value="Configuration.Instance.AdvRestartCommand" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text bg-gradient advconfiglabel">Java Path</span>
+                        <input type="text" class="form-control" @bind-value="Configuration.Instance.McJavaVersion" @onchange="ServerConfigsSave.SaveConfig" @bind-value:event="oninput" />
+                        <button class="btn btn-primary bg-gradient btn-sm filepickerbtn" @onclick="FilepickerService.PickJavaPath">Browse Files</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <NavLink class="btn btn-light bg-gradient btn-sm filepickerbtn" href="config">Go Back</NavLink>
+        <div class="col">
+            <NavLink class="btn btn-primary bg-gradient btn-sm gobackbtn" href="config">Go Back</NavLink>
+        </div>
     </div>
 </div>
 

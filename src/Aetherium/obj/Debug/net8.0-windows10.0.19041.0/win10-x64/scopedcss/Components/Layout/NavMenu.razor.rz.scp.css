@@ -94,4 +94,16 @@
             color: var(--text-color);
         }
 
+        .nav-item[b-3bdwor1p2n]  a:focus .icon {
+            width: 2rem;        
+            height: 2rem;
+            background-color: rgba(255,255,255,0);
+            filter: var(--icon-color-selected);
+        }
+
+        .nav-item[b-3bdwor1p2n]  a:focus .nav-item-text {
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+
 
