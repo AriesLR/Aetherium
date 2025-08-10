@@ -117,7 +117,7 @@ namespace Aetherium.Components.Functions.Server
                         {
                             FileName = mcfileName,
                             WorkingDirectory = directoryPath,
-                            Arguments = $"{AppConfig.launchParams} -jar {fileName} nogui",
+                            Arguments = $"-server {AppConfig.launchParams} -jar {fileName} nogui",
                             RedirectStandardOutput = true,
                             RedirectStandardError = true,
                             RedirectStandardInput = true,

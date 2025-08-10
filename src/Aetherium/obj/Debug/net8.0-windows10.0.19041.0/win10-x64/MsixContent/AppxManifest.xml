@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:deployment="http://schemas.microsoft.com/appx/manifest/deployment/windows10" IgnorableNamespaces="mp deployment" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="Microsoft.WindowsAppRuntime.1.4" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProcessorArchitecture="x64" Version="4000.1136.2333.0" />
+  <Identity Name="Microsoft.WindowsAppRuntime.1.5" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProcessorArchitecture="x64" Version="5001.214.1843.0" />
   <Properties>
     <Framework>true</Framework>
-    <DisplayName>WindowsAppRuntime.1.4</DisplayName>
+    <DisplayName>WindowsAppRuntime.1.5</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
-    <Description>Microsoft Windows App Runtime 1.4 (4000.1136.2333.0 x64 )</Description>
+    <Description>Microsoft Windows App Runtime 1.5 (5001.214.1843.0 x64 )</Description>
     <Logo>WindowsAppRuntime.png</Logo>
   </Properties>
   <Resources>
@@ -27,13 +27,14 @@
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
       <InProcessServer>
         <Path>Microsoft.WindowsAppRuntime.dll</Path>
+        <!-- NOTE: Keep ActivationClass elements sorted by absolute ActivatableClassId (namespace.class) -->
         <!-- Dynamic Dependency -->
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank" ThreadingModel="both" />
-        <!-- Deployment -->
+        <!-- WinAppSDK Deployment -->
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions" ThreadingModel="both" />
@@ -43,6 +44,32 @@
         <!-- AppLifecycle -->
         <ActivatableClass ActivatableClassId="Microsoft.Windows.AppLifecycle.ActivationRegistrationManager" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.AppLifecycle.AppInstance" ThreadingModel="both" />
+        <!-- AppNotifications -->
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotification" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationProgressData" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs" ThreadingModel="both" />
+        <!-- AppNotificationBuilder -->
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationButton" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox" ThreadingModel="both" />
+        <!-- Deployment -->
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.AddPackageOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.EnsureReadyOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageDeploymentManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageDeploymentResult" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageRuntimeManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageSet" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageSetItem" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.PackageVolume" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.ProvisionPackageOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.RegisterPackageOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.RemovePackageOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Management.Deployment.StagePackageOptions" ThreadingModel="both" />
         <!-- PushNotifications -->
         <ActivatableClass ActivatableClassId="Microsoft.Windows.PushNotifications.PushNotificationChannel" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult" ThreadingModel="both" />
@@ -56,17 +83,6 @@
         <ActivatableClass ActivatableClassId="Microsoft.Windows.System.EnvironmentManager" ThreadingModel="both" />
         <!-- PowerNotifications -->
         <ActivatableClass ActivatableClassId="Microsoft.Windows.System.Power.PowerManager" ThreadingModel="both" />
-        <!-- AppNotifications -->
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationManager" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotification" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationProgressData" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs" ThreadingModel="both" />
-        <!-- AppNotificationBuilder -->
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationButton" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.proxyStub" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
@@ -363,7 +379,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.ElementCompositionPreview" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.WindowsXamlManager" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.XamlIsland" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.XamlIslandRoot" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationResult" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs" ThreadingModel="both" />
@@ -583,6 +599,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.VisualTransition" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Window" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.WindowChrome" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.XamlIsland" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
@@ -600,6 +617,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.ScrollPresenterTestHooks" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.ScrollViewerIRefreshInfoProviderAdapter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.ScrollViewTestHooks" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.SelectorBarTestHooks" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.SliderInteraction" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.SpectrumBrush" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Private.Controls.SplitButtonTestApi" ThreadingModel="both" />
@@ -635,6 +653,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.RatingControlAutomationPeer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.RepeaterAutomationPeer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.ScrollPresenterAutomationPeer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.SelectorBarItemAutomationPeer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.SplitButtonAutomationPeer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.TabViewAutomationPeer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Automation.Peers.TabViewItemAutomationPeer" ThreadingModel="both" />
@@ -682,6 +701,9 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LayoutPanel" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LinedFlowLayout" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemCollectionTransitionProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MapControl" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MapElementsLayer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MapIcon" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBar" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBarItem" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.MenuBarItemFlyout" ThreadingModel="both" />
@@ -740,6 +762,8 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ScrollingZoomOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.ScrollView" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.SelectionModel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.SelectorBar" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.SelectorBarItem" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.SplitButton" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.StackLayout" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Xaml.Controls.StackLayoutState" ThreadingModel="both" />
@@ -823,6 +847,7 @@
         <Path>Microsoft.Web.WebView2.Core.dll</Path>
         <ActivatableClass ActivatableClassId="Microsoft.Web.WebView2.Core.CoreWebView2CompositionController" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Web.WebView2.Core.CoreWebView2Environment" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" ThreadingModel="both" />
       </InProcessServer>
@@ -922,6 +947,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.CoreWindowSiteBridge" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.DesktopChildSiteBridge" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.DesktopSiteBridge" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Content.ProcessStarter" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Content.SystemVisualSiteBridge" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.DragDrop.DragDropManager" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.DragDrop.DragOperation" ThreadingModel="both" />
@@ -929,6 +955,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.Experimental.ExpFocusNavigationHost" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.Experimental.ExpFocusNavigationRequest" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.Experimental.ExpPointerPoint" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Input.FocusNavigationRequest" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.GestureRecognizer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputActivationListener" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputCursor" ThreadingModel="both" />
@@ -936,6 +963,7 @@
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputDesktopResourceCursor" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputDesktopNamedResourceCursor" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputFocusController" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputFocusNavigationHost" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputKeyboardSource" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputLightDismissAction" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.UI.Input.InputObject" ThreadingModel="both" />
@@ -978,6 +1006,12 @@
         <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProvider2" InterfaceId="38C3A963-DD93-479D-9276-04BF84EE1816" />
         <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics" InterfaceId="661985A5-D187-482D-9EEF-6FDA05D21845" />
         <Interface Name="Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors" InterfaceId="90C1B5F0-0D3A-4AC6-ABB7-C97B367B8FCC" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider" InterfaceId="7293A12B-0329-458D-AC25-5332BE478FDE" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceProvider" InterfaceId="e1b6266d-88a0-416c-9440-e341cb047cd3" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderMessage" InterfaceId="60c2442a-4c9d-4880-ba26-caca9e567dd4" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderAnalytics" InterfaceId="f6885791-3085-4bd7-9cb1-4f1354c3a687" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderErrors" InterfaceId="6611e00a-d86c-49a3-9381-b7da67ee62dc" />
+        <Interface Name="Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnnouncementInvokedTarget" InterfaceId="5d44ae2a-072c-4df9-9fe5-34d5d2e9ff63" />
       </ProxyStub>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
@@ -985,6 +1019,10 @@
         <Path>Microsoft.Windows.Widgets.dll</Path>
         <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Providers.WidgetManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Feeds.Providers.FeedManager" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Microsoft.Windows.Widgets.Notifications.FeedAnnouncement" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <deployment:Extension Category="windows.deploymentExtensionHandler">
@@ -995,5 +1033,5 @@
       </deployment:DeploymentExtensionHandler>
     </deployment:Extension>
   </Extensions>
-  <mp:PhoneIdentity PhoneProductId="b9e8b971-ee94-4737-a270-9ed595dc59f3" PhonePublisherId="a8099e80-050d-411d-9b45-4ea107a7be6b" />
+  <mp:PhoneIdentity PhoneProductId="c39dd41a-7bc8-48b2-9d7c-3b839d693f40" PhonePublisherId="a8099e80-050d-411d-9b45-4ea107a7be6b" />
 </Package>

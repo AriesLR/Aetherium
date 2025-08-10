@@ -9,11 +9,14 @@ html[data-theme="a-dark"] {
     --grey-glass-bg: rgb(255, 255, 255, 0.10);
     --grey-glass-bg-light: rgb(255, 255, 255, 0.05);
     --grey-glass-bg-heavy: rgb(255, 255, 255, 0.50);
+    --black-glass-bg: rgb(0, 0, 0, 0.10);
+    --black-glass-bg-light: rgb(0, 0, 0, 0.05);
+    --black-glass-bg-heavy: rgb(0, 0, 0, 0.50);
     --terminal-bg: rgb(0, 0, 0, 0.50);
     --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(255, 255, 255, 0.90);
     --text-color-alt: rgb(255, 255, 255, 0.75);
-    --text-color-disabled: rgb(255, 255, 255, 0.60);
+    --text-color-disabled: rgb(255, 255, 255, 0.25);
     --border-ultra-heavy: rgb(255, 255, 255, 0.50);
     --border-heavy: rgb(255, 255, 255, 0.20);
     --border-light: rgb(255, 255, 255, 0.05);
@@ -76,7 +79,7 @@ html[data-theme="a-light"] {
     --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(0, 0, 0, 0.90);
     --text-color-alt: rgb(0, 0, 0, 0.75);
-    --text-color-disabled: rgb(0, 0, 0, 0.60);
+    --text-color-disabled: rgb(0, 0, 0, 0.25);
     --border-ultra-heavy: rgb(0, 0, 0, 0.50);
     --border-heavy: rgb(0, 0, 0, 0.20);
     --border-light: rgb(0, 0, 0, 0.05);
@@ -105,7 +108,7 @@ html[data-theme="a-blurple"] {
     --fancy-font: "Orbitron", Arial, sans-serif;
     --text-color: rgb(0, 0, 0, 0.90);
     --text-color-alt: rgb(0, 0, 0, 0.75);
-    --text-color-disabled: rgb(0, 0, 0, 0.60);
+    --text-color-disabled: rgb(0, 0, 0, 0.25);
     --border-ultra-heavy: rgb(0, 0, 0, 0.50);
     --border-heavy: rgb(0, 0, 0, 0.20);
     --border-light: rgb(0, 0, 0, 0.05);
@@ -506,13 +509,26 @@ h1:focus {
     backdrop-filter: blur(2px);
 }
 
+.configinput,
+.configinput:hover,
+.configinput:active,
+.configinput:focus {
+    background-color: var(--black-glass-bg);
+    font-size: 0.9rem;
+    color: var(--text-color-alt);
+}
+
 .configname {
     text-align: center;
 }
 
-.newconfigname {
+.newconfigname,
+.newconfigname:hover,
+.newconfigname:active,
+.newconfigname:focus {
     height: 2rem !important;
     line-height: 2rem !important;
+    color: var(--text-color-alt);
 }
 
 .configbutton {
@@ -539,6 +555,13 @@ h1:focus {
     resize: none;
 }
 
+.rconinput,
+.rconinput:hover,
+.rconinput:active,
+.rconinput:focus {
+    color: var(--text-color-alt);
+}
+
 .rcon-button {
     --bs-btn-border-color: var(--border-heavy) !important;
     --bs-btn-hover-border-color: var(--border-heavy) !important;
@@ -555,6 +578,13 @@ h1:focus {
     color: var(--text-color);
     border-color: var(--border-heavy);
     resize: none;
+}
+
+.serverinput,
+.serverinput:hover,
+.serverinput:active,
+.serverinput:focus {
+    color: var(--text-color-alt);
 }
 
 .togglebg {

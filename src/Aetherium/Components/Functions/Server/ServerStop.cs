@@ -19,7 +19,7 @@ namespace Aetherium.Components.Functions.Server
                 if (!AppConfig.advRestartType)
                 {
                     // If advRestartType is false, send command via server input
-                    SendCommandViaServerInput(Configuration.Instance.AdvRestartCommand);
+                    await SendCommandViaServerInput(Configuration.Instance.AdvRestartCommand);
                 }
                 else
                 {
@@ -65,6 +65,8 @@ namespace Aetherium.Components.Functions.Server
             {
                 await AppConfig.serverProcess.StandardInput.WriteLineAsync(command);
                 await AppConfig.serverProcess.StandardInput.FlushAsync();
+
+                await Task.Delay(10000);
                 AppConfig.serverOutput = "";
             }
         }
@@ -82,6 +84,7 @@ namespace Aetherium.Components.Functions.Server
                 AppConfig.rconCommand = command;
                 await Rcon.RconSendCommand();
                 AppConfig.rconCommand = "";
+                await Task.Delay(10000);
                 AppConfig.serverOutput = "";
             }
 

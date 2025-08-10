@@ -1,7 +1,6 @@
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\AboutAssets.txt
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\Aetherium.styles.css
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\Aetherium.bundle.scp.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.css
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\favicon.png
@@ -356,7 +355,6 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Security.AccessControl.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Power.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
@@ -509,3 +507,18 @@ G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Xaml\Assets\map.html
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.winmd
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.IO.RecyclableMemoryStream.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.Projection.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.EventLog.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\System.Diagnostics.PerformanceCounter.dll
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\wwwroot\Aetherium.x5hwgmtxdq.bundle.scp.css
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\Aetherium.staticwebassets.endpoints.json
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json.cache
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.Aetherium.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+G:\#Github#\Aetherium\src\Aetherium\obj\Release\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.publish.endpoints.json

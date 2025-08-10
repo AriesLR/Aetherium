@@ -103,6 +103,7 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\WinUIEdit.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\wuceffectsi.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\RestartAgent.exe
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.UI.Xaml\Assets\map.html
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\af-ZA\Microsoft.ui.xaml.dll.mui
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\af-ZA\Microsoft.UI.Xaml.Phone.dll.mui
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\am-ET\Microsoft.ui.xaml.dll.mui
@@ -289,6 +290,7 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.AppLifecycle.winmd
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.AppNotifications.Builder.winmd
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.AppNotifications.winmd
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Management.Deployment.winmd
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.PushNotifications.winmd
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Security.AccessControl.winmd
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.System.Power.winmd
@@ -339,6 +341,9 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.UI.Xaml.Controls.pri
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\resources.pri
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.AspNetCore.Metadata.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Configuration.ConfigurationManager.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Diagnostics.EventLog.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Diagnostics.PerformanceCounter.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.Drawing.Common.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\AlphaFS.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\AlphaVSS.Common.dll
@@ -369,6 +374,7 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Extensions.Options.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Extensions.Primitives.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Graphics.Canvas.Interop.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.IO.RecyclableMemoryStream.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.JSInterop.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Maui.Controls.Compatibility.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Maui.Controls.dll
@@ -386,11 +392,12 @@ G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.ApplicationModel.Resources.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Management.Deployment.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.PushNotifications.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Security.AccessControl.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.System.Power.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.System.Projection.dll
-G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Widgets.Providers.Projection.dll
+G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.Windows.Widgets.Projection.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.IO.Pipelines.dll
 G:\#Github#\Aetherium\src\Aetherium\bin\Release\net8.0-windows10.0.19041.0\win10-x64\publish\System.ServiceProcess.ServiceController.dll

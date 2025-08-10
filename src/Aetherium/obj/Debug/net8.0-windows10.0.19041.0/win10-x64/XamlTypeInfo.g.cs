@@ -12,10 +12,10 @@ namespace Aetherium.WinUI
 {
     public partial class App : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
         private global::Aetherium.Aetherium_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::Aetherium.Aetherium_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
@@ -32,7 +32,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXamlType(Type)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
@@ -42,7 +42,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXamlType(String)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
         {
@@ -52,7 +52,7 @@ namespace Aetherium.WinUI
         /// <summary>
         /// GetXmlnsDefinitions()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.XmlnsDefinition[] GetXmlnsDefinitions()
         {
@@ -66,7 +66,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     /// <summary>
     /// Main class for providing metadata for the app or library
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
@@ -110,7 +110,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
@@ -1430,7 +1430,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlSystemBaseType : global::Microsoft.UI.Xaml.Markup.IXamlType
     {
@@ -1480,7 +1480,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     internal delegate object CreateFromStringMethod(string args);
     internal delegate object BoxInstanceMethod(object instance);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlUserType : global::Aetherium.Aetherium_XamlTypeInfo.XamlSystemBaseType
         , global::Microsoft.UI.Xaml.Markup.IXamlType
@@ -1711,7 +1711,7 @@ namespace Aetherium.Aetherium_XamlTypeInfo
     internal delegate object Getter(object instance);
     internal delegate void Setter(object instance, object value);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2402")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2408")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Microsoft.UI.Xaml.Markup.IXamlMember
     {

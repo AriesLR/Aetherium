@@ -23,6 +23,7 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
+        AppSettingsInit.InitAppSettings();
         AppSettingsLoad.LoadAppConfig();
         if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName))
         {
@@ -31,6 +32,6 @@
 
         await ThemeService.SetThemeAsync(AppConfig.SelectedTheme);
 
-        await UpdateService.CheckForUpdatesPeriodically(60); // Minutes
+        await UpdateService.CheckForUpdatesPeriodically(300); // Minutes
     }
 }
