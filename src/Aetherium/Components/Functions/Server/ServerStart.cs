@@ -7,7 +7,9 @@ namespace Aetherium.Components.Functions.Server
     public class ServerStart
     {
         public static event Action<string>? OnOutputDataReceived;
+
         public static event Action<string>? OnErrorDataReceived;
+
         public static event Action? OnProcessExited;
 
         public static async Task StartServer()
@@ -50,7 +52,9 @@ namespace Aetherium.Components.Functions.Server
             string fileName = Path.GetFileName(AppConfig.serverPath);
 
             // Minecraft filename (Java Install)
-            string mcfileName = Configuration.Instance.McJavaVersion;
+            string mcfileName = string.IsNullOrEmpty(Configuration.Instance.McJavaVersion)
+                ? "java"
+                : Configuration.Instance.McJavaVersion;
 
             if (fileExtension == ".exe")
             {

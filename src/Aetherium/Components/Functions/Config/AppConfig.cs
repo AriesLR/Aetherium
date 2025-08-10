@@ -5,7 +5,7 @@ namespace Aetherium.Components.Functions.Config
 {
     public static class AppConfig
     {
-        public static string? AppVersion = "0.2.0";
+        public static string? AppVersion = "0.2.1";
         public static List<string> ConfigNames = [];
         public static string? NewConfigName;
         public static string? SelectedConfig;

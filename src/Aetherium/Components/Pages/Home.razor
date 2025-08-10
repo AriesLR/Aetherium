@@ -23,7 +23,6 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
-        AppSettingsInit.InitAppSettings();
         AppSettingsLoad.LoadAppConfig();
         if (!string.IsNullOrWhiteSpace(Configuration.Instance.ConfigName))
         {

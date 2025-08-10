@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-
 namespace Aetherium.Components.Functions.Config
 {
     public class AppSettingsLoad

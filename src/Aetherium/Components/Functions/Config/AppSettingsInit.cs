@@ -4,11 +4,17 @@ namespace Aetherium.Components.Functions.Config
 {
     public class AppSettingsInit
     {
-
         public static void InitAppSettings()
         {
-
             string appSettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Aetherium", "appsettings.json");
+            string appSettingsDir = Path.GetDirectoryName(appSettingsPath);
+
+            // Create the Aetherium directory if it doesn't exist
+            if (!Directory.Exists(appSettingsDir))
+            {
+                Directory.CreateDirectory(appSettingsDir);
+            }
+
             if (!File.Exists(appSettingsPath))
             {
                 // Create appsettings.json with default configuration names and selected config

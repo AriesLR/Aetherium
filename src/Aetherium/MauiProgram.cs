@@ -1,4 +1,5 @@
-﻿using Aetherium.Components.Functions.Services;
+﻿using Aetherium.Components.Functions.Config;
+using Aetherium.Components.Functions.Services;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
@@ -20,6 +21,7 @@ namespace Aetherium
 
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddScoped<ThemeService>();
+            AppSettingsInit.InitAppSettings();
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
